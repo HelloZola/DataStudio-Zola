@@ -46,9 +46,9 @@ cp $SOURCE/3rd_src/target/dependency/commons-lang3-3.12.0.jar $DEST/org.opengaus
 cp $SOURCE/3rd_src/target/dependency/gson-2.8.6.jar $DEST/org.opengauss.mppdbide.explainplan/.
 cp $SOURCE/3rd_src/target/dependency/gson-2.8.6.jar $DEST/org.opengauss.mppdbide.view/.
 cp $SOURCE/3rd_src/target/dependency/guava-30.1.1-jre.jar $DEST/org.opengauss.mppdbide.view/.
-cp $SOURCE/3rd_src/target/dependency/javafx-base-18-ea+2-win.jar $DEST/org.opengauss.mppdbide.view/.
-cp $SOURCE/3rd_src/target/dependency/javafx-controls-18-ea+2-win.jar $DEST/org.opengauss.mppdbide.view/.
-cp $SOURCE/3rd_src/target/dependency/javafx-graphics-18-ea+2-win.jar $DEST/org.opengauss.mppdbide.view/.
+cp $SOURCE/3rd_src/target/dependency/javafx-base-17.0.2-linux.jar $DEST/org.opengauss.mppdbide.view/.
+cp $SOURCE/3rd_src/target/dependency/javafx-controls-17.0.2-linux.jar $DEST/org.opengauss.mppdbide.view/.
+cp $SOURCE/3rd_src/target/dependency/javafx-graphics-17.0.2-linux.jar $DEST/org.opengauss.mppdbide.view/.
 cp $SOURCE/platform/Gauss200/gs_jdbc/gsjdbc4.jar $DEST/org.opengauss.dbdriver.jdbc.gauss/.
 
 rm -rf $TEST/org.opengauss.mppdbide.adapter.test.fragment/lib
