@@ -522,7 +522,7 @@ public class ServerConnectionInfo implements IServerConnectionInfo {
         }
 
         properties.setProperty("characterEncoding", dsEncoding);
-        properties.setProperty("ApplicationName", "Data Studio");
+        properties.setProperty("ApplicationName", "Vastdata Data Studio");
         if (CustomStringUtility.isProtocolVersionNeeded(driverName)) {
             properties.setProperty("protocolVersion", "3");
         }

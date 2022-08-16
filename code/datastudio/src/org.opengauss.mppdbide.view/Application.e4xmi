@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ASCII"?>
 <application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmlns:ui="http://www.eclipse.org/ui/2010/UIModel/application/ui" xmi:id="_C4LugPdQEeG3IOiaXuj5Ng" elementId="org.opengauss.mppdbide.view.application">
-  <children xsi:type="basic:TrimmedWindow" xmi:id="_L5pvAPdQEeG3IOiaXuj5Ng" elementId="org.opengauss.mppdbide.window.id.mainwindow" label="Data Studio" iconURI="platform:/plugin/org.opengauss.mppdbide.view/icons/ToolIcons/32x32(32).png">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_L5pvAPdQEeG3IOiaXuj5Ng" elementId="org.opengauss.mppdbide.window.id.mainwindow" label="Vastdata Data Studio" iconURI="platform:/plugin/org.opengauss.mppdbide.view/icons/ToolIcons/32x32(32).png">
     <tags>shellMaximized</tags>
     <children xsi:type="basic:PartSashContainer" xmi:id="_chYg0JPqEeOwspWUd5Ul7A" elementId="org.opengauss.mppdbide.partsashcontainer.id.main" containerData="" horizontal="true">
       <children xsi:type="basic:PartStack" xmi:id="_chYg0ZPqEeOwspWUd5Ul7A" elementId="org.opengauss.mppdbide.partstack.id.objectbrowser" containerData="15">

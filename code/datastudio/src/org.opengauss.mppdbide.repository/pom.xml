@@ -26,7 +26,7 @@
 			yyyyMMdd_HHmm</maven.build.timestamp.format>
 		<package-copyto-dir>
 			${basedir}/../../build/</package-copyto-dir>
-		<tool-name>Data Studio</tool-name>
+		<tool-name>Vastdata Data Studio</tool-name>
 		<docs-output-dir>
 			${target-product-dir}/${tool-name}/docs/</docs-output-dir>
 		<docs-output-dir_x86_64>

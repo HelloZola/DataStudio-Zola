@@ -157,7 +157,7 @@ public interface IiconPath {
     /**
      * The ico server.
      */
-    String ICO_SERVER = "icon-server.png";
+    String ICO_SERVER = "icon-server2.png";
 
     /**
      * The ico cloud node.

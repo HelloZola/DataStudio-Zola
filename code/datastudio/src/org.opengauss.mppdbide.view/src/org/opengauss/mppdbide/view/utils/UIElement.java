@@ -124,7 +124,7 @@ public final class UIElement {
 
     private static final int MAX_TABS_ALLOWED = 100;
 
-    private static final String RELEASE_NAME = "Data Studio";
+    private static final String RELEASE_NAME = "Vastdata Data Studio";
 
     private EPartService partService;
 

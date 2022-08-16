@@ -167,7 +167,7 @@ public class ExportExcelApachePOI {
             if ("Excel(xlsx)".equals(fileFormat)) {
                 xssfWorkBook = new SXSSFWorkbook();
                 POIXMLProperties properties = xssfWorkBook.getXSSFWorkbook().getProperties();
-                properties.getCoreProperties().setCreator("Data Studio");
+                properties.getCoreProperties().setCreator("Vastdata Data Studio");
                 xssfsheet = xssfWorkBook.createSheet(sheetName);
                 createXSSFCellStyleFormat();
             } else if ("Excel(xls)".equals(fileFormat)) {
@@ -175,7 +175,7 @@ public class ExportExcelApachePOI {
                 hssfWorkBook.createInformationProperties();
                 SummaryInformation summaryInfo = hssfWorkBook.getSummaryInformation();
                 if (null != summaryInfo) {
-                    summaryInfo.setAuthor("Data Studio");
+                    summaryInfo.setAuthor("Vastdata Data Studio");
                 }
                 hssfSheet = (HSSFSheet) hssfWorkBook.createSheet(sheetName);
                 createHSSFCellStyleFormat();

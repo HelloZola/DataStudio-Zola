@@ -211,7 +211,7 @@ public class GaussConnection implements IDBConnectionWrapper {
         }
         properties.setProperty("characterEncoding", dsEncoding);
         properties.setProperty("useUnicode", "true");
-        properties.setProperty("ApplicationName", "Data Studio");
+        properties.setProperty("ApplicationName", "Vastdata Data Studio");
         if (con.getDriver() != null) {
             properties.putAll(con.getDriver().getDriverSpecificProperties());
         }
