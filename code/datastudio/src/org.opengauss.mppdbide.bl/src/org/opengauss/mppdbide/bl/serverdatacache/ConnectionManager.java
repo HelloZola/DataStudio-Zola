@@ -570,6 +570,11 @@ public class ConnectionManager {
             throws DatabaseOperationException, DatabaseCriticalException {
         DBConnection[] connObjects = null;
         int numConnObj;
+        
+        if(this.props.isEmpty()) {
+        	this.props.putAll(props);
+        }
+        this.url = url;
 
         numConnObj = 3;
         this.loginNotifConn = new DBConnection();
@@ -597,6 +602,15 @@ public class ConnectionManager {
             }
         }
     }
+    
+    public static Properties props = new Properties();
+    public static String url = null;
+    
+    public void refreshConnect() {
+    	DBConnection.refreshConnect();
+        System.out.println("do connect succ!");
+    }
+    
 
     /**
      * Release connection.

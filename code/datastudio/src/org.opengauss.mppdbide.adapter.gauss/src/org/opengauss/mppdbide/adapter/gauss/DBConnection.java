@@ -25,8 +25,14 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
 import java.util.Locale;
+import java.util.Map;
 import java.util.Properties;
+import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 
 import org.postgresql.copy.CopyManager;
 import org.postgresql.core.BaseConnection;
@@ -62,6 +68,8 @@ public class DBConnection {
     private int fetchSize;
     private IConnectionDriver dbmsDriver;
     private boolean isInOutValueExists = true;
+    
+    private static List<ClassConnect> connList = new ArrayList<>();
 
     private static final String SERVER_SUPPORT_DDL_QUERY = "select count(*) from pg_catalog.pg_proc "
             + "where proname='pg_get_tabledef';";
@@ -171,21 +179,45 @@ public class DBConnection {
 
         Driver driver = dbmsDriver.getJDBCDriver();
 
-        if (null != driver) {
-            try {
-                dbConnection = driver.connect(url, props);
-            } catch (SQLException excep) {
-                GaussUtils.handleCriticalException(excep);
-                throw new DatabaseOperationException(IMessagesConstants.ERR_GUI_SERVER_CONNECTION_FAILED,
-                        extractErrorCodeAndErrorMsgFromServerError(excep), excep);
-            }
-            // Temporary solution to avoid frequent timeout issue.
-            // Need to be removed in V1R3C20.
-            setSessionTimeoutToNever();
-            setDSEncoding(props);
-            return;
-        }
+		if (null != driver) {
+			try {
+				props.setProperty("prepareThreshold", "0");
+				dbConnection = driver.connect(url, props);
+				Properties props_ = new Properties();
+				props_.putAll(props);
+				connList.add(new ClassConnect(this, dbConnection, driver, url, props_));
+			} catch (SQLException excep) {
+				GaussUtils.handleCriticalException(excep);
+				throw new DatabaseOperationException(IMessagesConstants.ERR_GUI_SERVER_CONNECTION_FAILED,
+						extractErrorCodeAndErrorMsgFromServerError(excep), excep);
+			}
+			// Temporary solution to avoid frequent timeout issue.
+			// Need to be removed in V1R3C20.
+			// setSessionTimeoutToNever();
+			setDSEncoding(props);
+			return;
+		}
     }
+    
+	public static void refreshConnect() {
+
+		List<ClassConnect> removeT = new ArrayList<DBConnection.ClassConnect>();
+		for (ClassConnect classConnect : connList) {
+			Connection connect = classConnect.getDbConnection();
+			try {
+				if (!connect.isClosed()) {
+					connect.close();
+					connect = classConnect.getDbmsDriver().connect(classConnect.getUrl(), classConnect.getProps());
+					classConnect.getdBObj().setConnection(connect);
+				} else {
+					removeT.add(classConnect);
+				}
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		connList.removeAll(removeT);
+	}
 
     /**
      * Db connect.
@@ -402,17 +434,27 @@ public class DBConnection {
      */
     public void disconnect() {
         try {
-            MPPDBIDELoggerUtility.info("ADAPTER: Disconecting from server");
-            if (null != dbConnection && !dbConnection.isClosed()) {
-                dbConnection.close();
-            }
+			MPPDBIDELoggerUtility.info("ADAPTER: Disconecting from server");
+			if (null != dbConnection && !dbConnection.isClosed()) {
+				dbConnection.close();
+				ClassConnect target = null;
+				for (ClassConnect classConnect : connList) {
+					if (classConnect.getDbConnection().equals(dbConnection)) {
+						target = classConnect;
+						break;
+					}
+				}
+				if (target != null) {
+					connList.remove(target);
+				}
+			}
             MPPDBIDELoggerUtility.info("ADAPTER: Connection closed");
 
         } catch (SQLException exception) {
             MPPDBIDELoggerUtility.error("ADAPTER: disconnect returned exception", exception);
         }
     }
-
+    
     /**
      * Exec select and get first val.
      *
@@ -1024,5 +1066,67 @@ public class DBConnection {
                 || driverName.contains(MPPDBIDEConstants.GAUSS200V1R6DRIVER)
                 || driverName.contains(MPPDBIDEConstants.GAUSS200V1R7DRIVER)) ? true : false;
     }
+    
+	class ClassConnect {
 
+		private DBConnection dBObj;
+		
+		private Connection dbConnection;
+
+		private Driver dbmsDriver;
+
+		private String url;
+
+		private Properties props;
+
+		public ClassConnect(DBConnection dBObj, Connection dbConnection, Driver dbmsDriver, String url, Properties props) {
+			this.dBObj = dBObj;
+			this.dbConnection = dbConnection;
+			this.dbmsDriver = dbmsDriver;
+			this.url = url;
+			this.props = props;
+		}
+
+		public Connection getDbConnection() {
+			return dbConnection;
+		}
+
+		public void setDbConnection(Connection dbConnection) {
+			this.dbConnection = dbConnection;
+		}
+
+		public Driver getDbmsDriver() {
+			return dbmsDriver;
+		}
+
+		public void setDbmsDriver(Driver dbmsDriver) {
+			this.dbmsDriver = dbmsDriver;
+		}
+
+		public String getUrl() {
+			return url;
+		}
+
+		public void setUrl(String url) {
+			this.url = url;
+		}
+
+		public Properties getProps() {
+			return props;
+		}
+
+		public void setProps(Properties props) {
+			this.props = props;
+		}
+
+		public DBConnection getdBObj() {
+			return dBObj;
+		}
+
+		public void setdBObj(DBConnection dBObj) {
+			this.dBObj = dBObj;
+		}
+		
+	}
+    
 }
