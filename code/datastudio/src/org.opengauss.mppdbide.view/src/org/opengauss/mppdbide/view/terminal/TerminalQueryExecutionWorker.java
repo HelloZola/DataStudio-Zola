@@ -17,9 +17,11 @@ package org.opengauss.mppdbide.view.terminal;
 
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.HashSet;
 
 import org.eclipse.core.runtime.Status;
+import org.eclipse.e4.ui.model.application.ui.basic.MPartStack;
 import org.eclipse.swt.widgets.Display;
 
 import org.opengauss.mppdbide.adapter.gauss.DBConnection;
@@ -145,9 +147,24 @@ public class TerminalQueryExecutionWorker extends UIWorkerJob {
          * start over again).
          */
         executeQueries(jobContext);
+        
+		if (isSetSessionTimeout(jobContext)) {
+			this.getTaskDB().getConnectionManager().refreshConnect();
+		}
 
         return null;
     }
+    
+	private boolean isSetSessionTimeout(SqlQueryExecutionWorkingContext jobContext) {
+
+		ArrayList<String> lists = jobContext.getQueryArray();
+		for (String sql : lists) {
+			if (sql.toLowerCase().contains("session_timeout") && sql.toLowerCase().contains("alter")) {
+				return true;
+			}
+		}
+		return false;
+	}
 
     private SqlQueryExecutionWorkingContext getJobContext() throws MPPDBIDEException, DatabaseOperationException {
         this.context.setCriticalErrorThrown(false);
