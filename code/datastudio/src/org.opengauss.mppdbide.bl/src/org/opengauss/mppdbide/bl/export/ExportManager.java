@@ -267,7 +267,7 @@ public class ExportManager implements IExportManager {
             fileMode = StandardOpenOption.APPEND;
             String dbgObjectDDL = dbgObject.getSourceCode().getCode();
             dbgObjectDDL = renderDDL(dbgObjectDDL);
-            Files.write(createdFilePath, dbgObjectDDL.getBytes(fileEncodingName);, fileMode);
+            Files.write(createdFilePath, dbgObjectDDL.getBytes(fileEncodingName), fileMode);
             addAclDDL(createdFilePath, dbgObject, conn, "FUNCTION");
             if (eventTable != null) {
                 eventTable
