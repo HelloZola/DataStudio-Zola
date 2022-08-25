@@ -265,7 +265,9 @@ public class ExportManager implements IExportManager {
 
             addDebugObjectHeader(createdFilePath, fileMode, dbgObject, fileEncodingName);
             fileMode = StandardOpenOption.APPEND;
-            Files.write(createdFilePath, dbgObject.getSourceCode().getCode().getBytes(fileEncodingName), fileMode);
+            String dbgObjectDDL = dbgObject.getSourceCode().getCode();
+            dbgObjectDDL = renderDDL(dbgObjectDDL);
+            Files.write(createdFilePath, dbgObjectDDL.getBytes(fileEncodingName);, fileMode);
             addAclDDL(createdFilePath, dbgObject, conn, "FUNCTION");
             if (eventTable != null) {
                 eventTable
@@ -273,6 +275,14 @@ public class ExportManager implements IExportManager {
             }
         }
     }
+
+	private String renderDDL(String ddl) {
+
+		while (ddl.trim().endsWith("/")) {
+			ddl = ddl.substring(0, ddl.length() - 1);
+		}
+		return ddl;
+	}
 
     private void writeTriggerDDL(ArrayList<ServerObject> objList, Path createdFilePath, DBConnection conn)
             throws DatabaseOperationException, DatabaseCriticalException, IOException, UnsupportedEncodingException {
