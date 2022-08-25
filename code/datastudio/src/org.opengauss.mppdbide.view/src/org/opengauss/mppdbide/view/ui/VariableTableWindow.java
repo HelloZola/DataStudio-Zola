@@ -33,10 +33,13 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableItem;
-
+import org.opengauss.mppdbide.adapter.gauss.DBConnection;
+import org.opengauss.mppdbide.adapter.gauss.Datatype;
 import org.opengauss.mppdbide.adapter.gauss.GaussDatatypeUtils;
 import org.opengauss.mppdbide.bl.serverdatacache.DefaultParameter;
 import org.opengauss.mppdbide.bl.serverdatacache.IDebugObject;
+import org.opengauss.mppdbide.bl.serverdatacache.TypeMetaData;
+import org.opengauss.mppdbide.bl.serverdatacache.TypeMetaDataUtil;
 import org.opengauss.mppdbide.debuger.vo.VariableVo;
 import org.opengauss.mppdbide.utils.IMessagesConstants;
 import org.opengauss.mppdbide.utils.loader.MessageConfigLoader;
@@ -162,12 +165,35 @@ public class VariableTableWindow extends WindowBase<VariableVo> {
             return value;
         }
 
-        private String getType() {
-            int typeCode = variableVo.dtype.intValue();
-            String type = GaussDatatypeUtils.getDataTypeHashMap().get(typeCode).getTypename();
-            return type;
-        }
+		private String getType() {
+			int typeCode = variableVo.dtype.intValue();
+			Datatype datatype = GaussDatatypeUtils.getDataTypeHashMap().get(typeCode);
+			if (datatype == null) {
+				datatype = reloadTypeMetaData(typeCode);
+			}
+			return datatype.getTypename();
+		}
 
+		private Datatype reloadTypeMetaData(int typeCode) {
+
+			try {
+				DBConnection dbconnection = DebugServiceHelper.getInstance().getDebugObject().getDatabase()
+						.getConnectionManager().getFreeConnection();
+				TypeMetaData typeMetaData = TypeMetaDataUtil.fetchTypeByOid(typeCode, dbconnection);
+				if (typeMetaData == null) {
+					return null;
+				}
+				Datatype dataType = new Datatype(Integer.parseInt(String.valueOf(typeMetaData.getOid())),
+						typeMetaData.getName(), true);
+				GaussDatatypeUtils.addNewDataType(Integer.parseInt(String.valueOf(typeMetaData.getOid())), dataType);
+				return dataType;
+			} catch (Exception e) {
+				// ignore error
+			}
+			return null;
+		}
+
+		
         private String getParamType() {
             PLSourceEditor plSourceEditor = UIElement.getInstance().getVisibleSourceViewer();
             IDebugObject debugObject = plSourceEditor.getDebugObject();

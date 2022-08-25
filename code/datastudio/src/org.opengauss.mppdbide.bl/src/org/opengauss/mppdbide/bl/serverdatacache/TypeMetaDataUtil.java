@@ -15,9 +15,14 @@
 
 package org.opengauss.mppdbide.bl.serverdatacache;
 
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.util.ArrayList;
 
+import org.opengauss.mppdbide.adapter.gauss.DBConnection;
+import org.opengauss.mppdbide.utils.IMessagesConstants;
 import org.opengauss.mppdbide.utils.MPPDBIDEConstants;
+import org.opengauss.mppdbide.utils.exceptions.DatabaseOperationException;
 
 /**
  * 
@@ -72,4 +77,32 @@ public class TypeMetaDataUtil {
 
         return null;
     }
+    
+    public static final String TYPE_STATENMENT_BY_OID = "select pt.oid as typeoid, pt.typename as typename from pg_type pt where pt.oid = ?";
+
+	public static TypeMetaData fetchTypeByOid(int oid, DBConnection dbconnection) throws DatabaseOperationException {
+
+		PreparedStatement preparedStatement = null;
+		ResultSet rs = null;
+		try {
+			preparedStatement = dbconnection.getPrepareStmt(TYPE_STATENMENT_BY_OID);
+			preparedStatement.setInt(1, oid);
+			rs = preparedStatement.executeQuery();
+			boolean hasNext = rs.next();
+			while (hasNext) {
+				TypeMetaData typeMetaData = new TypeMetaData(0, rs.getString("typename"), null);
+				typeMetaData.setName(rs.getString("typename"));
+				typeMetaData.setOid(rs.getLong("typeoid"));
+				return typeMetaData;
+			}
+			return null;
+		} catch (Exception e) {
+			// TODO: handle exception
+			throw new DatabaseOperationException(IMessagesConstants.ERR_GUI_RESULT_SET_INVALID);
+		} finally {
+			if (rs != null) {
+				dbconnection.closeResultSet(rs);
+			}
+		}
+	}
 }
