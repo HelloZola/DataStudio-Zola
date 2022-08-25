@@ -78,7 +78,7 @@ public class TypeMetaDataUtil {
         return null;
     }
     
-    public static final String TYPE_STATENMENT_BY_OID = "select pt.oid as typeoid, pt.typename as typename from pg_type pt where pt.oid = ?";
+    public static final String TYPE_STATENMENT_BY_OID = "select pt.oid as typeoid, pt.typname as typename from pg_type pt where pt.oid = ?";
 
 	public static TypeMetaData fetchTypeByOid(int oid, DBConnection dbconnection) throws DatabaseOperationException {
 
