@@ -27,6 +27,8 @@ import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.opengauss.mppdbide.adapter.gauss.DBConnection;
 import org.opengauss.mppdbide.bl.preferences.BLPreferenceManager;
@@ -278,7 +280,9 @@ public class ExportManager implements IExportManager {
 
 	private String renderDDL(String ddl) {
 
-		while (ddl.trim().endsWith("/")) {
+		String reg = "(.*)([/]{1,})([\\s]*)([/]{1,})";
+		Pattern pattern = Pattern.compile(reg);
+		while (pattern.matcher(ddl).find()) {
 			ddl = ddl.substring(0, ddl.length() - 1);
 		}
 		return ddl;
