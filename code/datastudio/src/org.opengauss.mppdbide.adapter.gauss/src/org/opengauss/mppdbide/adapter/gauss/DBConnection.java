@@ -36,12 +36,13 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.postgresql.PGConnection;
 import org.postgresql.copy.CopyManager;
 import org.postgresql.core.BaseConnection;
 import org.postgresql.core.BaseStatement;
 import org.postgresql.core.TransactionState;
 import org.postgresql.jdbc.PgConnection;
-
+import org.apache.commons.lang.StringUtils;
 import org.opengauss.mppdbide.adapter.IConnectionDriver;
 import org.opengauss.mppdbide.utils.DsEncodingEnum;
 import org.opengauss.mppdbide.utils.IMessagesConstants;
@@ -75,6 +76,9 @@ public class DBConnection {
     
     private boolean openTxnForCursor = false;
     private boolean openTxnForBegin = false;
+    
+    private String dbUser;
+    private String socketAddress;
     
     private static List<ClassConnect> connList = new ArrayList<>();
 
@@ -190,6 +194,17 @@ public class DBConnection {
 			try {
 				props.setProperty("prepareThreshold", "0");
 				dbConnection = driver.connect(url, props);
+				
+				if(dbUser == null) {
+					dbUser = props.getProperty("user");
+				}
+
+				if (StringUtils.isBlank(socketAddress)) {
+					if (dbConnection instanceof PgConnection) {
+						socketAddress = ((PgConnection) dbConnection).getSocketAddress();
+					}
+				}
+				
 				Properties props_ = new Properties();
 				props_.putAll(props);
 				connList.add(new ClassConnect(this, dbConnection, driver, url, props_));
@@ -1187,7 +1202,6 @@ public class DBConnection {
 		public void setdBObj(DBConnection dBObj) {
 			this.dBObj = dBObj;
 		}
-		
 	}
 
 	public boolean isOpenTxnForCursor() {
@@ -1205,5 +1219,13 @@ public class DBConnection {
 	public void setOpenTxnForBegin(boolean openTxnForBegin) {
 		this.openTxnForBegin = openTxnForBegin;
 	}
-    
+
+	public String getDbUser() {
+		return dbUser;
+	}
+
+	public String getSocketAddress() {
+		return socketAddress;
+	}
+
 }

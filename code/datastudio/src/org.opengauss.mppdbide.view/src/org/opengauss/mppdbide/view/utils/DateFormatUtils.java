@@ -16,6 +16,9 @@
 package org.opengauss.mppdbide.view.utils;
 
 import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import org.opengauss.mppdbide.utils.ConvertTimeStampValues;
 import org.opengauss.mppdbide.utils.ConvertTimeValues;
 import org.opengauss.mppdbide.utils.MPPDBIDEConstants;
@@ -62,4 +65,11 @@ public class DateFormatUtils {
         }
         return "";
     }
+    
+	public final static String yyyyMMddHHmmss = "yyyy-MM-dd HH:mm:ss";
+
+	public static String dataFormat(String formatType, Date date) {
+		SimpleDateFormat sdf = new SimpleDateFormat(formatType);
+		return sdf.format(date);
+	}
 }

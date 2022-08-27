@@ -93,6 +93,7 @@ import org.opengauss.mppdbide.bl.serverdatacache.helper.SchemaHelper;
 import org.opengauss.mppdbide.bl.serverdatacache.savepsswordoption.SavePrdOptions;
 import org.opengauss.mppdbide.bl.util.ExecTimer;
 import org.opengauss.mppdbide.bl.util.IExecTimer;
+import org.opengauss.mppdbide.presentation.IExecutionContext;
 import org.opengauss.mppdbide.utils.CustomStringUtility;
 import org.opengauss.mppdbide.utils.IMessagesConstants;
 import org.opengauss.mppdbide.utils.MPPDBIDEConstants;
@@ -115,8 +116,11 @@ import org.opengauss.mppdbide.view.core.statusbar.ObjectBrowserStatusBarProvider
 import org.opengauss.mppdbide.view.handler.HandlerUtilities;
 import org.opengauss.mppdbide.view.handler.util.TableViewerUtil;
 import org.opengauss.mppdbide.view.init.IDSCommandlineOptions;
+import org.opengauss.mppdbide.view.terminal.InitTerminalQueryExecutionWorker;
+import org.opengauss.mppdbide.view.terminal.executioncontext.SQLTerminalExecutionContext;
 import org.opengauss.mppdbide.view.ui.DBAssistantWindow;
 import org.opengauss.mppdbide.view.ui.ObjectBrowser;
+import org.opengauss.mppdbide.view.ui.terminal.SQLTerminal;
 import org.opengauss.mppdbide.view.uidisplay.UIDisplayFactoryProvider;
 import org.opengauss.mppdbide.view.utils.IDEMemoryAnalyzer;
 import org.opengauss.mppdbide.view.utils.UIElement;
@@ -2286,7 +2290,10 @@ public class DBConnectionDialog extends ConnectionDialog {
 
             private void createSQLTerminal(Database database) {
                 if (database != null) {
-                    UIElement.getInstance().createNewTerminal(database);
+                	SQLTerminal sqlTerminal = UIElement.getInstance().createNewTerminal(database);
+                	IExecutionContext context = new SQLTerminalExecutionContext(getParentShell(), sqlTerminal);
+                	InitTerminalQueryExecutionWorker worker = new InitTerminalQueryExecutionWorker(context);
+                	worker.schedule();
                 }
             }
 
