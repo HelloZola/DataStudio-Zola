@@ -236,6 +236,10 @@ public interface DatabaseUtils {
                 }
             }
 
+			if (query.toLowerCase().trim().startsWith("begin")) {
+				conn.setOpenTxnForBegin(true);
+			}
+            
             stmt = executeQuery(query, conn, messageQueue);
 
             if (stmt.getCalStmt() != null) {
@@ -257,7 +261,7 @@ public interface DatabaseUtils {
             // Not expected to come here as this has a single caller.
             return queryResult;
         } catch (SQLException objSQL) {
-            handleSQLException(connection, objSQL);
+            handleSQLException(connection, objSQL, conn);
 
             throw new DatabaseOperationException(IMessagesConstants.ERR_DATABASE_OPERATION_FAILURE, objSQL);
         } finally {
@@ -271,11 +275,14 @@ public interface DatabaseUtils {
      * @param connection the connection
      * @param objSQL the sql object
      */
-    static void handleSQLException(Connection connection, SQLException objSQL) {
+    static void handleSQLException(Connection connection, SQLException objSQL, DBConnection conn) {
         try {
             if (!connection.getAutoCommit()) {
+            	connection.rollback();
                 connection.commit();
+                connection.setAutoCommit(true);
             }
+            conn.setOpenTxnForBegin(false);
         } catch (SQLException objExp) {
             MPPDBIDELoggerUtility.error("Database : Database operation exeception", objExp);
         }

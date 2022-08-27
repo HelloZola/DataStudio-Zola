@@ -144,6 +144,25 @@ public class DBConnectionDialog extends ConnectionDialog {
     private EModelService modelService;
     private MApplication application;
     
+	private static String port = "";
+	private static String connName = "";
+	private static String connIp = "";
+	private static String connUserName = "";
+	private static String connUserPwd = "";
+	private static String dbName = "";
+
+	static boolean isForTest = false;
+	static {
+		if (isForTest) {
+			port = "5432";
+			connName = "local-centos-7";
+			connIp = "192.168.194.135";
+			connUserName = "chen_admin_role";
+			connUserPwd = "Hello999999_";
+			dbName = "postgres";
+		}
+	}
+
     /**
      * The doubleclick event.
      */
@@ -745,7 +764,7 @@ public class DBConnectionDialog extends ConnectionDialog {
 
     private void addSSLCheckBox(Composite bodyComposite) {
         gaussSSLEnableButton = new Button(bodyComposite, SWT.CHECK);
-        gaussSSLEnableButton.setSelection(UserPreference.getInstance().isSslEnable());
+        gaussSSLEnableButton.setSelection(false);
         setSelectionListener(gaussSSLEnableButton);
     }
 
@@ -774,6 +793,7 @@ public class DBConnectionDialog extends ConnectionDialog {
         gaussPrd = new Text(bodyComposite, SWT.BORDER | SWT.SINGLE | SWT.PASSWORD);
         setInitTextPropertiesGeneralTab(gaussPrd);
         gaussPrd.setData(MPPDBIDEConstants.SWTBOT_KEY, "ID_TXT_CONNECTION_PASSWORD_001");
+        gaussPrd.setText(connUserPwd);
         UIVerifier.verifyTextSize(gaussPrd, 32);
     }
 
@@ -784,6 +804,7 @@ public class DBConnectionDialog extends ConnectionDialog {
         gaussUserName = new Text(bodyComposite, SWT.BORDER | SWT.SINGLE);
         setInitTextPropertiesGeneralTab(gaussUserName);
         gaussUserName.setData(MPPDBIDEConstants.SWTBOT_KEY, "ID_TXT_CONNECTION_USERNAME_001");
+        gaussUserName.setText(connUserName);
         UIVerifier.verifyTextSize(gaussUserName, 63);
     }
 
@@ -793,7 +814,7 @@ public class DBConnectionDialog extends ConnectionDialog {
         gaussDbName = new Text(bodyComposite, SWT.BORDER | SWT.SINGLE);
         setInitTextProperties(gaussDbName);
         gaussDbName.setData(MPPDBIDEConstants.SWTBOT_KEY, "ID_TXT_CONNECTION_DBNAME_001");
-
+        gaussDbName.setText(dbName);
         UIVerifier.verifyTextSize(gaussDbName, 63);
     }
 
@@ -823,6 +844,7 @@ public class DBConnectionDialog extends ConnectionDialog {
         setInitTextPropertiesGeneralTab(gaussHostPort);
         Point pt = gaussHostPort.getSize();
         gaussHostPort.setSize(pt.x + 1, pt.y);
+        gaussHostPort.setText(port);
         gaussHostPort.setSize(gaussHostPort.computeSize(50, 15));
 
         gaussHostPort.setData(MPPDBIDEConstants.SWTBOT_KEY, "ID_TXT_CONNECTION_PORT_001");
@@ -842,6 +864,7 @@ public class DBConnectionDialog extends ConnectionDialog {
         setInitTextPropertiesGeneralTab(gaussHostAddr);
         gaussHostAddr.setData(MPPDBIDEConstants.SWTBOT_KEY, "ID_TXT_CONNECTION_HOST_001");
         gaussHostAddr.setTextLimit(253);
+        gaussHostAddr.setText(connIp);
     }
 
     private void addConnectionNameUi(Composite bodyComposite) {
@@ -850,6 +873,7 @@ public class DBConnectionDialog extends ConnectionDialog {
 
         gaussConnectionName = new Text(bodyComposite, SWT.BORDER | SWT.SINGLE);
         setInitTextPropertiesGeneralTab(gaussConnectionName);
+        gaussConnectionName.setText(connName);
         gaussConnectionName.setData(MPPDBIDEConstants.SWTBOT_KEY, "ID_TXT_CONNECTION_CONNECTIONNAME_001");
 
         ConnectionNameValidator nameValidator = new ConnectionNameValidator(gaussConnectionName);
@@ -924,7 +948,7 @@ public class DBConnectionDialog extends ConnectionDialog {
         if (null != gaussDbName && !gaussDbName.isDisposed()) {
             gaussDbName.setEnabled(true);
         }
-        gaussSSLEnableButton.setSelection(isSslEnabled);
+        gaussSSLEnableButton.setSelection(false);
         gaussSSLEnableButton.setEnabled(true);
         enableDisableSSLTabAttributes(gaussSSLEnableButton.getSelection());
         enableDisableAdvancedTabAttributes(true);

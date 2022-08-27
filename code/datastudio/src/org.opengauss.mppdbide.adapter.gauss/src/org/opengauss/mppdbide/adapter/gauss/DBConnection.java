@@ -69,6 +69,9 @@ public class DBConnection {
     private IConnectionDriver dbmsDriver;
     private boolean isInOutValueExists = true;
     
+    private boolean openTxnForCursor = false;
+    private boolean openTxnForBegin = false;
+    
     private static List<ClassConnect> connList = new ArrayList<>();
 
     private static final String SERVER_SUPPORT_DDL_QUERY = "select count(*) from pg_catalog.pg_proc "
@@ -1127,6 +1130,22 @@ public class DBConnection {
 			this.dBObj = dBObj;
 		}
 		
+	}
+
+	public boolean isOpenTxnForCursor() {
+		return openTxnForCursor;
+	}
+
+	public void setOpenTxnForCursor(boolean openTxnForCursor) {
+		this.openTxnForCursor = openTxnForCursor;
+	}
+
+	public boolean isOpenTxnForBegin() {
+		return openTxnForBegin;
+	}
+
+	public void setOpenTxnForBegin(boolean openTxnForBegin) {
+		this.openTxnForBegin = openTxnForBegin;
 	}
     
 }

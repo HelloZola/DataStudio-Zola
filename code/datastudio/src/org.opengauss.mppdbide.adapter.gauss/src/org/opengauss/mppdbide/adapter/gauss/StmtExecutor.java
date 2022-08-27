@@ -292,15 +292,32 @@ public class StmtExecutor {
             MPPDBIDELoggerUtility.info("ADAPTER: User query Executed successfully");
         } catch (SQLException excep) {
             closeStatement();
+            closeTxn();
             GaussUtils.handleCriticalException(excep);
             throw new DatabaseOperationException(IMessagesConstants.ERR_BL_EXECUTE_FAILED,
                     connection.extractErrorCodeAndErrorMsgFromServerError(excep), excep);
         } catch (OutOfMemoryError excep) { 
             closeStatement();
+            closeTxn();
             MPPDBIDELoggerUtility.error("OutOfMemoryError ocurred");
             throw new DatabaseCriticalException(IMessagesConstants.ERR_MSG_OUT_OF_MEMORY_ERROR_OCCURRED, excep);
         }
     }
+    
+	private void closeTxn() {
+		try {
+			boolean begin = connection.isOpenTxnForBegin();
+
+			connection.setOpenTxnForBegin(false);
+			connection.rollback();
+			connection.getConnection().setAutoCommit(true);
+//			if (begin) {
+//				connection.getConnection().commit();
+//			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 
     /**
      * handle type of query result
