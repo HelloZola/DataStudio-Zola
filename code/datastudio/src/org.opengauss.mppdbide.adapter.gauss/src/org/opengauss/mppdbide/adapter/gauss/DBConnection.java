@@ -33,6 +33,8 @@ import java.util.Map;
 import java.util.Properties;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.postgresql.copy.CopyManager;
 import org.postgresql.core.BaseConnection;
@@ -51,7 +53,9 @@ import org.opengauss.mppdbide.utils.loader.MessageConfigLoader;
 import org.opengauss.mppdbide.utils.logger.ILogger;
 import org.opengauss.mppdbide.utils.logger.MPPDBIDELoggerUtility;
 import org.opengauss.mppdbide.utils.messaging.GlobaMessageQueueUtil;
+import org.opengauss.mppdbide.utils.messaging.Message;
 import org.opengauss.mppdbide.utils.messaging.MessageQueue;
+import org.opengauss.mppdbide.utils.messaging.MessageType;
 
 /**
  * 
@@ -940,19 +944,73 @@ public class DBConnection {
      * @throws DatabaseCriticalException the database critical exception
      * @throws DatabaseOperationException the database operation exception
      */
-    public void registerNoticeListner(Statement stmt, MessageQueue messageQueue)
-            throws DatabaseCriticalException, DatabaseOperationException {
-        try {
-            if (stmt instanceof BaseStatement) {
-                ((BaseStatement) stmt).addNoticeListener(new GaussMppDbNoticeListner(messageQueue));
-            }
-        }
+	public void registerNoticeListner(Statement stmt, MessageQueue messageQueue)
+			throws DatabaseCriticalException, DatabaseOperationException {
+		try {
+			if (stmt instanceof BaseStatement) {
+				((BaseStatement) stmt)
+						.addNoticeListener(new GaussMppDbNoticeListner(messageQueue, new MsgPlusHandler() {
 
-        catch (SQLException excep) {
-            GaussUtils.handleCriticalException(excep);
-            throw new DatabaseOperationException(IMessagesConstants.ERR_GUI_STMT_EXCEPTION, excep);
-        }
-    }
+							@Override
+							public List<String> handlerMsg(String msg) {
+
+								List<String> result = new ArrayList<String>();
+								result.add(msg);
+								if (msg.contains("thresholdsize")) {
+									String reg = "(.*)(Tablespace)(.*)(size exceeds thresholdsize)";
+									Pattern pattern = Pattern.compile(reg);
+									Matcher ma = pattern.matcher(msg);
+
+									if (ma.find()) {
+										printTableSpaceHint(ma.group(3).trim(), messageQueue);
+									}
+								}
+								return result;
+							}
+						}));
+			}
+		} catch (SQLException excep) {
+			GaussUtils.handleCriticalException(excep);
+			throw new DatabaseOperationException(IMessagesConstants.ERR_GUI_STMT_EXCEPTION, excep);
+		}
+	}
+    
+	private void printTableSpaceHint(String tbName, MessageQueue messageQueue) {
+
+		new Thread(new Runnable() {
+			@Override
+			public void run() {
+				Statement statement = null;
+				try {
+					statement = getConnection().createStatement();
+					ResultSet rs = statement
+							.executeQuery("select * from PG_TABLESPACE where spcname='" + tbName + "';");
+					while (rs.next()) {
+						String spcthreshold = rs.getString("spcthreshold");
+						String spcmaxsize = rs.getString("spcmaxsize");
+
+						StringBuilder sbuf = new StringBuilder();
+						sbuf.append("HINT:  maxsize ").append(spcmaxsize).append(", threshold size is ")
+								.append(spcthreshold)
+								// .append(", current size is ").append("xxx")
+								.append(", request size is ").append(spcmaxsize);
+						String result = sbuf.toString();
+						MPPDBIDELoggerUtility.info(result);
+						Message mmsg = new Message(MessageType.NOTICE, result);
+						messageQueue.push(mmsg);
+						break;
+					}
+				} catch (SQLException e) {
+					e.printStackTrace();
+				} finally {
+					try {
+						statement.close();
+					} catch (SQLException e) {
+					}
+				}
+			}
+		}).start();
+	}
 
     /**
      * Close result set.

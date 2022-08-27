@@ -16,9 +16,10 @@
 package org.opengauss.mppdbide.adapter.gauss;
 
 import java.sql.SQLWarning;
+import java.util.List;
 
 import org.postgresql.core.NoticeListener;
-
+import org.apache.commons.lang.StringUtils;
 import org.opengauss.mppdbide.utils.messaging.IMessageQueue;
 import org.opengauss.mppdbide.utils.messaging.Message;
 import org.opengauss.mppdbide.utils.messaging.MessageQueue;
@@ -33,7 +34,9 @@ import org.opengauss.mppdbide.utils.messaging.MessageType;
  * @since 3.0.0
  */
 public class GaussMppDbNoticeListner implements NoticeListener {
+	
     private IMessageQueue msgQ;
+    private MsgPlusHandler msgPlusHandler;
 
     /**
      * Instantiates a new gauss mpp db notice listner.
@@ -42,6 +45,11 @@ public class GaussMppDbNoticeListner implements NoticeListener {
      */
     public GaussMppDbNoticeListner(MessageQueue messageQueue) {
         msgQ = messageQueue;
+    }
+    
+    public GaussMppDbNoticeListner(MessageQueue messageQueue, MsgPlusHandler msgPlusHandler) {
+        this.msgQ = messageQueue;
+        this.msgPlusHandler = msgPlusHandler;
     }
 
     @Override
@@ -52,7 +60,17 @@ public class GaussMppDbNoticeListner implements NoticeListener {
 
         String msgString = notice.getMessage();
         Message msg = new Message(MessageType.NOTICE, msgString);
-        msgQ.push(msg);
+		if (msgPlusHandler != null) {
+			List<String> msgList = msgPlusHandler.handlerMsg(msgString);
+			for (String mm : msgList) {
+				if(StringUtils.isNotBlank(mm)) {
+					Message mmsg = new Message(MessageType.NOTICE, mm);
+					msgQ.push(mmsg);
+				}
+			}
+		} else {
+			msgQ.push(msg);
+		}
     }
 
 }
