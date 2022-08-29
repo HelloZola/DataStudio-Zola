@@ -1003,15 +1003,36 @@ public class DBConnection {
 					while (rs.next()) {
 						String spcthreshold = rs.getString("spcthreshold");
 						String spcmaxsize = rs.getString("spcmaxsize");
+						String tbCurSize = getSizeOfTb(tbName);
 
 						StringBuilder sbuf = new StringBuilder();
-						sbuf.append("HINT:  maxsize ").append(spcmaxsize).append(", threshold size is ")
-								.append(spcthreshold)
-								// .append(", current size is ").append("xxx")
-								.append(", request size is ").append(spcmaxsize);
-						String result = sbuf.toString();
-						MPPDBIDELoggerUtility.info(result);
-						Message mmsg = new Message(MessageType.NOTICE, result);
+						sbuf.append("HINT:  ");
+
+						if (StringUtils.isNotBlank(spcthreshold)) {
+							sbuf.append("maxsize ").append(spcmaxsize);
+						}
+
+						if (StringUtils.isNotBlank(spcthreshold)) {
+							if (!sbuf.toString().trim().endsWith(",") && !sbuf.toString().trim().endsWith(":")) {
+								sbuf.append(", ");
+							}
+							sbuf.append("threshold size is ").append(spcthreshold);
+						}
+
+						if (StringUtils.isNotBlank(tbCurSize)) {
+							if (!sbuf.toString().trim().endsWith(",") && !sbuf.toString().trim().endsWith(":")) {
+								sbuf.append(", ");
+							}
+							sbuf.append("current size is ").append(tbCurSize);
+						}
+
+						if (StringUtils.isNotBlank(spcmaxsize)) {
+							if (!sbuf.toString().trim().endsWith(",") && !sbuf.toString().trim().endsWith(":")) {
+								sbuf.append(", ");
+							}
+							sbuf.append(" request size is ").append(spcmaxsize);
+						}
+						Message mmsg = new Message(MessageType.NOTICE, sbuf.toString());
 						messageQueue.push(mmsg);
 						break;
 					}
@@ -1026,7 +1047,28 @@ public class DBConnection {
 			}
 		}).start();
 	}
+	
+	private String getSizeOfTb(String tbName) {
 
+		Statement statement = null;
+		try {
+			statement = getConnection().createStatement();
+			ResultSet rs = statement
+					.executeQuery("select pg_size_pretty(pg_tablespace_size('" + tbName + "')) as size;");
+			while (rs.next()) {
+				return rs.getString("size");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				statement.close();
+			} catch (SQLException e) {
+			}
+		}
+		return null;
+	}
+	
     /**
      * Close result set.
      *

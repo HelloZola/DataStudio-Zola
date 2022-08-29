@@ -183,7 +183,7 @@ public class InitTerminalQueryExecutionWorker extends UIWorkerJob {
 				consoleData.add("Last failed login info");
 			}
 			consoleData.add("login time: " + record.getLoginTime());
-			consoleData.add("application name: " + record.getMethod());
+			consoleData.add("application name: " + record.getApplicationName());
 			consoleData.add("Ip address: " + record.getIpAddress());
 			consoleData.add("method: " + record.getMethod());
 		}
