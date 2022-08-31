@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (c) 2022 Huawei Technologies Co.,Ltd.
  *
  * openGauss is licensed under Mulan PSL v2.
@@ -6,7 +6,7 @@
  * You may obtain a copy of Mulan PSL v2 at:
  *
  *           http://license.coscl.org.cn/MulanPSL2
- *        
+ *
  * THIS SOFTWARE IS PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OF ANY KIND,
  * EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO NON-INFRINGEMENT,
  * MERCHANTABILITY OR FIT FOR A PARTICULAR PURPOSE.
@@ -93,6 +93,7 @@ import org.opengauss.mppdbide.bl.serverdatacache.helper.SchemaHelper;
 import org.opengauss.mppdbide.bl.serverdatacache.savepsswordoption.SavePrdOptions;
 import org.opengauss.mppdbide.bl.util.ExecTimer;
 import org.opengauss.mppdbide.bl.util.IExecTimer;
+import org.opengauss.mppdbide.presentation.IExecutionContext;
 import org.opengauss.mppdbide.utils.CustomStringUtility;
 import org.opengauss.mppdbide.utils.IMessagesConstants;
 import org.opengauss.mppdbide.utils.MPPDBIDEConstants;
@@ -115,8 +116,10 @@ import org.opengauss.mppdbide.view.core.statusbar.ObjectBrowserStatusBarProvider
 import org.opengauss.mppdbide.view.handler.HandlerUtilities;
 import org.opengauss.mppdbide.view.handler.util.TableViewerUtil;
 import org.opengauss.mppdbide.view.init.IDSCommandlineOptions;
+import org.opengauss.mppdbide.view.terminal.executioncontext.SQLTerminalExecutionContext;
 import org.opengauss.mppdbide.view.ui.DBAssistantWindow;
 import org.opengauss.mppdbide.view.ui.ObjectBrowser;
+import org.opengauss.mppdbide.view.ui.terminal.SQLTerminal;
 import org.opengauss.mppdbide.view.uidisplay.UIDisplayFactoryProvider;
 import org.opengauss.mppdbide.view.utils.IDEMemoryAnalyzer;
 import org.opengauss.mppdbide.view.utils.UIElement;
@@ -129,9 +132,9 @@ import org.opengauss.mppdbide.view.utils.icon.IconUtility;
 import org.opengauss.mppdbide.view.utils.icon.IiconPath;
 
 /**
- * 
+ *
  * Title: class
- * 
+ *
  * Description: The Class DBConnectionDialog.
  *
  * @since 3.0.0
@@ -143,7 +146,26 @@ public class DBConnectionDialog extends ConnectionDialog {
 
     private EModelService modelService;
     private MApplication application;
-    
+
+    private static String port = "";
+    private static String connName = "";
+    private static String connIp = "";
+    private static String connUserName = "";
+    private static String connUserPwd = "";
+    private static String dbName = "";
+
+    static boolean isForTest = false;
+    static {
+        if (isForTest) {
+            port = "5432";
+            connName = "local-centos-7";
+            connIp = "192.168.194.137";
+            connUserName = "chen_admin_role";
+            connUserPwd = "Hello999999_";
+            dbName = "postgres";
+        }
+    }
+
     /**
      * The doubleclick event.
      */
@@ -157,8 +179,8 @@ public class DBConnectionDialog extends ConnectionDialog {
     private boolean flag = false;
 
     private String[] columns = new String[] {MessageConfigLoader.getProperty(IMessagesConstants.CONNECTION_NAME),
-        MessageConfigLoader.getProperty(IMessagesConstants.CONNECTION_DETAILS),
-        MessageConfigLoader.getProperty(IMessagesConstants.CONN_PROP_DB_VERSION)};
+            MessageConfigLoader.getProperty(IMessagesConstants.CONNECTION_DETAILS),
+            MessageConfigLoader.getProperty(IMessagesConstants.CONN_PROP_DB_VERSION)};
 
     private UIElement uiElementInstance;
     private Composite bodyComposite;
@@ -179,7 +201,7 @@ public class DBConnectionDialog extends ConnectionDialog {
      * @param application the application
      */
     public DBConnectionDialog(Shell parentShell, EModelService modelService, MApplication application,
-            boolean isCommandlineFlow) {
+                              boolean isCommandlineFlow) {
         super(parentShell);
         this.isCommandlineFlow = isCommandlineFlow;
         this.application = application;
@@ -359,7 +381,7 @@ public class DBConnectionDialog extends ConnectionDialog {
         tabGeneral.setText("  " + MessageConfigLoader.getProperty(IMessagesConstants.CTAB_GENERAL) + "  ");
         folder.setSelection(tabGeneral);
         folder.setSelectionBackground(new Color[] {generalComposite.getBackground(), generalComposite.getBackground(),
-            generalComposite.getBackground()}, new int[] {50, 100});
+                generalComposite.getBackground()}, new int[] {50, 100});
 
         tabGeneral.setControl(createGaussControls(generalComposite));
         return generalComposite;
@@ -457,9 +479,9 @@ public class DBConnectionDialog extends ConnectionDialog {
     }
 
     /**
-     * 
+     *
      * Title: class
-     * 
+     *
      * Description: The Class HandleDoubleClickEvent.
      */
     private final class HandleDoubleClickEvent implements IDoubleClickListener {
@@ -483,9 +505,9 @@ public class DBConnectionDialog extends ConnectionDialog {
     }
 
     /**
-     * 
+     *
      * Title: class
-     * 
+     *
      * Description: The Class ProfileNameColumnLabelProvider.
      */
     private static class ProfileNameColumnLabelProvider extends ColumnLabelProvider {
@@ -496,9 +518,9 @@ public class DBConnectionDialog extends ConnectionDialog {
     }
 
     /**
-     * 
+     *
      * Title: class
-     * 
+     *
      * Description: The Class ProfileURLColumnLabelProvider.
      */
     private static class ProfileURLColumnLabelProvider extends ColumnLabelProvider {
@@ -509,9 +531,9 @@ public class DBConnectionDialog extends ConnectionDialog {
     }
 
     /**
-     * 
+     *
      * Title: class
-     * 
+     *
      * Description: The Class ProfileDatabaseVersionProvider.
      */
     private static class ProfileDatabaseVersionProvider extends ColumnLabelProvider {
@@ -745,7 +767,7 @@ public class DBConnectionDialog extends ConnectionDialog {
 
     private void addSSLCheckBox(Composite bodyComposite) {
         gaussSSLEnableButton = new Button(bodyComposite, SWT.CHECK);
-        gaussSSLEnableButton.setSelection(UserPreference.getInstance().isSslEnable());
+        gaussSSLEnableButton.setSelection(false);
         setSelectionListener(gaussSSLEnableButton);
     }
 
@@ -754,12 +776,12 @@ public class DBConnectionDialog extends ConnectionDialog {
         String[] saveOptions = null;
         if (getEnablePermanentPasswordSaveOption()) {
             saveOptions = new String[] {
-                MessageConfigLoader.getProperty(SavePrdOptions.PERMANENTLY.toString() + "_SAVE"),
-                MessageConfigLoader.getProperty(SavePrdOptions.CURRENT_SESSION_ONLY.toString()),
-                MessageConfigLoader.getProperty(SavePrdOptions.DO_NOT_SAVE.toString())};
+                    MessageConfigLoader.getProperty(SavePrdOptions.PERMANENTLY.toString() + "_SAVE"),
+                    MessageConfigLoader.getProperty(SavePrdOptions.CURRENT_SESSION_ONLY.toString()),
+                    MessageConfigLoader.getProperty(SavePrdOptions.DO_NOT_SAVE.toString())};
         } else {
             saveOptions = new String[] {MessageConfigLoader.getProperty(SavePrdOptions.CURRENT_SESSION_ONLY.toString()),
-                MessageConfigLoader.getProperty(SavePrdOptions.DO_NOT_SAVE.toString())};
+                    MessageConfigLoader.getProperty(SavePrdOptions.DO_NOT_SAVE.toString())};
         }
 
         savePswdOptions.setItems(saveOptions);
@@ -774,6 +796,7 @@ public class DBConnectionDialog extends ConnectionDialog {
         gaussPrd = new Text(bodyComposite, SWT.BORDER | SWT.SINGLE | SWT.PASSWORD);
         setInitTextPropertiesGeneralTab(gaussPrd);
         gaussPrd.setData(MPPDBIDEConstants.SWTBOT_KEY, "ID_TXT_CONNECTION_PASSWORD_001");
+        gaussPrd.setText(connUserPwd);
         UIVerifier.verifyTextSize(gaussPrd, 32);
     }
 
@@ -784,6 +807,7 @@ public class DBConnectionDialog extends ConnectionDialog {
         gaussUserName = new Text(bodyComposite, SWT.BORDER | SWT.SINGLE);
         setInitTextPropertiesGeneralTab(gaussUserName);
         gaussUserName.setData(MPPDBIDEConstants.SWTBOT_KEY, "ID_TXT_CONNECTION_USERNAME_001");
+        gaussUserName.setText(connUserName);
         UIVerifier.verifyTextSize(gaussUserName, 63);
     }
 
@@ -793,7 +817,7 @@ public class DBConnectionDialog extends ConnectionDialog {
         gaussDbName = new Text(bodyComposite, SWT.BORDER | SWT.SINGLE);
         setInitTextProperties(gaussDbName);
         gaussDbName.setData(MPPDBIDEConstants.SWTBOT_KEY, "ID_TXT_CONNECTION_DBNAME_001");
-
+        gaussDbName.setText(dbName);
         UIVerifier.verifyTextSize(gaussDbName, 63);
     }
 
@@ -823,6 +847,7 @@ public class DBConnectionDialog extends ConnectionDialog {
         setInitTextPropertiesGeneralTab(gaussHostPort);
         Point pt = gaussHostPort.getSize();
         gaussHostPort.setSize(pt.x + 1, pt.y);
+        gaussHostPort.setText(port);
         gaussHostPort.setSize(gaussHostPort.computeSize(50, 15));
 
         gaussHostPort.setData(MPPDBIDEConstants.SWTBOT_KEY, "ID_TXT_CONNECTION_PORT_001");
@@ -842,6 +867,7 @@ public class DBConnectionDialog extends ConnectionDialog {
         setInitTextPropertiesGeneralTab(gaussHostAddr);
         gaussHostAddr.setData(MPPDBIDEConstants.SWTBOT_KEY, "ID_TXT_CONNECTION_HOST_001");
         gaussHostAddr.setTextLimit(253);
+        gaussHostAddr.setText(connIp);
     }
 
     private void addConnectionNameUi(Composite bodyComposite) {
@@ -850,6 +876,7 @@ public class DBConnectionDialog extends ConnectionDialog {
 
         gaussConnectionName = new Text(bodyComposite, SWT.BORDER | SWT.SINGLE);
         setInitTextPropertiesGeneralTab(gaussConnectionName);
+        gaussConnectionName.setText(connName);
         gaussConnectionName.setData(MPPDBIDEConstants.SWTBOT_KEY, "ID_TXT_CONNECTION_CONNECTIONNAME_001");
 
         ConnectionNameValidator nameValidator = new ConnectionNameValidator(gaussConnectionName);
@@ -924,7 +951,7 @@ public class DBConnectionDialog extends ConnectionDialog {
         if (null != gaussDbName && !gaussDbName.isDisposed()) {
             gaussDbName.setEnabled(true);
         }
-        gaussSSLEnableButton.setSelection(isSslEnabled);
+        gaussSSLEnableButton.setSelection(false);
         gaussSSLEnableButton.setEnabled(true);
         enableDisableSSLTabAttributes(gaussSSLEnableButton.getSelection());
         enableDisableAdvancedTabAttributes(true);
@@ -1111,7 +1138,7 @@ public class DBConnectionDialog extends ConnectionDialog {
                     new String[] {MessageConfigLoader.getProperty(IMessagesConstants.BROWSE_BTN_ROOT_CERT)});
             dialog.setFilterExtensions(
                     new String[] {MessageConfigLoader.getProperty(IMessagesConstants.BROWSE_BTN_ROOT_CERT),
-                        MessageConfigLoader.getProperty(IMessagesConstants.BROWSE_BTN_PEM_CERT)});
+                            MessageConfigLoader.getProperty(IMessagesConstants.BROWSE_BTN_PEM_CERT)});
 
             String rootPath = dialog.open();
             rootCertFilePathText.setText(rootPath != null ? rootPath : "");
@@ -1603,7 +1630,7 @@ public class DBConnectionDialog extends ConnectionDialog {
                 MessageConfigLoader.getProperty(IMessagesConstants.CANCEL_CONNECTION_TITLE),
                 MessageConfigLoader.getProperty(IMessagesConstants.CANCEL_CONNECTION_BODY),
                 new String[] {MessageConfigLoader.getProperty(IMessagesConstants.YES_OPTION),
-                    MessageConfigLoader.getProperty(IMessagesConstants.NO_OPTION)},
+                        MessageConfigLoader.getProperty(IMessagesConstants.NO_OPTION)},
                 1);
 
         if (OK_ID == userChoice) {
@@ -1698,7 +1725,7 @@ public class DBConnectionDialog extends ConnectionDialog {
                 MessageConfigLoader.getProperty(IMessagesConstants.SSL_DISABLED_CONTINUE_OR_CANCEL),
                 MessageDialog.WARNING,
                 new String[] {MessageConfigLoader.getProperty(IMessagesConstants.MPPDBIDE_DIA_BTN_CONT),
-                    MessageConfigLoader.getProperty(IMessagesConstants.MPPDBIDE_DIA_BTN_CANC)},
+                        MessageConfigLoader.getProperty(IMessagesConstants.MPPDBIDE_DIA_BTN_CANC)},
                 1);
         result = dialog.open();
 
@@ -1766,7 +1793,7 @@ public class DBConnectionDialog extends ConnectionDialog {
 
     /**
      * new connection initiation for commandline arguments
-     * 
+     *
      * @param parameterMap input param map
      */
     public void newConnectionPressedCommandline(Map<String, String> parameterMap, CmdLineCharObject cmdLinePassword) {
@@ -1795,12 +1822,12 @@ public class DBConnectionDialog extends ConnectionDialog {
 
     /**
      * generate server connection info from parameter map
-     * 
+     *
      * @param parameterMap input map
      * @return prepared connection info
      */
     public ServerConnectionInfo getServerConnectionInfoCommandline(Map<String, String> parameterMap,
-            CmdLineCharObject cmdLinePassword) {
+                                                                   CmdLineCharObject cmdLinePassword) {
         ServerConnectionInfo info = new ServerConnectionInfo();
 
         fillGeneralTabFieldsCommandline(parameterMap, info, cmdLinePassword);
@@ -1819,7 +1846,7 @@ public class DBConnectionDialog extends ConnectionDialog {
     }
 
     private void fillGeneralTabFieldsCommandline(Map<String, String> parameterMap, ServerConnectionInfo info,
-            CmdLineCharObject cmdLinePassword) {
+                                                 CmdLineCharObject cmdLinePassword) {
         info.setConectionName(parameterMap.get(IDSCommandlineOptions.CONNECTION_NAME));
         info.setServerIp(parameterMap.get(IDSCommandlineOptions.HOST_IP));
         info.setServerPort(Integer.parseInt(parameterMap.get(IDSCommandlineOptions.HOST_PORT)));
@@ -1878,7 +1905,7 @@ public class DBConnectionDialog extends ConnectionDialog {
     }
 
     private IStatus dbConnectionDialogInnerJob(final DBConnProfCache connProfCache, final ServerConnectionInfo connInfo,
-            final IJobCancelStatus status) {
+                                               final IJobCancelStatus status) {
         Exception connectionFailureException = null;
         IExecTimer timer = new ExecTimer("Connection error");
         IExecTimer timersuccess = new ExecTimer("Connection Success");
@@ -1931,9 +1958,9 @@ public class DBConnectionDialog extends ConnectionDialog {
     }
 
     private void handleFinalOperationOnConnection(final DBConnProfCache connProfCache,
-            final ServerConnectionInfo connInfo, Exception connectionFailureException, IExecTimer timer,
-            IExecTimer timersuccess, Path folderPath, ConnectionProfileManagerImpl connProfImpl,
-            boolean exceptionOccured) {
+                                                  final ServerConnectionInfo connInfo, Exception connectionFailureException, IExecTimer timer,
+                                                  IExecTimer timersuccess, Path folderPath, ConnectionProfileManagerImpl connProfImpl,
+                                                  boolean exceptionOccured) {
         closeConnectionNotifier();
         if (exceptionOccured && null != folderPath
                 && !connProfImpl.isProfileInfoAvailableInMetaData(connInfo.getConectionName())) {
@@ -1971,8 +1998,8 @@ public class DBConnectionDialog extends ConnectionDialog {
     }
 
     private Path getProfileId(final DBConnProfCache connProfCache, final ServerConnectionInfo connInfo,
-            final IJobCancelStatus status, IExecTimer timer, IExecTimer timersuccess,
-            ConnectionProfileManagerImpl connProfImpl)
+                              final IJobCancelStatus status, IExecTimer timer, IExecTimer timersuccess,
+                              ConnectionProfileManagerImpl connProfImpl)
             throws IOException, FileOperationException, DataStudioSecurityException, DatabaseOperationException,
             MPPDBIDEException, PasswordExpiryException, OutOfMemoryError, DatabaseCriticalException {
         Path folderPath;
@@ -1989,7 +2016,7 @@ public class DBConnectionDialog extends ConnectionDialog {
     }
 
     private void operationsOnSuccessfulConnection(final DBConnProfCache connProfCache,
-            final ServerConnectionInfo connInfo)
+                                                  final ServerConnectionInfo connInfo)
             throws DatabaseOperationException, DatabaseCriticalException, DataStudioSecurityException {
         // initialize DBAssist
         initializeDbAssist();
@@ -2025,7 +2052,7 @@ public class DBConnectionDialog extends ConnectionDialog {
     }
 
     private void finalCleanUp(final DBConnProfCache connProfCache, Exception connectionFailureException,
-            IExecTimer timersuccess) {
+                              IExecTimer timersuccess) {
         enableConnectionDialog();
 
         if (null != connectionFailureException) {
@@ -2496,7 +2523,7 @@ public class DBConnectionDialog extends ConnectionDialog {
             }
         });
     }
-    
+
     private void handleMPPDBIDEException(final String errMsg) {
         if (errMsg.contains(MessageConfigLoader.getProperty(IMessagesConstants.SECURITY_FAILURE_SUGGESTION))) {
             MPPDBIDEDialogs.generateDSErrorDialog(
@@ -2906,7 +2933,7 @@ public class DBConnectionDialog extends ConnectionDialog {
 
     /**
      * sets Password expiry callback
-     * 
+     *
      * @param callBackIf callback function
      * @return true/false
      */
