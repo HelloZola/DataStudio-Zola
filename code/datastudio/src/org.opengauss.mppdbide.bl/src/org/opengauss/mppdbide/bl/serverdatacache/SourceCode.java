@@ -17,6 +17,7 @@ package org.opengauss.mppdbide.bl.serverdatacache;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Locale;
 
 import org.opengauss.mppdbide.utils.MPPDBIDEConstants;
 
@@ -119,7 +120,9 @@ public class SourceCode implements ISourceCode {
         String src = rs.getString(2);
         if (null != src) {
             fnsSrc.append(src.replaceAll("\\$function\\$", "\\$\\$"));
-            fnsSrc.append(MPPDBIDEConstants.ESCAPE_FORWARDSLASH);
+            if (!src.toLowerCase(Locale.ENGLISH).contains("end;\n/\n") && !src.toLowerCase(Locale.ENGLISH).contains("end ;\n/\n")){
+                fnsSrc.append(MPPDBIDEConstants.ESCAPE_FORWARDSLASH);
+            }
             this.setCode(fnsSrc.toString());
         }
     }

@@ -25,10 +25,11 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Locale;
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
 import org.opengauss.mppdbide.adapter.gauss.DBConnection;
 import org.opengauss.mppdbide.bl.preferences.BLPreferenceManager;
@@ -136,11 +137,11 @@ public class ExportManager implements IExportManager {
         if (object instanceof Namespace) {
             Namespace ns = (Namespace) object;
             exportNamespaceDdl(createdFilePath, conn, ns);
-            exportDebugObjDdl(conn, createdFilePath, ns);
+            exportSequenceDdl(type, conn, createdFilePath, ns);
             exportTableDdl(type, conn, createdFilePath, ns, isTablespaceOption);
             exportSequenceDDLOwenedBy(type, conn, createdFilePath, ns);
             exportViewDdl(conn, createdFilePath, ns);
-            exportSequenceDdl(type, conn, createdFilePath, ns);
+            exportDebugObjDdl(conn, createdFilePath, ns);
         } else if (object instanceof TableMetaData) {
             objList.add((TableMetaData) object);
             writeTableObjectDDL(objList, createdFilePath, type, conn, isTablespaceOption);
@@ -205,6 +206,9 @@ public class ExportManager implements IExportManager {
             throws DatabaseOperationException, DatabaseCriticalException, IOException, UnsupportedEncodingException {
         ArrayList<ServerObject> objList = new ArrayList<ServerObject>(MPPDBIDEConstants.OBJECT_ARRAY_SIZE);
         objList.addAll(ns.getFunctions().getSortedServerObjectList());
+        //按照oid重新排序
+        objList = (ArrayList<ServerObject>) objList.stream().filter( serverObject -> serverObject != null )
+                .sorted(Comparator.comparing(ServerObject::getOid)).collect(Collectors.toList());
         writeDebugObjectDDL(objList, createdFilePath, conn);
         objList.clear();
     }
