@@ -6,11 +6,12 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
-	<classpathentry kind="src" path="src/"/>
+	<classpathentry kind="src" path="src"/>
 	<classpathentry exported="true" kind="lib" path="gson-2.8.6.jar"/>
 	<classpathentry exported="true" kind="lib" path="guava-30.1.1-jre.jar"/>
-	<classpathentry kind="output" path="target/classes"/>
 	<classpathentry kind="lib" path="javafx-base-18-ea+2-win.jar"/>
 	<classpathentry kind="lib" path="javafx-controls-18-ea+2-win.jar"/>
 	<classpathentry kind="lib" path="javafx-graphics-18-ea+2-win.jar"/>
+	<classpathentry kind="lib" path="javafx-swt.jar"/>
+	<classpathentry kind="output" path="target/classes"/>
 </classpath>
