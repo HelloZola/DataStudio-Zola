@@ -29,7 +29,6 @@ import org.opengauss.mppdbide.bl.serverdatacache.IQueryMaterializer;
 import org.opengauss.mppdbide.bl.sqlhistory.IQueryExecutionSummary;
 import org.opengauss.mppdbide.presentation.IExecutionContext;
 import org.opengauss.mppdbide.presentation.edittabledata.CursorQueryExecutor;
-import org.opengauss.mppdbide.presentation.edittabledata.CursorQueryExecutorTmp;
 import org.opengauss.mppdbide.presentation.edittabledata.QueryResultMaterializer;
 import org.opengauss.mppdbide.presentation.grid.IDSGridDataProvider;
 import org.opengauss.mppdbide.presentation.resultset.ConsoleDataWrapper;
@@ -67,8 +66,6 @@ public class QueryExecutionOrchestrator {
     
     private CursorQueryExecutor queryExecutor = null;
     
-    private CursorQueryExecutorTmp queryExecutorTmp = null;
-    
     private Statement stmt = null;
 
     private volatile int okClickCursorDialog;
@@ -99,10 +96,10 @@ public class QueryExecutionOrchestrator {
      */
     public Object executeQuery(String query, HashSet<Object> listOfObjects) throws MPPDBIDEException {
         if (isValidateQueryForSelect(query)) {
-        	queryExecutorTmp = new CursorQueryExecutorTmp(query, this.execContext, execSummary, isEditTableData(),
+        	queryExecutor = new CursorQueryExecutor(query, this.execContext, execSummary, isEditTableData(),
                     isQueryResultEditing(query), connection);
             try {
-                IDSGridDataProvider result = queryExecutorTmp.execute(this.execSummary);
+                IDSGridDataProvider result = queryExecutor.execute(this.execSummary);
                 report();
                 return result;
             }
