@@ -12,12 +12,12 @@
     <version>0.0.1</version>
     <name>common-lib</name>
 
-    <properties>
-        <javafx.platform>linux</javafx.platform>
-<!--        <javafx.version>18-ea+2</javafx.version>-->
-        <javafx.version>17.0.2</javafx.version>
-         <javafx.classifier>linux</javafx.classifier>
-    </properties>
+	<properties>
+		<javafx.platform>linux</javafx.platform>
+		<javafx.version>17.0.2</javafx.version>
+		<!-- <javafx.classifier>win</javafx.classifier> -->
+		<javafx.classifier></javafx.classifier>
+	</properties>
     <dependencies>
         <dependency>
             <groupId>org.antlr</groupId>

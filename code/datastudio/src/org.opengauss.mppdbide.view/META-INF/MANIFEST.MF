@@ -68,7 +68,6 @@ Require-Bundle: org.eclipse.core.runtime;bundle-version="3.15.300",
  org.apache.commons.lang3;bundle-version="3.1.0",
  openjfx.base;bundle-version="17.0.2",
  openjfx.controls;bundle-version="17.0.2",
- openjfx.graphics.win32_64;bundle-version="17.0.2",
  openjfx.swing;bundle-version="17.0.2",
  openjfx.swt;bundle-version="17.0.2"
 Bundle-RequiredExecutionEnvironment: JavaSE-11

@@ -40,7 +40,6 @@ import org.opengauss.mppdbide.view.erd.convertor.ERModelToGraphModelConvertor;
 import org.opengauss.mppdbide.view.erd.parts.ERPartFactory;
 
 import javafx.application.Platform;
-import javafx.embed.swt.FXCanvas;
 import javafx.scene.Scene;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
@@ -57,7 +56,6 @@ public abstract class ERAbstractCore extends AbstractContentPart {
 
     private IDomain domain;
     private IViewer viewer;
-    private FXCanvas canvas;
     private ERContextMenu erContextMenu;
     private AbstractERPresentation presenter;
 
@@ -69,7 +67,6 @@ public abstract class ERAbstractCore extends AbstractContentPart {
     public void createPartControl(Composite parent) {
         Injector injector = Guice.createInjector(createModule());
 
-        canvas = new FXCanvas(parent, SWT.BORDER | SWT.READ_ONLY);
         domain = injector.getInstance(IDomain.class);
         viewer = domain.getAdapter(AdapterKey.get(IViewer.class, IDomain.CONTENT_VIEWER_ROLE));
 
@@ -81,7 +78,6 @@ public abstract class ERAbstractCore extends AbstractContentPart {
             @Override
             public void run() {
                 Scene scene = new Scene(viewer.getCanvas());
-                canvas.setScene(scene);
                 viewer.getContents().setAll(Collections.singletonList(graph));
                 /* activate domain only after viewers have been hooked */
                 domain.activate();
@@ -97,7 +93,6 @@ public abstract class ERAbstractCore extends AbstractContentPart {
                 erContextMenu.hide();
             }
         });
-
     }
 
     private Module createModule() {

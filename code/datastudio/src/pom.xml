@@ -28,7 +28,7 @@
         <tycho-version>2.6.0</tycho-version>
         <java.version>11</java.version>
 <!--        <javafx.home>E:\Dev\javafx-sdk-17.0.2</javafx.home>-->
-        <javafx.home>E:\tmp\openjfx-18.0.2_linux-x64_bin-sdk\javafx-sdk-18.0.2</javafx.home>
+        <javafx.home>E:\Dev\linux\openjfx-18.0.2_linux-x64_bin-sdk\javafx-sdk-18.0.2</javafx.home>
 
         <!-- <maven.test.skip>true</maven.test.skip> -->
         <maven.compiler.source>11</maven.compiler.source>

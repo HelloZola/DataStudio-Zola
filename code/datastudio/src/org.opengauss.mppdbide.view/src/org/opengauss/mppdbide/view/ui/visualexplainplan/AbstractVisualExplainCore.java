@@ -53,7 +53,6 @@ import org.opengauss.mppdbide.view.ui.visualexplainplan.parts.DSGraphLayoutBehav
 import org.opengauss.mppdbide.view.ui.visualexplainplan.parts.OpenNodePropertyOnClickHandler;
 
 import javafx.application.Platform;
-import javafx.embed.swt.FXCanvas;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 
@@ -88,8 +87,6 @@ public abstract class AbstractVisualExplainCore extends AbstractContentPart {
 
     private VisualExplainPlanUIPresentation vepPresenter;
 
-    private FXCanvas canvas;
-
     /**
      * Instantiates a new abstract visual explain core.
      */
@@ -113,7 +110,6 @@ public abstract class AbstractVisualExplainCore extends AbstractContentPart {
 
         Injector injector = Guice.createInjector(createModule(vepPresenter.getExplainPlanTabId()));
 
-        canvas = new FXCanvas(parent, SWT.BORDER | SWT.READ_ONLY);
         domain = injector.getInstance(IDomain.class);
         viewer = domain.getAdapter(AdapterKey.get(IViewer.class, IDomain.CONTENT_VIEWER_ROLE));
 
@@ -125,7 +121,6 @@ public abstract class AbstractVisualExplainCore extends AbstractContentPart {
             @Override
             public void run() {
                 Scene scene = new Scene(viewer.getCanvas());
-                canvas.setScene(scene);
                 viewer.getContents().setAll(Collections.singletonList(graph));
                 /* activate domain only after viewers have been hooked */
                 domain.activate();
@@ -250,9 +245,7 @@ public abstract class AbstractVisualExplainCore extends AbstractContentPart {
     public void preDestroy() {
         this.viewer = null;
         this.domain = null;
-        this.canvas = null;
         this.vepPresenter = null;
-
     }
 
     /**
