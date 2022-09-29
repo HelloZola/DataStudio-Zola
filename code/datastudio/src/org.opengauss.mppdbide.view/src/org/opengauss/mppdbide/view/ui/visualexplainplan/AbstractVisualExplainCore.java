@@ -52,11 +52,6 @@ import org.opengauss.mppdbide.view.ui.visualexplainplan.parts.CustomContentPartF
 import org.opengauss.mppdbide.view.ui.visualexplainplan.parts.DSGraphLayoutBehavior;
 import org.opengauss.mppdbide.view.ui.visualexplainplan.parts.OpenNodePropertyOnClickHandler;
 
-import javafx.application.Platform;
-import javafx.embed.swt.FXCanvas;
-import javafx.scene.Node;
-import javafx.scene.Scene;
-
 /**
  * 
  * Title: class
@@ -88,8 +83,6 @@ public abstract class AbstractVisualExplainCore extends AbstractContentPart {
 
     private VisualExplainPlanUIPresentation vepPresenter;
 
-    private FXCanvas canvas;
-
     /**
      * Instantiates a new abstract visual explain core.
      */
@@ -110,31 +103,31 @@ public abstract class AbstractVisualExplainCore extends AbstractContentPart {
     }
 
     private void createViewer(Composite parent) {
-
-        Injector injector = Guice.createInjector(createModule(vepPresenter.getExplainPlanTabId()));
-
-        canvas = new FXCanvas(parent, SWT.BORDER | SWT.READ_ONLY);
-        domain = injector.getInstance(IDomain.class);
-        viewer = domain.getAdapter(AdapterKey.get(IViewer.class, IDomain.CONTENT_VIEWER_ROLE));
-
-        /* Get the graph model to set to viewer */
-        Graph graph = vepPresenter.getPresenter().getGraphModel();
-
-        /* Using Platform.runLater() for UI thread modifications of FX */
-        Platform.runLater(new Runnable() {
-            @Override
-            public void run() {
-                Scene scene = new Scene(viewer.getCanvas());
-                canvas.setScene(scene);
-                viewer.getContents().setAll(Collections.singletonList(graph));
-                /* activate domain only after viewers have been hooked */
-                domain.activate();
-            }
-        });
-
-        /* Reset view to center once rendered */
-        ViewResetJob viewResetJob = new ViewResetJob();
-        viewResetJob.schedule();
+//
+//        Injector injector = Guice.createInjector(createModule(vepPresenter.getExplainPlanTabId()));
+//
+//        canvas = new FXCanvas(parent, SWT.BORDER | SWT.READ_ONLY);
+//        domain = injector.getInstance(IDomain.class);
+//        viewer = domain.getAdapter(AdapterKey.get(IViewer.class, IDomain.CONTENT_VIEWER_ROLE));
+//
+//        /* Get the graph model to set to viewer */
+//        Graph graph = vepPresenter.getPresenter().getGraphModel();
+//
+//        /* Using Platform.runLater() for UI thread modifications of FX */
+//        Platform.runLater(new Runnable() {
+//            @Override
+//            public void run() {
+//                Scene scene = new Scene(viewer.getCanvas());
+//                canvas.setScene(scene);
+//                viewer.getContents().setAll(Collections.singletonList(graph));
+//                /* activate domain only after viewers have been hooked */
+//                domain.activate();
+//            }
+//        });
+//
+//        /* Reset view to center once rendered */
+//        ViewResetJob viewResetJob = new ViewResetJob();
+//        viewResetJob.schedule();
     }
 
     private Module createModule(String tabId) {
@@ -225,32 +218,12 @@ public abstract class AbstractVisualExplainCore extends AbstractContentPart {
     }
 
     /**
-     * Do create visual.
-     *
-     * @return the node
-     */
-    @Override
-    protected Node doCreateVisual() {
-        return null;
-    }
-
-    /**
-     * Do refresh visual.
-     *
-     * @param visual the visual
-     */
-    @Override
-    protected void doRefreshVisual(Node visual) {
-    }
-
-    /**
      * Pre destroy.
      */
     @PreDestroy
     public void preDestroy() {
         this.viewer = null;
         this.domain = null;
-        this.canvas = null;
         this.vepPresenter = null;
 
     }
@@ -259,22 +232,22 @@ public abstract class AbstractVisualExplainCore extends AbstractContentPart {
      * Handle reset view port.
      */
     protected void handleResetViewPort() {
-        Platform.runLater(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    if (viewer.getRootPart() != null) {
-                        ViewportPolicy viewportPolicy = viewer.getRootPart().getAdapter(ViewportPolicy.class);
-                        viewportPolicy.init();
-                        viewportPolicy.fitToSize(1, 1);
-                        ITransactionalOperation commit = viewportPolicy.commit();
-                        viewer.getDomain().execute(commit, null);
-                    }
-                } catch (ExecutionException | IllegalStateException exception) {
-                    MPPDBIDELoggerUtility.error("Failed to reset zoom level for VEP");
-                }
-            }
-        });
+//        Platform.runLater(new Runnable() {
+//            @Override
+//            public void run() {
+//                try {
+//                    if (viewer.getRootPart() != null) {
+//                        ViewportPolicy viewportPolicy = viewer.getRootPart().getAdapter(ViewportPolicy.class);
+//                        viewportPolicy.init();
+//                        viewportPolicy.fitToSize(1, 1);
+//                        ITransactionalOperation commit = viewportPolicy.commit();
+//                        viewer.getDomain().execute(commit, null);
+//                    }
+//                } catch (ExecutionException | IllegalStateException exception) {
+//                    MPPDBIDELoggerUtility.error("Failed to reset zoom level for VEP");
+//                }
+//            }
+//        });
 
     }
 

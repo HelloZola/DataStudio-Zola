@@ -24,7 +24,6 @@
         <module>org.opengauss.mppdbide.repository</module>
     </modules>
     <properties>
-        <!--<tycho-version>1.4.0</tycho-version>-->
         <tycho-version>2.6.0</tycho-version>
         <java.version>11</java.version>
         <javafx.home>E:\Dev\javafx-sdk-17.0.2</javafx.home>
@@ -195,9 +194,9 @@
                     <!-- configure the p2 target environments for multi-platform build -->
                     <environments>
                         <environment>
-                        <os>win32</os>
-                        <ws>win32</ws>
-                        <arch>x86_64</arch>
+                        <os>linux</os>
+                        <ws>gtk</ws>
+                        <arch>aarch64</arch>
                         </environment>
                     </environments>
                 </configuration>

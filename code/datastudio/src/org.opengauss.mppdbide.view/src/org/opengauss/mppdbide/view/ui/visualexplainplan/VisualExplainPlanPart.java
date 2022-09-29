@@ -22,6 +22,7 @@ import javax.inject.Inject;
 import org.eclipse.e4.core.contexts.IEclipseContext;
 import org.eclipse.e4.core.services.events.IEventBroker;
 import org.eclipse.e4.ui.model.application.ui.basic.MPart;
+import org.eclipse.gef.common.adapt.IAdaptable;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.custom.SashForm;
 import org.eclipse.swt.events.SelectionEvent;
@@ -32,6 +33,8 @@ import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 import org.osgi.service.event.Event;
 import org.osgi.service.event.EventHandler;
+
+import javafx.scene.Node;
 
 import org.opengauss.mppdbide.eclipse.dependent.EclipseContextDSKeys;
 import org.opengauss.mppdbide.eclipse.dependent.EclipseInjections;
@@ -220,5 +223,17 @@ public class VisualExplainPlanPart extends AbstractVisualExplainCore implements 
             }
         }
     }
+
+	@Override
+	protected Node doCreateVisual() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	protected void doRefreshVisual(Node visual) {
+		// TODO Auto-generated method stub
+		
+	}
 
 }

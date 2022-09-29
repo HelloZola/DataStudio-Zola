@@ -15,35 +15,22 @@
 
 package org.opengauss.mppdbide.view.ui.erd;
 
-import java.util.Collections;
-
 import org.eclipse.gef.common.adapt.AdapterKey;
 import org.eclipse.gef.common.adapt.inject.AdaptableScopes;
 import org.eclipse.gef.common.adapt.inject.AdapterInjectionSupport;
 import org.eclipse.gef.common.adapt.inject.AdapterInjectionSupport.LoggingMode;
-import org.eclipse.gef.graph.Graph;
 import org.eclipse.gef.mvc.fx.domain.IDomain;
 import org.eclipse.gef.mvc.fx.parts.AbstractContentPart;
 import org.eclipse.gef.mvc.fx.parts.IContentPartFactory;
 import org.eclipse.gef.mvc.fx.viewer.IViewer;
 import org.eclipse.gef.zest.fx.ZestFxModule;
-import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
-
-import com.google.inject.Guice;
-import com.google.inject.Injector;
-import com.google.inject.Module;
-import com.google.inject.multibindings.MapBinder;
 import org.opengauss.mppdbide.presentation.erd.AbstractERPresentation;
 import org.opengauss.mppdbide.view.erd.contextmenu.ERContextMenu;
-import org.opengauss.mppdbide.view.erd.convertor.ERModelToGraphModelConvertor;
 import org.opengauss.mppdbide.view.erd.parts.ERPartFactory;
 
-import javafx.application.Platform;
-import javafx.embed.swt.FXCanvas;
-import javafx.scene.Scene;
-import javafx.scene.input.MouseButton;
-import javafx.scene.input.MouseEvent;
+import com.google.inject.Module;
+import com.google.inject.multibindings.MapBinder;
 
 /**
  * The Class ERAbstractCore.
@@ -57,7 +44,6 @@ public abstract class ERAbstractCore extends AbstractContentPart {
 
     private IDomain domain;
     private IViewer viewer;
-    private FXCanvas canvas;
     private ERContextMenu erContextMenu;
     private AbstractERPresentation presenter;
 
@@ -67,36 +53,6 @@ public abstract class ERAbstractCore extends AbstractContentPart {
      * @param parent the parent
      */
     public void createPartControl(Composite parent) {
-        Injector injector = Guice.createInjector(createModule());
-
-        canvas = new FXCanvas(parent, SWT.BORDER | SWT.READ_ONLY);
-        domain = injector.getInstance(IDomain.class);
-        viewer = domain.getAdapter(AdapterKey.get(IViewer.class, IDomain.CONTENT_VIEWER_ROLE));
-
-        /* Get the graph model to set to viewer */
-        Graph graph = ERModelToGraphModelConvertor.getGraphModel(presenter);
-
-        /* Using Platform.runLater() for UI thread modifications of FX */
-        Platform.runLater(new Runnable() {
-            @Override
-            public void run() {
-                Scene scene = new Scene(viewer.getCanvas());
-                canvas.setScene(scene);
-                viewer.getContents().setAll(Collections.singletonList(graph));
-                /* activate domain only after viewers have been hooked */
-                domain.activate();
-            }
-        });
-
-        erContextMenu = new ERContextMenu(viewer, presenter);
-        erContextMenu.initERContextMenu();
-        viewer.getCanvas().addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent me) -> {
-            if (me.getButton() == MouseButton.SECONDARY || me.isControlDown()) {
-                erContextMenu.show(viewer.getCanvas(), me.getScreenX(), me.getScreenY());
-            } else {
-                erContextMenu.hide();
-            }
-        });
 
     }
 

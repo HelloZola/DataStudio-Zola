@@ -17,7 +17,6 @@ package org.opengauss.mppdbide.utils.logger;
 
 import java.io.FileNotFoundException;
 import java.net.BindException;
-import java.security.acl.NotOwnerException;
 import java.util.ConcurrentModificationException;
 import java.util.MissingResourceException;
 import java.util.jar.JarException;
@@ -33,25 +32,24 @@ import javax.naming.InsufficientResourcesException;
  * @since 3.0.0
  */
 public interface ISensitiveExceptionsFilter {
-    /*
-     * SQLException is not considered as sensitive exception because DS is a
-     * database client tool and, masking SQL exception would make the logs
-     * useless for debugging
-     */
-    /**
-     * isSensitiveException
-     *
-     * @param throwable the throwable
-     * @return is sensitive exception or not
-     */
-    static boolean isSensitiveException(Throwable throwable) {
-        if (throwable instanceof FileNotFoundException || throwable instanceof JarException
-                || throwable instanceof MissingResourceException || throwable instanceof NotOwnerException
-                || throwable instanceof ConcurrentModificationException
-                || throwable instanceof InsufficientResourcesException || throwable instanceof BindException
-                || throwable instanceof OutOfMemoryError || throwable instanceof StackOverflowError) {
-            return true;
-        }
-        return false;
-    }
+	/*
+	 * SQLException is not considered as sensitive exception because DS is a
+	 * database client tool and, masking SQL exception would make the logs useless
+	 * for debugging
+	 */
+	/**
+	 * isSensitiveException
+	 *
+	 * @param throwable the throwable
+	 * @return is sensitive exception or not
+	 */
+	static boolean isSensitiveException(Throwable throwable) {
+		if (throwable instanceof FileNotFoundException || throwable instanceof JarException
+				|| throwable instanceof MissingResourceException || throwable instanceof ConcurrentModificationException
+				|| throwable instanceof InsufficientResourcesException || throwable instanceof BindException
+				|| throwable instanceof OutOfMemoryError || throwable instanceof StackOverflowError) {
+			return true;
+		}
+		return false;
+	}
 }
