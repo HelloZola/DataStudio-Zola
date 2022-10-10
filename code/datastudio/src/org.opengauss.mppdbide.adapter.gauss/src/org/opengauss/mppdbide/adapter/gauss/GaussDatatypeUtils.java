@@ -165,4 +165,9 @@ public class GaussDatatypeUtils {
     public static HashMap<Integer, Datatype> getDataTypeHashMap() {
         return datatypeMap;
     }
+    
+    public static void addNewDataType(Integer code,Datatype newDataType) {
+    	datatypeMap.put(code, newDataType);
+    }
+    
 }
