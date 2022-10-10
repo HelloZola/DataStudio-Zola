@@ -143,15 +143,7 @@ public class DBConnectionDialog extends ConnectionDialog {
 
     private EModelService modelService;
     private MApplication application;
-    
-    private final String port = "5555";
-    private final String connName = "local-centos-7";
-    private final String connIp = "192.168.194.128";
-    private final String connUserName = "chen_admin_role";
-    private final String connUserPwd = "Hello999999_";
-    private final String dbName = "postgres";
-    
-    
+
     /**
      * The doubleclick event.
      */
@@ -782,7 +774,6 @@ public class DBConnectionDialog extends ConnectionDialog {
         gaussPrd = new Text(bodyComposite, SWT.BORDER | SWT.SINGLE | SWT.PASSWORD);
         setInitTextPropertiesGeneralTab(gaussPrd);
         gaussPrd.setData(MPPDBIDEConstants.SWTBOT_KEY, "ID_TXT_CONNECTION_PASSWORD_001");
-        gaussPrd.setText(connUserPwd);
         UIVerifier.verifyTextSize(gaussPrd, 32);
     }
 
@@ -793,7 +784,6 @@ public class DBConnectionDialog extends ConnectionDialog {
         gaussUserName = new Text(bodyComposite, SWT.BORDER | SWT.SINGLE);
         setInitTextPropertiesGeneralTab(gaussUserName);
         gaussUserName.setData(MPPDBIDEConstants.SWTBOT_KEY, "ID_TXT_CONNECTION_USERNAME_001");
-        gaussUserName.setText(connUserName);
         UIVerifier.verifyTextSize(gaussUserName, 63);
     }
 
@@ -803,7 +793,7 @@ public class DBConnectionDialog extends ConnectionDialog {
         gaussDbName = new Text(bodyComposite, SWT.BORDER | SWT.SINGLE);
         setInitTextProperties(gaussDbName);
         gaussDbName.setData(MPPDBIDEConstants.SWTBOT_KEY, "ID_TXT_CONNECTION_DBNAME_001");
-        gaussDbName.setText(dbName);
+
         UIVerifier.verifyTextSize(gaussDbName, 63);
     }
 
@@ -833,7 +823,6 @@ public class DBConnectionDialog extends ConnectionDialog {
         setInitTextPropertiesGeneralTab(gaussHostPort);
         Point pt = gaussHostPort.getSize();
         gaussHostPort.setSize(pt.x + 1, pt.y);
-        gaussHostPort.setText(port);
         gaussHostPort.setSize(gaussHostPort.computeSize(50, 15));
 
         gaussHostPort.setData(MPPDBIDEConstants.SWTBOT_KEY, "ID_TXT_CONNECTION_PORT_001");
@@ -853,7 +842,6 @@ public class DBConnectionDialog extends ConnectionDialog {
         setInitTextPropertiesGeneralTab(gaussHostAddr);
         gaussHostAddr.setData(MPPDBIDEConstants.SWTBOT_KEY, "ID_TXT_CONNECTION_HOST_001");
         gaussHostAddr.setTextLimit(253);
-        gaussHostAddr.setText(connIp);
     }
 
     private void addConnectionNameUi(Composite bodyComposite) {
@@ -862,7 +850,6 @@ public class DBConnectionDialog extends ConnectionDialog {
 
         gaussConnectionName = new Text(bodyComposite, SWT.BORDER | SWT.SINGLE);
         setInitTextPropertiesGeneralTab(gaussConnectionName);
-        gaussConnectionName.setText(connName);
         gaussConnectionName.setData(MPPDBIDEConstants.SWTBOT_KEY, "ID_TXT_CONNECTION_CONNECTIONNAME_001");
 
         ConnectionNameValidator nameValidator = new ConnectionNameValidator(gaussConnectionName);
