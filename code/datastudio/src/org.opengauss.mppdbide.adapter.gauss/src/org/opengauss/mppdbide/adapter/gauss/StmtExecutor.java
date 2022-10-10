@@ -539,11 +539,11 @@ public class StmtExecutor {
         try {
             if (!getCursorResultSetType()) {
                 if (null != rs && rs.next()) {
-                    getFuncProcResultValue(rs, valueRows,
+                    getFuncProcResultValueV2(rs, valueRows,
                             new GetFuncProcResultValueParam(columnCount, calStmt != null, false));
                 }
             } else {
-                getFuncProcResultValue(rs, valueRows,
+            	getFuncProcResultValueV2(rs, valueRows,
                         new GetFuncProcResultValueParam(columnCount, calStmt != null, isInputParaVisited));
             }
         } catch (SQLException exe) {
@@ -603,6 +603,41 @@ public class StmtExecutor {
         }
     }
 
+    private void getFuncProcResultValueV2(ResultSet rs, ArrayList<Object[]> rows, GetFuncProcResultValueParam paramObj)
+            throws NumberFormatException, DatabaseOperationException, SQLException {
+    	
+		ResultSetMetaData metaData = rs.getMetaData();
+
+		if (metaData == null) {
+			return;
+		}
+
+		int count = metaData.getColumnCount();
+
+		if (count < 1) {
+			return;
+		}
+
+		for (int i = 1; i <= count; i++) {
+
+			Object[] row = new Object[paramObj.getColumnCount()];
+			int colIndex;
+			boolean isShowCursorPopup = getShowCursorPopup(rs);
+			for (colIndex = 1; colIndex < paramObj.getColumnCount(); colIndex++) {
+				row[colIndex - 1] = ResultSetDatatypeMapping.getFuncProcColObjectExceptValueV2(rs, i, colIndex,
+						getCursorResultSetType());
+			}
+			if (isShowCursorPopup) {
+				row[colIndex - 1] = ResultSetDatatypeMapping.getReadColumnValueObject(rs, i);
+			} else if (getCursorResultSetType()) {
+				row[colIndex - 1] = ResultSetDatatypeMapping.convertResultSetToObject(rs, i, true, false);
+			} else {
+				row[colIndex - 1] = ResultSetDatatypeMapping.getReadColumnValueObject(rs, i);
+			}
+			rows.add(row);
+		}
+    }
+    
     private void getFuncProcResultValue(ResultSet rs, ArrayList<Object[]> rows, GetFuncProcResultValueParam paramObj)
             throws NumberFormatException, DatabaseOperationException, SQLException {
         Object[] row = new Object[paramObj.getColumnCount()];
