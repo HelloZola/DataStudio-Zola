@@ -583,4 +583,35 @@ public final class ResultSetDatatypeMapping {
         }
         return "";
     }
+    
+    public static Object getFuncProcColObjectExceptValueV2(ResultSet rs, int columnIndex, int caseIndex, boolean isCursorTypeResult) 
+            throws NumberFormatException, DatabaseOperationException {
+        try {
+            if (rs.getMetaData() != null) {
+                switch (caseIndex) {
+                    case 1: {
+                        if (isCursorTypeResult) {
+                            return MPPDBIDEConstants.RETURN_RESULT_COL_VALUE;
+                        }
+                        return rs.getMetaData().getColumnName(columnIndex);
+                    }
+                    case 2: {
+                        if (isCursorTypeResult) {
+                            return MPPDBIDEConstants.CURSOR;
+                        }
+                        return rs.getMetaData().getColumnTypeName(columnIndex);
+                    }
+                    case 3: {
+                        return MPPDBIDEConstants.OUT;
+                    }
+                    default: {
+                        return "";
+                    }
+                }
+            }
+        } catch (SQLException exe) {
+            MPPDBIDELoggerUtility.error("Error occured while getting result set values", exe);
+        }
+        return "";
+    }
 }
