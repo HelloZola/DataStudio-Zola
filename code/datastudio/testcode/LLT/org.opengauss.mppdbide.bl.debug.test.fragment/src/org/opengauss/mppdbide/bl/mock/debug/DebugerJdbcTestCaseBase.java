@@ -137,7 +137,7 @@ public class DebugerJdbcTestCaseBase extends BasicJDBCTestCaseAdapter {
         serverInfo.setSavePrdOption(SavePrdOptions.DO_NOT_SAVE);
         serverInfo.setPrivilegeBasedObAccess(true);
         ConnectionProfileManagerImpl.getInstance().getDiskUtility().setOsCurrentUserFolderPath(".");
-        ConnectionProfileManagerImpl.getInstance().generateSecurityFolderInsideProfile(serverInfo);
+        //ConnectionProfileManagerImpl.getInstance().generateSecurityFolderInsideProfile(serverInfo);
         CommonLLTUtils.createTableSpaceRS(preparedstatementHandler);
 
         JobCancelStatus status = new JobCancelStatus();
@@ -216,22 +216,26 @@ public class DebugerJdbcTestCaseBase extends BasicJDBCTestCaseAdapter {
     {
         super.tearDown();
 
-        debugService.end();
-        debugService = null;
-        queryService.closeService();
-        queryService = null;
-        preparedstatementHandler.clearPreparedStatements();
-        preparedstatementHandler.clearThrowsSQLException();
-        MockStatementToHang.resetHangQueries();
-        GaussMockPreparedStatementToHang.resetHangqueries();
-        database = null;
-        
-        Iterator<Server> itr = DBConnProfCache.getInstance().getServers().iterator();
-        
-        while(itr.hasNext())
-        {
-            DBConnProfCache.getInstance().removeServer(itr.next().getId());
-        }
+        try {
+        	debugService.end();
+            debugService = null;
+            queryService.closeService();
+            queryService = null;
+            preparedstatementHandler.clearPreparedStatements();
+            preparedstatementHandler.clearThrowsSQLException();
+            MockStatementToHang.resetHangQueries();
+            GaussMockPreparedStatementToHang.resetHangqueries();
+            database = null;
+            
+            Iterator<Server> itr = DBConnProfCache.getInstance().getServers().iterator();
+            
+            while(itr.hasNext())
+            {
+                DBConnProfCache.getInstance().removeServer(itr.next().getId());
+            }
+        }catch (Exception e) {
+			e.printStackTrace();
+		}
     }
     
     
