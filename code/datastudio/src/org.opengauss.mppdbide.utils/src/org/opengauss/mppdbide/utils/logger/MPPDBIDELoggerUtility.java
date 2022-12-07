@@ -173,19 +173,19 @@ public class MPPDBIDELoggerUtility implements ILogger {
      *
      * @param isReinit the is reinit
      */
-    public static void checkAndCreateLogger(boolean isReinit) {
-        synchronized (Lock) {
-            if (!isLoggerInitialized) {
-                LOGGER = LogManager.getLogger("dslogger");
-                SECURITY = LogManager.getLogger("security");
-                OPERATION = LogManager.getLogger("operation");
-                changeLevelAndReconfigure();
-                isLoggerInitialized = true;
-            } else if (isReinit) {
-                changeLevelAndReconfigure();
-            }
-        }
-    }
+	public static void checkAndCreateLogger(boolean isReinit) {
+		synchronized (Lock) {
+			if (!isLoggerInitialized) {
+				LOGGER = LogManager.getLogger(MPPDBIDELoggerUtility.class);
+				SECURITY = LogManager.getLogger(MPPDBIDELoggerUtility.class);
+				OPERATION = LogManager.getLogger(MPPDBIDELoggerUtility.class);
+				changeLevelAndReconfigure();
+				isLoggerInitialized = true;
+			} else if (isReinit) {
+				changeLevelAndReconfigure();
+			}
+		}
+	}
 
     private static void changeLevelAndReconfigure() {
         if (null != loglevel) {

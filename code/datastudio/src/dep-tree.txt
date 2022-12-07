@@ -1,0 +1,1125 @@
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective settings
+[WARNING] Unrecognised tag: 'id' (position: START_TAG seen ...<profiles>\r\n\t<id>... @215:6)  @ E:\apache-maven\apache-maven-3.8.6\conf\settings.xml, line 215, column 6
+[WARNING] 
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.opengauss.plide.build:org.opengauss.mppdbide.view:eclipse-plugin:1.0.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-resources-plugin is missing. @ line 20, column 14
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] Computing target platform for MavenProject: org.opengauss.plide.build:org.opengauss.dbdriver.jdbc.gauss:1.0.0-SNAPSHOT @ E:\eclipse-projects\DataStudio-Zola\code\datastudio\src\org.opengauss.dbdriver.jdbc.gauss\pom.xml
+[INFO] Fetching p2.index from http://mirrors.ustc.edu.cn/eclipse/releases/2021-12/202112081000/ (140B)
+[INFO] Adding repository http://mirrors.ustc.edu.cn/eclipse/releases/2021-12/202112081000
+[INFO] Fetching p2.index from http://mirrors.ustc.edu.cn/eclipse/nattable/releases/1.6.0/repository/ (172B)
+[INFO] Adding repository http://mirrors.ustc.edu.cn/eclipse/nattable/releases/1.6.0/repository
+[INFO] Fetching p2.index from http://mirrors.ustc.edu.cn/eclipse/tools/gef/updates/releases/5.1.0_gef-master_5509/ (172B)
+[INFO] Adding repository http://mirrors.ustc.edu.cn/eclipse/tools/gef/updates/releases/5.1.0_gef-master_5509
+[INFO] Adding repository http://mirrors.ustc.edu.cn/eclipse/efxclipse/updates-released/3.5.0/site
+[INFO] Adding repository file:/E:/Dev/openjfx.p2-17.0.2
+[INFO] Resolving dependencies of MavenProject: org.opengauss.plide.build:org.opengauss.dbdriver.jdbc.gauss:1.0.0-SNAPSHOT @ E:\eclipse-projects\DataStudio-Zola\code\datastudio\src\org.opengauss.dbdriver.jdbc.gauss\pom.xml
+[INFO] Resolving class path of MavenProject: org.opengauss.plide.build:org.opengauss.dbdriver.jdbc.gauss:1.0.0-SNAPSHOT @ E:\eclipse-projects\DataStudio-Zola\code\datastudio\src\org.opengauss.dbdriver.jdbc.gauss\pom.xml
+[INFO] Computing target platform for MavenProject: org.opengauss.plide.build:Common-collection:1.0.0 @ E:\eclipse-projects\DataStudio-Zola\code\datastudio\src\Common-collection\pom.xml
+[INFO] Resolving dependencies of MavenProject: org.opengauss.plide.build:Common-collection:1.0.0 @ E:\eclipse-projects\DataStudio-Zola\code\datastudio\src\Common-collection\pom.xml
+[WARNING] The following locally built units have been used to resolve project dependencies:
+[WARNING]   Common-collection/1.0.0
+[INFO] Resolving class path of MavenProject: org.opengauss.plide.build:Common-collection:1.0.0 @ E:\eclipse-projects\DataStudio-Zola\code\datastudio\src\Common-collection\pom.xml
+[INFO] Computing target platform for MavenProject: org.opengauss.plide.build:commons-csv:1.0.0 @ E:\eclipse-projects\DataStudio-Zola\code\datastudio\src\commons-csv\pom.xml
+[INFO] Resolving dependencies of MavenProject: org.opengauss.plide.build:commons-csv:1.0.0 @ E:\eclipse-projects\DataStudio-Zola\code\datastudio\src\commons-csv\pom.xml
+[WARNING] The following locally built units have been used to resolve project dependencies:
+[WARNING]   commons-csv/1.0.0
+[INFO] Resolving class path of MavenProject: org.opengauss.plide.build:commons-csv:1.0.0 @ E:\eclipse-projects\DataStudio-Zola\code\datastudio\src\commons-csv\pom.xml
+[INFO] Computing target platform for MavenProject: org.opengauss.plide.build:JSQLParser:1.0.0 @ E:\eclipse-projects\DataStudio-Zola\code\datastudio\src\JSQLParser\pom.xml
+[INFO] Resolving dependencies of MavenProject: org.opengauss.plide.build:JSQLParser:1.0.0 @ E:\eclipse-projects\DataStudio-Zola\code\datastudio\src\JSQLParser\pom.xml
+[WARNING] The following locally built units have been used to resolve project dependencies:
+[WARNING]   JSQLParser/1.0.0
+[INFO] Resolving class path of MavenProject: org.opengauss.plide.build:JSQLParser:1.0.0 @ E:\eclipse-projects\DataStudio-Zola\code\datastudio\src\JSQLParser\pom.xml
+[INFO] Computing target platform for MavenProject: org.opengauss.plide.build:org.opengauss.mppdbide.util:1.0.0-SNAPSHOT @ E:\eclipse-projects\DataStudio-Zola\code\datastudio\src\org.opengauss.mppdbide.utils\pom.xml
+[INFO] Resolving dependencies of MavenProject: org.opengauss.plide.build:org.opengauss.mppdbide.util:1.0.0-SNAPSHOT @ E:\eclipse-projects\DataStudio-Zola\code\datastudio\src\org.opengauss.mppdbide.utils\pom.xml
+[WARNING] The following locally built units have been used to resolve project dependencies:
+[WARNING]   JSQLParser/1.0.0
+[INFO] Resolving class path of MavenProject: org.opengauss.plide.build:org.opengauss.mppdbide.util:1.0.0-SNAPSHOT @ E:\eclipse-projects\DataStudio-Zola\code\datastudio\src\org.opengauss.mppdbide.utils\pom.xml
+[INFO] Computing target platform for MavenProject: org.opengauss.plide.build:org.opengauss.mppdbide.parser:1.0.0-SNAPSHOT @ E:\eclipse-projects\DataStudio-Zola\code\datastudio\src\org.opengauss.mppdbide.parser\pom.xml
+[INFO] Resolving dependencies of MavenProject: org.opengauss.plide.build:org.opengauss.mppdbide.parser:1.0.0-SNAPSHOT @ E:\eclipse-projects\DataStudio-Zola\code\datastudio\src\org.opengauss.mppdbide.parser\pom.xml
+[WARNING] The following locally built units have been used to resolve project dependencies:
+[WARNING]   Common-collection/1.0.0
+[WARNING]   JSQLParser/1.0.0
+[INFO] Resolving class path of MavenProject: org.opengauss.plide.build:org.opengauss.mppdbide.parser:1.0.0-SNAPSHOT @ E:\eclipse-projects\DataStudio-Zola\code\datastudio\src\org.opengauss.mppdbide.parser\pom.xml
+[INFO] Computing target platform for MavenProject: org.opengauss.plide.build:org.opengauss.mppdbide.adapter.gauss:1.0.0-SNAPSHOT @ E:\eclipse-projects\DataStudio-Zola\code\datastudio\src\org.opengauss.mppdbide.adapter.gauss\pom.xml
+[INFO] Resolving dependencies of MavenProject: org.opengauss.plide.build:org.opengauss.mppdbide.adapter.gauss:1.0.0-SNAPSHOT @ E:\eclipse-projects\DataStudio-Zola\code\datastudio\src\org.opengauss.mppdbide.adapter.gauss\pom.xml
+[WARNING] The following locally built units have been used to resolve project dependencies:
+[WARNING]   Common-collection/1.0.0
+[WARNING]   JSQLParser/1.0.0
+[INFO] Resolving class path of MavenProject: org.opengauss.plide.build:org.opengauss.mppdbide.adapter.gauss:1.0.0-SNAPSHOT @ E:\eclipse-projects\DataStudio-Zola\code\datastudio\src\org.opengauss.mppdbide.adapter.gauss\pom.xml
+[INFO] Computing target platform for MavenProject: org.opengauss.plide.build:org.opengauss.mppdbide.debuger:1.0.0-SNAPSHOT @ E:\eclipse-projects\DataStudio-Zola\code\datastudio\src\org.opengauss.mppdbide.debuger\pom.xml
+[INFO] Resolving dependencies of MavenProject: org.opengauss.plide.build:org.opengauss.mppdbide.debuger:1.0.0-SNAPSHOT @ E:\eclipse-projects\DataStudio-Zola\code\datastudio\src\org.opengauss.mppdbide.debuger\pom.xml
+[WARNING] The following locally built units have been used to resolve project dependencies:
+[WARNING]   Common-collection/1.0.0
+[WARNING]   JSQLParser/1.0.0
+[INFO] Resolving class path of MavenProject: org.opengauss.plide.build:org.opengauss.mppdbide.debuger:1.0.0-SNAPSHOT @ E:\eclipse-projects\DataStudio-Zola\code\datastudio\src\org.opengauss.mppdbide.debuger\pom.xml
+[INFO] Computing target platform for MavenProject: org.opengauss.plide.build:org.opengauss.mppdbide.bl:1.0.0-SNAPSHOT @ E:\eclipse-projects\DataStudio-Zola\code\datastudio\src\org.opengauss.mppdbide.bl\pom.xml
+[INFO] Resolving dependencies of MavenProject: org.opengauss.plide.build:org.opengauss.mppdbide.bl:1.0.0-SNAPSHOT @ E:\eclipse-projects\DataStudio-Zola\code\datastudio\src\org.opengauss.mppdbide.bl\pom.xml
+[WARNING] The following locally built units have been used to resolve project dependencies:
+[WARNING]   Common-collection/1.0.0
+[WARNING]   JSQLParser/1.0.0
+[INFO] Resolving class path of MavenProject: org.opengauss.plide.build:org.opengauss.mppdbide.bl:1.0.0-SNAPSHOT @ E:\eclipse-projects\DataStudio-Zola\code\datastudio\src\org.opengauss.mppdbide.bl\pom.xml
+[INFO] Computing target platform for MavenProject: org.opengauss.plide.build:org.opengauss.mppdbide.presentation:1.0.0-SNAPSHOT @ E:\eclipse-projects\DataStudio-Zola\code\datastudio\src\org.opengauss.mppdbide.presentation\pom.xml
+[INFO] Resolving dependencies of MavenProject: org.opengauss.plide.build:org.opengauss.mppdbide.presentation:1.0.0-SNAPSHOT @ E:\eclipse-projects\DataStudio-Zola\code\datastudio\src\org.opengauss.mppdbide.presentation\pom.xml
+[WARNING] The following locally built units have been used to resolve project dependencies:
+[WARNING]   Common-collection/1.0.0
+[WARNING]   JSQLParser/1.0.0
+[INFO] Resolving class path of MavenProject: org.opengauss.plide.build:org.opengauss.mppdbide.presentation:1.0.0-SNAPSHOT @ E:\eclipse-projects\DataStudio-Zola\code\datastudio\src\org.opengauss.mppdbide.presentation\pom.xml
+[INFO] Computing target platform for MavenProject: org.opengauss.plide.build:org.opengauss.mppdbide.explainplan:1.0.0-SNAPSHOT @ E:\eclipse-projects\DataStudio-Zola\code\datastudio\src\org.opengauss.mppdbide.explainplan\pom.xml
+[INFO] Resolving dependencies of MavenProject: org.opengauss.plide.build:org.opengauss.mppdbide.explainplan:1.0.0-SNAPSHOT @ E:\eclipse-projects\DataStudio-Zola\code\datastudio\src\org.opengauss.mppdbide.explainplan\pom.xml
+[WARNING] The following locally built units have been used to resolve project dependencies:
+[WARNING]   Common-collection/1.0.0
+[WARNING]   JSQLParser/1.0.0
+[INFO] Resolving class path of MavenProject: org.opengauss.plide.build:org.opengauss.mppdbide.explainplan:1.0.0-SNAPSHOT @ E:\eclipse-projects\DataStudio-Zola\code\datastudio\src\org.opengauss.mppdbide.explainplan\pom.xml
+[INFO] Computing target platform for MavenProject: org.opengauss.plide.build:org.opengauss.mppdbide.editor.extension:1.0.0-SNAPSHOT @ E:\eclipse-projects\DataStudio-Zola\code\datastudio\src\org.opengauss.mppdbide.editor.extension\pom.xml
+[INFO] Resolving dependencies of MavenProject: org.opengauss.plide.build:org.opengauss.mppdbide.editor.extension:1.0.0-SNAPSHOT @ E:\eclipse-projects\DataStudio-Zola\code\datastudio\src\org.opengauss.mppdbide.editor.extension\pom.xml
+[WARNING] The following locally built units have been used to resolve project dependencies:
+[WARNING]   Common-collection/1.0.0
+[WARNING]   JSQLParser/1.0.0
+[INFO] Resolving class path of MavenProject: org.opengauss.plide.build:org.opengauss.mppdbide.editor.extension:1.0.0-SNAPSHOT @ E:\eclipse-projects\DataStudio-Zola\code\datastudio\src\org.opengauss.mppdbide.editor.extension\pom.xml
+[INFO] Computing target platform for MavenProject: org.opengauss.plide.build:org.opengauss.mppdbide.view:1.0.0-SNAPSHOT @ E:\eclipse-projects\DataStudio-Zola\code\datastudio\src\org.opengauss.mppdbide.view\pom.xml
+[INFO] Resolving dependencies of MavenProject: org.opengauss.plide.build:org.opengauss.mppdbide.view:1.0.0-SNAPSHOT @ E:\eclipse-projects\DataStudio-Zola\code\datastudio\src\org.opengauss.mppdbide.view\pom.xml
+[WARNING] The following locally built units have been used to resolve project dependencies:
+[WARNING]   Common-collection/1.0.0
+[WARNING]   commons-csv/1.0.0
+[WARNING]   JSQLParser/1.0.0
+[INFO] Resolving class path of MavenProject: org.opengauss.plide.build:org.opengauss.mppdbide.view:1.0.0-SNAPSHOT @ E:\eclipse-projects\DataStudio-Zola\code\datastudio\src\org.opengauss.mppdbide.view\pom.xml
+[INFO] Computing target platform for MavenProject: org.opengauss.plide.build:org.opengauss.mppdbide.feature:1.0.0-SNAPSHOT @ E:\eclipse-projects\DataStudio-Zola\code\datastudio\src\org.opengauss.mppdbide.feature\pom.xml
+[INFO] Resolving dependencies of MavenProject: org.opengauss.plide.build:org.opengauss.mppdbide.feature:1.0.0-SNAPSHOT @ E:\eclipse-projects\DataStudio-Zola\code\datastudio\src\org.opengauss.mppdbide.feature\pom.xml
+[WARNING] The following locally built units have been used to resolve project dependencies:
+[WARNING]   Common-collection/1.0.0
+[WARNING]   commons-csv/1.0.0
+[WARNING]   JSQLParser/1.0.0
+[INFO] Resolving class path of MavenProject: org.opengauss.plide.build:org.opengauss.mppdbide.feature:1.0.0-SNAPSHOT @ E:\eclipse-projects\DataStudio-Zola\code\datastudio\src\org.opengauss.mppdbide.feature\pom.xml
+[INFO] Computing target platform for MavenProject: org.opengauss.plide.build:org.opengauss.mppdbide.repository:1.0.0-SNAPSHOT @ E:\eclipse-projects\DataStudio-Zola\code\datastudio\src\org.opengauss.mppdbide.repository\pom.xml
+[INFO] Resolving dependencies of MavenProject: org.opengauss.plide.build:org.opengauss.mppdbide.repository:1.0.0-SNAPSHOT @ E:\eclipse-projects\DataStudio-Zola\code\datastudio\src\org.opengauss.mppdbide.repository\pom.xml
+[WARNING] The following locally built units have been used to resolve project dependencies:
+[WARNING]   Common-collection/1.0.0
+[WARNING]   commons-csv/1.0.0
+[WARNING]   JSQLParser/1.0.0
+[INFO] Resolving class path of MavenProject: org.opengauss.plide.build:org.opengauss.mppdbide.repository:1.0.0-SNAPSHOT @ E:\eclipse-projects\DataStudio-Zola\code\datastudio\src\org.opengauss.mppdbide.repository\pom.xml
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] GAUSS_MPP_DB_IDE                                                   [pom]
+[INFO] org.opengauss.dbdriver.jdbc.gauss                       [eclipse-plugin]
+[INFO] Common-collection                                       [eclipse-plugin]
+[INFO] commons-csv                                             [eclipse-plugin]
+[INFO] JSQLParser                                              [eclipse-plugin]
+[INFO] org.opengauss.mppdbide.util                             [eclipse-plugin]
+[INFO] org.opengauss.mppdbide.adapter.gauss                    [eclipse-plugin]
+[INFO] org.opengauss.mppdbide.bl                               [eclipse-plugin]
+[INFO] gauss parser                                            [eclipse-plugin]
+[INFO] org.opengauss.mppdbide.debuger                          [eclipse-plugin]
+[INFO] org.opengauss.mppdbide.presentation                     [eclipse-plugin]
+[INFO] org.opengauss.mppdbide.explainplan                      [eclipse-plugin]
+[INFO] org.opengauss.mppdbide.editor.extension                 [eclipse-plugin]
+[INFO] org.opengauss.mppdbide.view                             [eclipse-plugin]
+[INFO] org.opengauss.mppdbide.feature                         [eclipse-feature]
+[INFO] org.opengauss.mppdbide.repository                   [eclipse-repository]
+[INFO] 
+[INFO] -------------< org.opengauss.plide.build:GAUSS_MPP_DB_IDE >-------------
+[INFO] Building GAUSS_MPP_DB_IDE 1.0.0-SNAPSHOT                          [1/16]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ GAUSS_MPP_DB_IDE ---
+[INFO] org.opengauss.plide.build:GAUSS_MPP_DB_IDE:pom:1.0.0-SNAPSHOT
+[INFO] 
+[INFO] ----< org.opengauss.plide.build:org.opengauss.dbdriver.jdbc.gauss >-----
+[INFO] Building org.opengauss.dbdriver.jdbc.gauss 1.0.0-SNAPSHOT         [2/16]
+[INFO] ---------------------------[ eclipse-plugin ]---------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ org.opengauss.dbdriver.jdbc.gauss ---
+[INFO] org.opengauss.plide.build:org.opengauss.dbdriver.jdbc.gauss:eclipse-plugin:1.0.0-SNAPSHOT
+[INFO] \- org.opengauss.plide.build:org.opengauss.dbdriver.jdbc.gauss:jar:gsjdbc4.jar:1.0.0.qualifier:system
+[INFO] 
+[INFO] ------------< org.opengauss.plide.build:Common-collection >-------------
+[INFO] Building Common-collection 1.0.0                                  [3/16]
+[INFO] ---------------------------[ eclipse-plugin ]---------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ Common-collection ---
+[INFO] org.opengauss.plide.build:Common-collection:eclipse-plugin:1.0.0
+[INFO] +- org.opengauss.plide.build:Common-collection:jar:xmlbeans-3.1.0.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:Common-collection:jar:poi-4.1.2.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:Common-collection:jar:poi-ooxml-4.1.2.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:Common-collection:jar:poi-ooxml-schemas-4.1.2.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:Common-collection:jar:commons-collections4-4.4.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:Common-collection:jar:commons-compress-1.21.jar:1.0.0:system
+[INFO] \- org.opengauss.plide.build:Common-collection:jar:commons-math3-3.6.1.jar:1.0.0:system
+[INFO] 
+[INFO] ---------------< org.opengauss.plide.build:commons-csv >----------------
+[INFO] Building commons-csv 1.0.0                                        [4/16]
+[INFO] ---------------------------[ eclipse-plugin ]---------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ commons-csv ---
+[INFO] org.opengauss.plide.build:commons-csv:eclipse-plugin:1.0.0
+[INFO] \- org.opengauss.plide.build:commons-csv:jar:commons-csv-1.9.0.jar:1.0.0:system
+[INFO] 
+[INFO] ----------------< org.opengauss.plide.build:JSQLParser >----------------
+[INFO] Building JSQLParser 1.0.0                                         [5/16]
+[INFO] ---------------------------[ eclipse-plugin ]---------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ JSQLParser ---
+[INFO] org.opengauss.plide.build:JSQLParser:eclipse-plugin:1.0.0
+[INFO] \- org.opengauss.plide.build:JSQLParser:jar:jsqlparser-3.2.jar:1.0.0:system
+[INFO] 
+[INFO] -------< org.opengauss.plide.build:org.opengauss.mppdbide.util >--------
+[INFO] Building org.opengauss.mppdbide.util 1.0.0-SNAPSHOT               [6/16]
+[INFO] ---------------------------[ eclipse-plugin ]---------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ org.opengauss.mppdbide.util ---
+[INFO] org.opengauss.plide.build:org.opengauss.mppdbide.util:eclipse-plugin:1.0.0-SNAPSHOT
+[INFO] +- org.opengauss.plide.build:JSQLParser:eclipse-plugin:1.0.0:provided
+[INFO] +- org.opengauss.plide.build:JSQLParser:jar:jsqlparser-3.2.jar:1.0.0:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.osgi:jar:3.17.100.v20211104-1730:system
+[INFO] +- p2.eclipse-plugin:com.ibm.icu:jar:67.1.0.v20200706-1749:system
+[INFO] +- p2.eclipse-plugin:org.apache.commons.codec:jar:1.14.0.v20200818-1422:system
+[INFO] +- p2.eclipse-plugin:org.apache.commons.io:jar:2.8.0.v20210415-0900:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.core.commands:jar:3.10.100.v20210722-1426:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.equinox.common:jar:3.15.100.v20211021-1418:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.core.contenttype:jar:3.8.100.v20210910-0640:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.equinox.preferences:jar:3.9.100.v20211021-1418:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.equinox.registry:jar:3.11.100.v20211021-1418:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.core.jobs:jar:3.12.0.v20210723-1034:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.core.runtime:jar:3.24.0.v20210910-0750:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.equinox.app:jar:1.6.100.v20211021-1418:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.jface:jar:3.24.0.v20211110-1517:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.swt:jar:3.118.0.v20211123-0851:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.jface.text:jar:3.19.0.v20211026-2100:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.text:jar:3.12.0.v20210512-1644:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.swt.win32.win32.x86_64:jar:3.118.0.v20211123-0851:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.util:jar:log4j-api-2.17.1.jar:1.0.0.qualifier:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.util:jar:log4j-core-2.17.1.jar:1.0.0.qualifier:system
+[INFO] \- p2.eclipse-plugin:org.apache.commons.lang3:jar:3.1.0.v201403281430:system
+[INFO] 
+[INFO] ---< org.opengauss.plide.build:org.opengauss.mppdbide.adapter.gauss >---
+[INFO] Building org.opengauss.mppdbide.adapter.gauss 1.0.0-SNAPSHOT      [7/16]
+[INFO] ---------------------------[ eclipse-plugin ]---------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ org.opengauss.mppdbide.adapter.gauss ---
+[INFO] org.opengauss.plide.build:org.opengauss.mppdbide.adapter.gauss:eclipse-plugin:1.0.0-SNAPSHOT
+[INFO] +- org.opengauss.plide.build:JSQLParser:eclipse-plugin:1.0.0:provided
+[INFO] +- org.opengauss.plide.build:JSQLParser:jar:jsqlparser-3.2.jar:1.0.0:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.osgi:jar:3.17.100.v20211104-1730:system
+[INFO] +- p2.eclipse-plugin:com.ibm.icu:jar:67.1.0.v20200706-1749:system
+[INFO] +- p2.eclipse-plugin:org.apache.commons.codec:jar:1.14.0.v20200818-1422:system
+[INFO] +- p2.eclipse-plugin:org.apache.commons.io:jar:2.8.0.v20210415-0900:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.core.commands:jar:3.10.100.v20210722-1426:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.equinox.common:jar:3.15.100.v20211021-1418:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.core.contenttype:jar:3.8.100.v20210910-0640:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.equinox.preferences:jar:3.9.100.v20211021-1418:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.equinox.registry:jar:3.11.100.v20211021-1418:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.core.jobs:jar:3.12.0.v20210723-1034:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.core.runtime:jar:3.24.0.v20210910-0750:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.equinox.app:jar:1.6.100.v20211021-1418:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.jface:jar:3.24.0.v20211110-1517:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.swt:jar:3.118.0.v20211123-0851:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.jface.text:jar:3.19.0.v20211026-2100:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.text:jar:3.12.0.v20210512-1644:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.swt.win32.win32.x86_64:jar:3.118.0.v20211123-0851:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.dbdriver.jdbc.gauss:eclipse-plugin:1.0.0-SNAPSHOT:provided
+[INFO] +- org.opengauss.plide.build:org.opengauss.dbdriver.jdbc.gauss:jar:gsjdbc4.jar:1.0.0.qualifier:system
+[INFO] +- p2.eclipse-plugin:org.apache.commons.lang:jar:2.6.0.v201404270220:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.util:eclipse-plugin:1.0.0-SNAPSHOT:provided
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.util:jar:log4j-api-2.17.1.jar:1.0.0.qualifier:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.util:jar:log4j-core-2.17.1.jar:1.0.0.qualifier:system
+[INFO] +- org.opengauss.plide.build:Common-collection:eclipse-plugin:1.0.0:provided
+[INFO] +- org.opengauss.plide.build:Common-collection:jar:xmlbeans-3.1.0.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:Common-collection:jar:poi-4.1.2.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:Common-collection:jar:poi-ooxml-4.1.2.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:Common-collection:jar:poi-ooxml-schemas-4.1.2.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:Common-collection:jar:commons-collections4-4.4.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:Common-collection:jar:commons-compress-1.21.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:Common-collection:jar:commons-math3-3.6.1.jar:1.0.0:system
+[INFO] \- p2.eclipse-plugin:org.apache.commons.lang3:jar:3.1.0.v201403281430:system
+[INFO] 
+[INFO] --------< org.opengauss.plide.build:org.opengauss.mppdbide.bl >---------
+[INFO] Building org.opengauss.mppdbide.bl 1.0.0-SNAPSHOT                 [8/16]
+[INFO] ---------------------------[ eclipse-plugin ]---------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ org.opengauss.mppdbide.bl ---
+[INFO] org.opengauss.plide.build:org.opengauss.mppdbide.bl:eclipse-plugin:1.0.0-SNAPSHOT
+[INFO] +- org.opengauss.plide.build:JSQLParser:eclipse-plugin:1.0.0:provided
+[INFO] +- org.opengauss.plide.build:JSQLParser:jar:jsqlparser-3.2.jar:1.0.0:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.osgi.util:jar:3.6.100.v20210723-1119:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.osgi:jar:3.17.100.v20211104-1730:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.osgi.services:jar:3.10.200.v20210723-0643:system
+[INFO] +- p2.eclipse-plugin:com.ibm.icu:jar:67.1.0.v20200706-1749:system
+[INFO] +- p2.eclipse-plugin:javax.annotation:jar:1.3.5.v20200909-1856:system
+[INFO] +- p2.eclipse-plugin:org.apache.commons.codec:jar:1.14.0.v20200818-1422:system
+[INFO] +- p2.eclipse-plugin:org.apache.commons.io:jar:2.8.0.v20210415-0900:system
+[INFO] +- p2.eclipse-plugin:org.apache.felix.scr:jar:2.1.24.v20200924-1939:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.core.commands:jar:3.10.100.v20210722-1426:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.equinox.common:jar:3.15.100.v20211021-1418:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.core.contenttype:jar:3.8.100.v20210910-0640:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.equinox.preferences:jar:3.9.100.v20211021-1418:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.equinox.registry:jar:3.11.100.v20211021-1418:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.core.jobs:jar:3.12.0.v20210723-1034:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.core.runtime:jar:3.24.0.v20210910-0750:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.equinox.app:jar:1.6.100.v20211021-1418:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.e4.core.contexts:jar:1.9.100.v20211011-1349:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.e4.core.di:jar:1.8.100.v20210910-0640:system
+[INFO] +- p2.eclipse-plugin:javax.inject:jar:1.0.0.v20091030:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.e4.core.di.annotations:jar:1.7.100.v20210910-0640:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.e4.core.services:jar:2.3.100.v20210910-0640:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.jface:jar:3.24.0.v20211110-1517:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.swt:jar:3.118.0.v20211123-0851:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.jface.text:jar:3.19.0.v20211026-2100:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.text:jar:3.12.0.v20210512-1644:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.swt.win32.win32.x86_64:jar:3.118.0.v20211123-0851:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.dbdriver.jdbc.gauss:eclipse-plugin:1.0.0-SNAPSHOT:provided
+[INFO] +- org.opengauss.plide.build:org.opengauss.dbdriver.jdbc.gauss:jar:gsjdbc4.jar:1.0.0.qualifier:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.adapter.gauss:eclipse-plugin:1.0.0-SNAPSHOT:provided
+[INFO] +- p2.eclipse-plugin:org.apache.commons.lang:jar:2.6.0.v201404270220:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.util:eclipse-plugin:1.0.0-SNAPSHOT:provided
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.util:jar:log4j-api-2.17.1.jar:1.0.0.qualifier:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.util:jar:log4j-core-2.17.1.jar:1.0.0.qualifier:system
+[INFO] +- org.opengauss.plide.build:Common-collection:eclipse-plugin:1.0.0:provided
+[INFO] +- org.opengauss.plide.build:Common-collection:jar:xmlbeans-3.1.0.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:Common-collection:jar:poi-4.1.2.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:Common-collection:jar:poi-ooxml-4.1.2.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:Common-collection:jar:poi-ooxml-schemas-4.1.2.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:Common-collection:jar:commons-collections4-4.4.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:Common-collection:jar:commons-compress-1.21.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:Common-collection:jar:commons-math3-3.6.1.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.bl:jar:gson-2.8.6.jar:1.0.0.qualifier:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.bl:jar:commons-lang3-3.12.0.jar:1.0.0.qualifier:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.bl:jar:commons-io-2.11.0.jar:1.0.0.qualifier:system
+[INFO] \- p2.eclipse-plugin:org.apache.commons.lang3:jar:3.1.0.v201403281430:system
+[INFO] 
+[INFO] ------< org.opengauss.plide.build:org.opengauss.mppdbide.parser >-------
+[INFO] Building gauss parser 1.0.0-SNAPSHOT                              [9/16]
+[INFO] ---------------------------[ eclipse-plugin ]---------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ org.opengauss.mppdbide.parser ---
+[INFO] org.opengauss.plide.build:org.opengauss.mppdbide.parser:eclipse-plugin:1.0.0-SNAPSHOT
+[INFO] +- org.antlr:antlr4-runtime:jar:4.7.1:compile
+[INFO] +- org.opengauss.plide.build:JSQLParser:eclipse-plugin:1.0.0:provided
+[INFO] +- org.opengauss.plide.build:JSQLParser:jar:jsqlparser-3.2.jar:1.0.0:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.osgi.util:jar:3.6.100.v20210723-1119:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.osgi:jar:3.17.100.v20211104-1730:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.osgi.services:jar:3.10.200.v20210723-0643:system
+[INFO] +- p2.eclipse-plugin:com.ibm.icu:jar:67.1.0.v20200706-1749:system
+[INFO] +- p2.eclipse-plugin:javax.annotation:jar:1.3.5.v20200909-1856:system
+[INFO] +- p2.eclipse-plugin:org.apache.commons.codec:jar:1.14.0.v20200818-1422:system
+[INFO] +- p2.eclipse-plugin:org.apache.commons.io:jar:2.8.0.v20210415-0900:system
+[INFO] +- p2.eclipse-plugin:org.apache.felix.scr:jar:2.1.24.v20200924-1939:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.core.commands:jar:3.10.100.v20210722-1426:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.equinox.common:jar:3.15.100.v20211021-1418:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.core.contenttype:jar:3.8.100.v20210910-0640:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.equinox.preferences:jar:3.9.100.v20211021-1418:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.equinox.registry:jar:3.11.100.v20211021-1418:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.core.jobs:jar:3.12.0.v20210723-1034:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.core.runtime:jar:3.24.0.v20210910-0750:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.equinox.app:jar:1.6.100.v20211021-1418:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.e4.core.contexts:jar:1.9.100.v20211011-1349:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.e4.core.di:jar:1.8.100.v20210910-0640:system
+[INFO] +- p2.eclipse-plugin:javax.inject:jar:1.0.0.v20091030:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.e4.core.di.annotations:jar:1.7.100.v20210910-0640:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.e4.core.services:jar:2.3.100.v20210910-0640:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.jface:jar:3.24.0.v20211110-1517:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.swt:jar:3.118.0.v20211123-0851:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.jface.text:jar:3.19.0.v20211026-2100:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.text:jar:3.12.0.v20210512-1644:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.swt.win32.win32.x86_64:jar:3.118.0.v20211123-0851:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.dbdriver.jdbc.gauss:eclipse-plugin:1.0.0-SNAPSHOT:provided
+[INFO] +- org.opengauss.plide.build:org.opengauss.dbdriver.jdbc.gauss:jar:gsjdbc4.jar:1.0.0.qualifier:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.adapter.gauss:eclipse-plugin:1.0.0-SNAPSHOT:provided
+[INFO] +- p2.eclipse-plugin:org.apache.commons.lang:jar:2.6.0.v201404270220:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.util:eclipse-plugin:1.0.0-SNAPSHOT:provided
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.util:jar:log4j-api-2.17.1.jar:1.0.0.qualifier:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.util:jar:log4j-core-2.17.1.jar:1.0.0.qualifier:system
+[INFO] +- org.opengauss.plide.build:Common-collection:eclipse-plugin:1.0.0:provided
+[INFO] +- org.opengauss.plide.build:Common-collection:jar:xmlbeans-3.1.0.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:Common-collection:jar:poi-4.1.2.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:Common-collection:jar:poi-ooxml-4.1.2.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:Common-collection:jar:poi-ooxml-schemas-4.1.2.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:Common-collection:jar:commons-collections4-4.4.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:Common-collection:jar:commons-compress-1.21.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:Common-collection:jar:commons-math3-3.6.1.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.bl:eclipse-plugin:1.0.0-SNAPSHOT:provided
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.bl:jar:gson-2.8.6.jar:1.0.0.qualifier:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.bl:jar:commons-lang3-3.12.0.jar:1.0.0.qualifier:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.bl:jar:commons-io-2.11.0.jar:1.0.0.qualifier:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.parser:jar:antlr4-runtime-4.9.2.jar:1.0.0.qualifier:system
+[INFO] \- p2.eclipse-plugin:org.apache.commons.lang3:jar:3.1.0.v201403281430:system
+[INFO] 
+[INFO] ------< org.opengauss.plide.build:org.opengauss.mppdbide.debuger >------
+[INFO] Building org.opengauss.mppdbide.debuger 1.0.0-SNAPSHOT           [10/16]
+[INFO] ---------------------------[ eclipse-plugin ]---------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ org.opengauss.mppdbide.debuger ---
+[INFO] org.opengauss.plide.build:org.opengauss.mppdbide.debuger:eclipse-plugin:1.0.0-SNAPSHOT
+[INFO] +- org.opengauss.plide.build:JSQLParser:eclipse-plugin:1.0.0:provided
+[INFO] +- org.opengauss.plide.build:JSQLParser:jar:jsqlparser-3.2.jar:1.0.0:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.osgi:jar:3.17.100.v20211104-1730:system
+[INFO] +- p2.eclipse-plugin:com.ibm.icu:jar:67.1.0.v20200706-1749:system
+[INFO] +- p2.eclipse-plugin:org.apache.commons.codec:jar:1.14.0.v20200818-1422:system
+[INFO] +- p2.eclipse-plugin:org.apache.commons.io:jar:2.8.0.v20210415-0900:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.core.commands:jar:3.10.100.v20210722-1426:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.equinox.common:jar:3.15.100.v20211021-1418:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.core.contenttype:jar:3.8.100.v20210910-0640:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.equinox.preferences:jar:3.9.100.v20211021-1418:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.equinox.registry:jar:3.11.100.v20211021-1418:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.core.jobs:jar:3.12.0.v20210723-1034:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.core.runtime:jar:3.24.0.v20210910-0750:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.equinox.app:jar:1.6.100.v20211021-1418:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.jface:jar:3.24.0.v20211110-1517:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.swt:jar:3.118.0.v20211123-0851:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.jface.text:jar:3.19.0.v20211026-2100:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.text:jar:3.12.0.v20210512-1644:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.swt.win32.win32.x86_64:jar:3.118.0.v20211123-0851:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.dbdriver.jdbc.gauss:eclipse-plugin:1.0.0-SNAPSHOT:provided
+[INFO] +- org.opengauss.plide.build:org.opengauss.dbdriver.jdbc.gauss:jar:gsjdbc4.jar:1.0.0.qualifier:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.adapter.gauss:eclipse-plugin:1.0.0-SNAPSHOT:provided
+[INFO] +- p2.eclipse-plugin:org.apache.commons.lang:jar:2.6.0.v201404270220:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.util:eclipse-plugin:1.0.0-SNAPSHOT:provided
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.util:jar:log4j-api-2.17.1.jar:1.0.0.qualifier:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.util:jar:log4j-core-2.17.1.jar:1.0.0.qualifier:system
+[INFO] +- org.opengauss.plide.build:Common-collection:eclipse-plugin:1.0.0:provided
+[INFO] +- org.opengauss.plide.build:Common-collection:jar:xmlbeans-3.1.0.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:Common-collection:jar:poi-4.1.2.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:Common-collection:jar:poi-ooxml-4.1.2.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:Common-collection:jar:poi-ooxml-schemas-4.1.2.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:Common-collection:jar:commons-collections4-4.4.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:Common-collection:jar:commons-compress-1.21.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:Common-collection:jar:commons-math3-3.6.1.jar:1.0.0:system
+[INFO] \- p2.eclipse-plugin:org.apache.commons.lang3:jar:3.1.0.v201403281430:system
+[INFO] 
+[INFO] ---< org.opengauss.plide.build:org.opengauss.mppdbide.presentation >----
+[INFO] Building org.opengauss.mppdbide.presentation 1.0.0-SNAPSHOT      [11/16]
+[INFO] ---------------------------[ eclipse-plugin ]---------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ org.opengauss.mppdbide.presentation ---
+[INFO] org.opengauss.plide.build:org.opengauss.mppdbide.presentation:eclipse-plugin:1.0.0-SNAPSHOT
+[INFO] +- junit:junit:jar:4.11:test
+[INFO] |  \- org.hamcrest:hamcrest-core:jar:1.3:test
+[INFO] +- com.mockrunner:mockrunner-jdbc:jar:1.1.2:test
+[INFO] |  +- com.mockrunner:mockrunner-core:jar:1.1.2:test
+[INFO] |  |  +- jdom:jdom:jar:1.0:test
+[INFO] |  |  +- oro:oro:jar:2.0.8:test
+[INFO] |  |  +- com.kirkk:jaranalyzer:jar:1.2:test
+[INFO] |  |  |  +- bcel:bcel:jar:5.1:test
+[INFO] |  |  |  |  \- regexp:regexp:jar:1.2:test
+[INFO] |  |  |  +- jakarta-regexp:jakarta-regexp:jar:1.4:test
+[INFO] |  |  |  \- ant:ant:jar:1.6.5:test
+[INFO] |  |  \- nekohtml:nekohtml:jar:0.9.5:test
+[INFO] |  \- commons-logging:commons-logging:jar:1.0.4:test
+[INFO] +- org.opengauss.plide.build:JSQLParser:eclipse-plugin:1.0.0:provided
+[INFO] +- org.opengauss.plide.build:JSQLParser:jar:jsqlparser-3.2.jar:1.0.0:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.osgi.util:jar:3.6.100.v20210723-1119:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.osgi:jar:3.17.100.v20211104-1730:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.osgi.services:jar:3.10.200.v20210723-0643:system
+[INFO] +- p2.eclipse-plugin:ca.odell.glazedlists:jar:1.9.0.v201303080712:system
+[INFO] +- p2.eclipse-plugin:com.ibm.icu:jar:67.1.0.v20200706-1749:system
+[INFO] +- p2.eclipse-plugin:javax.annotation:jar:1.3.5.v20200909-1856:system
+[INFO] +- p2.eclipse-plugin:org.apache.commons.codec:jar:1.14.0.v20200818-1422:system
+[INFO] +- p2.eclipse-plugin:org.apache.commons.io:jar:2.8.0.v20210415-0900:system
+[INFO] +- p2.eclipse-plugin:org.apache.felix.scr:jar:2.1.24.v20200924-1939:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.core.commands:jar:3.10.100.v20210722-1426:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.equinox.common:jar:3.15.100.v20211021-1418:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.core.contenttype:jar:3.8.100.v20210910-0640:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.equinox.preferences:jar:3.9.100.v20211021-1418:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.equinox.registry:jar:3.11.100.v20211021-1418:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.core.jobs:jar:3.12.0.v20210723-1034:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.core.runtime:jar:3.24.0.v20210910-0750:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.equinox.app:jar:1.6.100.v20211021-1418:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.e4.core.contexts:jar:1.9.100.v20211011-1349:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.e4.core.di:jar:1.8.100.v20210910-0640:system
+[INFO] +- p2.eclipse-plugin:javax.inject:jar:1.0.0.v20091030:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.e4.core.di.annotations:jar:1.7.100.v20210910-0640:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.e4.core.services:jar:2.3.100.v20210910-0640:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.jface:jar:3.24.0.v20211110-1517:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.swt:jar:3.118.0.v20211123-0851:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.jface.text:jar:3.19.0.v20211026-2100:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.text:jar:3.12.0.v20210512-1644:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.swt.win32.win32.x86_64:jar:3.118.0.v20211123-0851:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.dbdriver.jdbc.gauss:eclipse-plugin:1.0.0-SNAPSHOT:provided
+[INFO] +- org.opengauss.plide.build:org.opengauss.dbdriver.jdbc.gauss:jar:gsjdbc4.jar:1.0.0.qualifier:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.adapter.gauss:eclipse-plugin:1.0.0-SNAPSHOT:provided
+[INFO] +- p2.eclipse-plugin:org.apache.commons.lang:jar:2.6.0.v201404270220:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.util:eclipse-plugin:1.0.0-SNAPSHOT:provided
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.util:jar:log4j-api-2.17.1.jar:1.0.0.qualifier:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.util:jar:log4j-core-2.17.1.jar:1.0.0.qualifier:system
+[INFO] +- org.opengauss.plide.build:Common-collection:eclipse-plugin:1.0.0:provided
+[INFO] +- org.opengauss.plide.build:Common-collection:jar:xmlbeans-3.1.0.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:Common-collection:jar:poi-4.1.2.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:Common-collection:jar:poi-ooxml-4.1.2.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:Common-collection:jar:poi-ooxml-schemas-4.1.2.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:Common-collection:jar:commons-collections4-4.4.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:Common-collection:jar:commons-compress-1.21.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:Common-collection:jar:commons-math3-3.6.1.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.bl:eclipse-plugin:1.0.0-SNAPSHOT:provided
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.bl:jar:gson-2.8.6.jar:1.0.0.qualifier:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.bl:jar:commons-lang3-3.12.0.jar:1.0.0.qualifier:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.bl:jar:commons-io-2.11.0.jar:1.0.0.qualifier:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.debuger:eclipse-plugin:1.0.0-SNAPSHOT:provided
+[INFO] \- p2.eclipse-plugin:org.apache.commons.lang3:jar:3.1.0.v201403281430:system
+[INFO] 
+[INFO] ----< org.opengauss.plide.build:org.opengauss.mppdbide.explainplan >----
+[INFO] Building org.opengauss.mppdbide.explainplan 1.0.0-SNAPSHOT       [12/16]
+[INFO] ---------------------------[ eclipse-plugin ]---------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ org.opengauss.mppdbide.explainplan ---
+[INFO] org.opengauss.plide.build:org.opengauss.mppdbide.explainplan:eclipse-plugin:1.0.0-SNAPSHOT
+[INFO] +- org.opengauss.plide.build:JSQLParser:eclipse-plugin:1.0.0:provided
+[INFO] +- org.opengauss.plide.build:JSQLParser:jar:jsqlparser-3.2.jar:1.0.0:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.osgi.util:jar:3.6.100.v20210723-1119:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.osgi:jar:3.17.100.v20211104-1730:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.osgi.services:jar:3.10.200.v20210723-0643:system
+[INFO] +- p2.eclipse-plugin:ca.odell.glazedlists:jar:1.9.0.v201303080712:system
+[INFO] +- p2.eclipse-plugin:com.google.guava:jar:30.1.0.v20210127-2300:system
+[INFO] +- p2.eclipse-plugin:javax.inject:jar:1.0.0.v20091030:system
+[INFO] +- p2.eclipse-plugin:com.google.inject:jar:3.0.0.v201605172100:system
+[INFO] +- p2.eclipse-plugin:com.google.inject.multibindings:jar:3.0.0.v201605172100:system
+[INFO] +- p2.eclipse-plugin:com.ibm.icu:jar:67.1.0.v20200706-1749:system
+[INFO] +- p2.eclipse-plugin:javax.annotation:jar:1.3.5.v20200909-1856:system
+[INFO] +- p2.eclipse-plugin:org.apache.commons.codec:jar:1.14.0.v20200818-1422:system
+[INFO] +- p2.eclipse-plugin:org.apache.commons.io:jar:2.8.0.v20210415-0900:system
+[INFO] +- p2.eclipse-plugin:org.apache.felix.scr:jar:2.1.24.v20200924-1939:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.core.commands:jar:3.10.100.v20210722-1426:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.equinox.common:jar:3.15.100.v20211021-1418:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.core.contenttype:jar:3.8.100.v20210910-0640:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.equinox.preferences:jar:3.9.100.v20211021-1418:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.equinox.registry:jar:3.11.100.v20211021-1418:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.core.jobs:jar:3.12.0.v20210723-1034:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.core.runtime:jar:3.24.0.v20210910-0750:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.equinox.app:jar:1.6.100.v20211021-1418:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.e4.core.contexts:jar:1.9.100.v20211011-1349:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.e4.core.di:jar:1.8.100.v20210910-0640:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.e4.core.di.annotations:jar:1.7.100.v20210910-0640:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.e4.core.services:jar:2.3.100.v20210910-0640:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.gef.common:jar:5.0.1.202112010300:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.gef.geometry:jar:5.0.1.202112010300:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.gef.geometry.convert.fx:jar:5.0.0.202112010300:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.gef.fx:jar:5.0.5.202112010300:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.gef.graph:jar:5.1.0.202112010300:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.gef.layout:jar:5.0.0.202112010300:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.gef.mvc.fx:jar:5.2.3.202112010300:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.gef.zest.fx:jar:5.1.2.202112010300:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.jface:jar:3.24.0.v20211110-1517:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.swt:jar:3.118.0.v20211123-0851:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.jface.text:jar:3.19.0.v20211026-2100:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.text:jar:3.12.0.v20210512-1644:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.swt.win32.win32.x86_64:jar:3.118.0.v20211123-0851:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.dbdriver.jdbc.gauss:eclipse-plugin:1.0.0-SNAPSHOT:provided
+[INFO] +- org.opengauss.plide.build:org.opengauss.dbdriver.jdbc.gauss:jar:gsjdbc4.jar:1.0.0.qualifier:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.adapter.gauss:eclipse-plugin:1.0.0-SNAPSHOT:provided
+[INFO] +- p2.eclipse-plugin:org.apache.commons.lang:jar:2.6.0.v201404270220:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.util:eclipse-plugin:1.0.0-SNAPSHOT:provided
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.util:jar:log4j-api-2.17.1.jar:1.0.0.qualifier:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.util:jar:log4j-core-2.17.1.jar:1.0.0.qualifier:system
+[INFO] +- org.opengauss.plide.build:Common-collection:eclipse-plugin:1.0.0:provided
+[INFO] +- org.opengauss.plide.build:Common-collection:jar:xmlbeans-3.1.0.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:Common-collection:jar:poi-4.1.2.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:Common-collection:jar:poi-ooxml-4.1.2.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:Common-collection:jar:poi-ooxml-schemas-4.1.2.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:Common-collection:jar:commons-collections4-4.4.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:Common-collection:jar:commons-compress-1.21.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:Common-collection:jar:commons-math3-3.6.1.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.bl:eclipse-plugin:1.0.0-SNAPSHOT:provided
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.bl:jar:gson-2.8.6.jar:1.0.0.qualifier:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.bl:jar:commons-lang3-3.12.0.jar:1.0.0.qualifier:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.bl:jar:commons-io-2.11.0.jar:1.0.0.qualifier:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.debuger:eclipse-plugin:1.0.0-SNAPSHOT:provided
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.explainplan:jar:gson-2.8.6.jar:1.0.0.qualifier:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.presentation:eclipse-plugin:1.0.0-SNAPSHOT:provided
+[INFO] \- p2.eclipse-plugin:org.apache.commons.lang3:jar:3.1.0.v201403281430:system
+[INFO] 
+[INFO] --< org.opengauss.plide.build:org.opengauss.mppdbide.editor.extension >--
+[INFO] Building org.opengauss.mppdbide.editor.extension 1.0.0-SNAPSHOT  [13/16]
+[INFO] ---------------------------[ eclipse-plugin ]---------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ org.opengauss.mppdbide.editor.extension ---
+[INFO] org.opengauss.plide.build:org.opengauss.mppdbide.editor.extension:eclipse-plugin:1.0.0-SNAPSHOT
+[INFO] +- org.opengauss.plide.build:JSQLParser:eclipse-plugin:1.0.0:provided
+[INFO] +- org.opengauss.plide.build:JSQLParser:jar:jsqlparser-3.2.jar:1.0.0:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.osgi.util:jar:3.6.100.v20210723-1119:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.osgi:jar:3.17.100.v20211104-1730:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.osgi.services:jar:3.10.200.v20210723-0643:system
+[INFO] +- p2.eclipse-plugin:com.ibm.icu:jar:67.1.0.v20200706-1749:system
+[INFO] +- p2.eclipse-plugin:javax.annotation:jar:1.3.5.v20200909-1856:system
+[INFO] +- p2.eclipse-plugin:org.apache.commons.codec:jar:1.14.0.v20200818-1422:system
+[INFO] +- p2.eclipse-plugin:org.apache.commons.io:jar:2.8.0.v20210415-0900:system
+[INFO] +- p2.eclipse-plugin:org.apache.felix.scr:jar:2.1.24.v20200924-1939:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.core.commands:jar:3.10.100.v20210722-1426:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.equinox.common:jar:3.15.100.v20211021-1418:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.core.contenttype:jar:3.8.100.v20210910-0640:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.equinox.preferences:jar:3.9.100.v20211021-1418:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.equinox.registry:jar:3.11.100.v20211021-1418:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.core.jobs:jar:3.12.0.v20210723-1034:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.core.runtime:jar:3.24.0.v20210910-0750:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.equinox.app:jar:1.6.100.v20211021-1418:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.e4.core.contexts:jar:1.9.100.v20211011-1349:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.e4.core.di:jar:1.8.100.v20210910-0640:system
+[INFO] +- p2.eclipse-plugin:javax.inject:jar:1.0.0.v20091030:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.e4.core.di.annotations:jar:1.7.100.v20210910-0640:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.e4.core.services:jar:2.3.100.v20210910-0640:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.jface:jar:3.24.0.v20211110-1517:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.swt:jar:3.118.0.v20211123-0851:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.jface.text:jar:3.19.0.v20211026-2100:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.text:jar:3.12.0.v20210512-1644:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.swt.win32.win32.x86_64:jar:3.118.0.v20211123-0851:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.dbdriver.jdbc.gauss:eclipse-plugin:1.0.0-SNAPSHOT:provided
+[INFO] +- org.opengauss.plide.build:org.opengauss.dbdriver.jdbc.gauss:jar:gsjdbc4.jar:1.0.0.qualifier:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.adapter.gauss:eclipse-plugin:1.0.0-SNAPSHOT:provided
+[INFO] +- p2.eclipse-plugin:org.apache.commons.lang:jar:2.6.0.v201404270220:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.util:eclipse-plugin:1.0.0-SNAPSHOT:provided
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.util:jar:log4j-api-2.17.1.jar:1.0.0.qualifier:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.util:jar:log4j-core-2.17.1.jar:1.0.0.qualifier:system
+[INFO] +- org.opengauss.plide.build:Common-collection:eclipse-plugin:1.0.0:provided
+[INFO] +- org.opengauss.plide.build:Common-collection:jar:xmlbeans-3.1.0.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:Common-collection:jar:poi-4.1.2.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:Common-collection:jar:poi-ooxml-4.1.2.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:Common-collection:jar:poi-ooxml-schemas-4.1.2.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:Common-collection:jar:commons-collections4-4.4.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:Common-collection:jar:commons-compress-1.21.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:Common-collection:jar:commons-math3-3.6.1.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.bl:eclipse-plugin:1.0.0-SNAPSHOT:provided
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.bl:jar:gson-2.8.6.jar:1.0.0.qualifier:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.bl:jar:commons-lang3-3.12.0.jar:1.0.0.qualifier:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.bl:jar:commons-io-2.11.0.jar:1.0.0.qualifier:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.parser:eclipse-plugin:1.0.0-SNAPSHOT:provided
+[INFO] |  \- org.antlr:antlr4-runtime:jar:4.7.1:provided
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.parser:jar:antlr4-runtime-4.9.2.jar:1.0.0.qualifier:system
+[INFO] \- p2.eclipse-plugin:org.apache.commons.lang3:jar:3.1.0.v201403281430:system
+[INFO] 
+[INFO] -------< org.opengauss.plide.build:org.opengauss.mppdbide.view >--------
+[INFO] Building org.opengauss.mppdbide.view 1.0.0-SNAPSHOT              [14/16]
+[INFO] ---------------------------[ eclipse-plugin ]---------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ org.opengauss.mppdbide.view ---
+[INFO] org.opengauss.plide.build:org.opengauss.mppdbide.view:eclipse-plugin:1.0.0-SNAPSHOT
+[INFO] +- org.opengauss.plide.build:JSQLParser:eclipse-plugin:1.0.0:provided
+[INFO] +- org.opengauss.plide.build:JSQLParser:jar:jsqlparser-3.2.jar:1.0.0:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.osgi.util:jar:3.6.100.v20210723-1119:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.osgi:jar:3.17.100.v20211104-1730:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.osgi.services:jar:3.10.200.v20210723-0643:system
+[INFO] +- p2.eclipse-plugin:ca.odell.glazedlists:jar:1.9.0.v201303080712:system
+[INFO] +- p2.eclipse-plugin:com.google.guava:jar:21.0.0.v20170206-1425:system
+[INFO] +- p2.eclipse-plugin:javax.inject:jar:1.0.0.v20091030:system
+[INFO] +- p2.eclipse-plugin:com.google.inject:jar:3.0.0.v201605172100:system
+[INFO] +- p2.eclipse-plugin:com.google.inject.multibindings:jar:3.0.0.v201605172100:system
+[INFO] +- p2.eclipse-plugin:com.ibm.icu:jar:67.1.0.v20200706-1749:system
+[INFO] +- p2.eclipse-plugin:com.sun.jna:jar:5.8.0.v20210503-0343:system
+[INFO] +- p2.eclipse-plugin:com.sun.jna.platform:jar:5.8.0.v20210406-1004:system
+[INFO] +- org.opengauss.plide.build:commons-csv:eclipse-plugin:1.0.0:provided
+[INFO] +- org.opengauss.plide.build:commons-csv:jar:commons-csv-1.9.0.jar:1.0.0:system
+[INFO] +- p2.eclipse-plugin:javax.annotation:jar:1.3.5.v20200909-1856:system
+[INFO] +- p2.eclipse-plugin:org.w3c.dom.svg:jar:1.1.0.v201011041433:system
+[INFO] +- p2.eclipse-plugin:org.apache.batik.constants:jar:1.14.0.v20210324-0332:system
+[INFO] +- p2.eclipse-plugin:org.w3c.css.sac:jar:1.3.1.v200903091627:system
+[INFO] +- p2.eclipse-plugin:org.apache.xmlgraphics:jar:2.6.0.v20210409-0748:system
+[INFO] +- p2.eclipse-plugin:org.apache.batik.css:jar:1.14.0.v20210324-0332:system
+[INFO] +- p2.eclipse-plugin:org.apache.batik.util:jar:1.14.0.v20210324-0332:system
+[INFO] +- p2.eclipse-plugin:org.apache.batik.i18n:jar:1.14.0.v20210324-0332:system
+[INFO] +- p2.eclipse-plugin:org.w3c.dom.events:jar:3.0.0.draft20060413_v201105210656:system
+[INFO] +- p2.eclipse-plugin:org.w3c.dom.smil:jar:1.0.1.v200903091627:system
+[INFO] +- p2.eclipse-plugin:org.apache.commons.codec:jar:1.14.0.v20200818-1422:system
+[INFO] +- p2.eclipse-plugin:org.apache.commons.io:jar:2.8.0.v20210415-0900:system
+[INFO] +- p2.eclipse-plugin:org.apache.commons.logging:jar:1.2.0.v20180409-1502:system
+[INFO] +- p2.eclipse-plugin:org.apache.felix.scr:jar:2.1.24.v20200924-1939:system
+[INFO] +- p2.eclipse-plugin:org.bouncycastle.bcpg:jar:1.69.0.v20210713-1924:system
+[INFO] +- p2.eclipse-plugin:org.bouncycastle.bcprov:jar:1.69.0.v20210923-1401:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.compare.core:jar:3.6.1000.v20201020-1107:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.core.runtime:jar:3.24.0.v20210910-0750:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.core.commands:jar:3.10.100.v20210722-1426:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.equinox.common:jar:3.15.100.v20211021-1418:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.core.contenttype:jar:3.8.100.v20210910-0640:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.equinox.preferences:jar:3.9.100.v20211021-1418:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.equinox.registry:jar:3.11.100.v20211021-1418:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.core.databinding:jar:1.10.100.v20200926-1123:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.core.databinding.observable:jar:1.11.0.v20210722-1426:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.core.databinding.property:jar:1.9.0.v20210619-1129:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.core.expressions:jar:3.8.100.v20210910-0640:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.core.filebuffers:jar:3.7.100.v20210909-1906:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.text:jar:3.12.0.v20210512-1644:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.core.filesystem:jar:1.9.200.v20210912-1851:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.core.jobs:jar:3.12.0.v20210723-1034:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.core.net:jar:1.3.1100.v20210424-0724:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.equinox.security:jar:1.3.800.v20211021-1418:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.core.resources:jar:3.16.0.v20211001-2032:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.equinox.app:jar:1.6.100.v20211021-1418:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.e4.core.commands:jar:1.0.0.v20210507-1901:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.e4.core.di:jar:1.8.100.v20210910-0640:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.e4.core.contexts:jar:1.9.100.v20211011-1349:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.e4.core.services:jar:2.3.100.v20210910-0640:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.e4.core.di.annotations:jar:1.7.100.v20210910-0640:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.e4.core.di.extensions:jar:0.17.100.v20210910-0640:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.e4.core.di.extensions.supplier:jar:0.16.200.v20210910-0640:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.e4.emf.xpath:jar:0.3.0.v20210722-1426:system
+[INFO] +- p2.eclipse-plugin:org.apache.commons.jxpath:jar:1.3.0.v200911051830:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.emf.ecore:jar:2.25.0.v20210816-0937:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.e4.ui.bindings:jar:0.13.100.v20210722-1426:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.swt:jar:3.118.0.v20211123-0851:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.e4.ui.services:jar:1.5.0.v20210115-1333:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.jface:jar:3.24.0.v20211110-1517:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.e4.ui.css.core:jar:0.13.200.v20211022-1402:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.e4.ui.css.swt:jar:0.14.400.v20211026-1534:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.e4.ui.css.swt.theme:jar:0.13.0.v20201026-1147:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.e4.ui.di:jar:1.4.0.v20210621-1133:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.e4.ui.dialogs:jar:1.3.100.v20211103-1334:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.e4.ui.ide:jar:3.16.0.v20210625-1251:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.e4.ui.model.workbench:jar:2.2.0.v20210727-1533:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.equinox.event:jar:1.6.100.v20211021-1418:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.e4.ui.widgets:jar:1.3.0.v20210621-1136:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.e4.ui.workbench:jar:1.13.100.v20211019-0756:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.emf.ecore.change:jar:2.14.0.v20190528-0725:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.emf.ecore.xmi:jar:2.16.0.v20190528-0725:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.e4.ui.workbench.addons.swt:jar:1.4.400.v20211102-0453:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.e4.ui.workbench.renderers.swt:jar:0.15.300.v20211102-1716:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.e4.ui.workbench.swt:jar:0.16.300.v20211102-0939:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.jface.databinding:jar:1.13.0.v20210619-1146:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.e4.ui.workbench3:jar:0.16.0.v20210619-0956:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.urischeme:jar:1.2.100.v20211001-1648:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.emf.common:jar:2.23.0.v20210924-1718:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.equinox.bidi:jar:1.4.100.v20211021-1418:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.equinox.launcher:jar:1.6.400.v20210924-0641:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.equinox.p2.artifact.repository:jar:1.4.300.v20211104-1311:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.equinox.p2.metadata:jar:2.6.100.v20210813-0606:system
+[INFO] +- p2.eclipse-plugin:org.tukaani.xz:jar:1.9.0.v20210624-1259:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.equinox.p2.core:jar:2.8.100.v20210908-0659:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.equinox.p2.jarprocessor:jar:1.2.100.v20210907-0854:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.equinox.p2.repository:jar:2.5.300.v20211006-1229:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.equinox.p2.engine:jar:2.7.200.v20211104-1616:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.equinox.p2.metadata.repository:jar:1.4.0.v20210315-2228:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.gef.common:jar:5.0.1.202112010300:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.gef.geometry:jar:5.0.1.202112010300:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.gef.geometry.convert.fx:jar:5.0.0.202112010300:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.gef.fx:jar:5.0.5.202112010300:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.gef.fx.swt:jar:5.0.2.202112010300:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.gef.fx.jface:jar:5.0.2.202112010300:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.gef.geometry.convert.swt:jar:5.0.2.202112010300:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.gef.graph:jar:5.1.0.202112010300:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.gef.layout:jar:5.0.0.202112010300:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.gef.mvc.fx:jar:5.2.3.202112010300:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.gef.zest.fx:jar:5.1.2.202112010300:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.help:jar:3.9.100.v20210721-0601:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.jface.notifications:jar:0.4.0.v20211004-0555:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.jface.text:jar:3.19.0.v20211026-2100:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.mylyn.commons.core:jar:3.25.2.v20200813-0821:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.mylyn.commons.screenshots:jar:3.25.2.v20200813-0821:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.mylyn.commons.ui:jar:3.25.2.v20200813-0821:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.ui:jar:3.200.0.v20211026-0701:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.ui.forms:jar:3.11.300.v20211022-1451:system
+[INFO] +- p2.eclipse-plugin:org.apache.commons.lang:jar:2.6.0.v201404270220:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.swt.win32.win32.x86_64:jar:3.118.0.v20211123-0851:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.nebula.cwt:jar:1.1.0.201907151344:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.nebula.widgets.cdatetime:jar:1.4.0.201907151344:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.nebula.widgets.nattable.core:jar:1.6.0.201909181823:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.nebula.widgets.nattable.extension.e4:jar:1.2.0.201909181823:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.nebula.widgets.nattable.extension.glazedlists:jar:1.6.0.201909181823:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.nebula.widgets.nattable.extension.nebula:jar:1.2.0.201909181823:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.nebula.widgets.richtext:jar:1.3.0.201907151344:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.ui.workbench:jar:3.124.0.v20211116-0651:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.ui.editors:jar:3.14.300.v20210913-0815:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.ui.ide:jar:3.18.400.v20211026-0701:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.ui.workbench.texteditor:jar:3.16.300.v20211119-1032:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.ui.navigator:jar:3.10.200.v20211009-1706:system
+[INFO] +- p2.eclipse-plugin:org.eclipse.ui.views:jar:3.11.100.v20210816-0811:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.dbdriver.jdbc.gauss:eclipse-plugin:1.0.0-SNAPSHOT:provided
+[INFO] +- org.opengauss.plide.build:org.opengauss.dbdriver.jdbc.gauss:jar:gsjdbc4.jar:1.0.0.qualifier:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.adapter.gauss:eclipse-plugin:1.0.0-SNAPSHOT:provided
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.util:eclipse-plugin:1.0.0-SNAPSHOT:provided
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.util:jar:log4j-api-2.17.1.jar:1.0.0.qualifier:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.util:jar:log4j-core-2.17.1.jar:1.0.0.qualifier:system
+[INFO] +- org.opengauss.plide.build:Common-collection:eclipse-plugin:1.0.0:provided
+[INFO] +- org.opengauss.plide.build:Common-collection:jar:xmlbeans-3.1.0.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:Common-collection:jar:poi-4.1.2.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:Common-collection:jar:poi-ooxml-4.1.2.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:Common-collection:jar:poi-ooxml-schemas-4.1.2.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:Common-collection:jar:commons-collections4-4.4.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:Common-collection:jar:commons-compress-1.21.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:Common-collection:jar:commons-math3-3.6.1.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.bl:eclipse-plugin:1.0.0-SNAPSHOT:provided
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.bl:jar:gson-2.8.6.jar:1.0.0.qualifier:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.bl:jar:commons-lang3-3.12.0.jar:1.0.0.qualifier:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.bl:jar:commons-io-2.11.0.jar:1.0.0.qualifier:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.debuger:eclipse-plugin:1.0.0-SNAPSHOT:provided
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.editor.extension:eclipse-plugin:1.0.0-SNAPSHOT:provided
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.parser:eclipse-plugin:1.0.0-SNAPSHOT:provided
+[INFO] |  \- org.antlr:antlr4-runtime:jar:4.7.1:provided
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.parser:jar:antlr4-runtime-4.9.2.jar:1.0.0.qualifier:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.explainplan:eclipse-plugin:1.0.0-SNAPSHOT:provided
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.explainplan:jar:gson-2.8.6.jar:1.0.0.qualifier:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.presentation:eclipse-plugin:1.0.0-SNAPSHOT:provided
+[INFO] +- p2.eclipse-plugin:org.apache.commons.lang3:jar:3.1.0.v201403281430:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.view:jar:gson-2.8.6.jar:1.0.0.qualifier:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.view:jar:guava-30.1.1-jre.jar:1.0.0.qualifier:system
+[INFO] +- p2.eclipse-plugin:openjfx.base:jar:17.0.2:system
+[INFO] +- p2.eclipse-plugin:openjfx.controls:jar:17.0.2:system
+[INFO] +- p2.eclipse-plugin:openjfx.graphics.win32_64:jar:17.0.2:system
+[INFO] +- p2.eclipse-plugin:openjfx.swing:jar:17.0.2:system
+[INFO] \- p2.eclipse-plugin:openjfx.swt:jar:17.0.2:system
+[INFO] 
+[INFO] ------< org.opengauss.plide.build:org.opengauss.mppdbide.feature >------
+[INFO] Building org.opengauss.mppdbide.feature 1.0.0-SNAPSHOT           [15/16]
+[INFO] --------------------------[ eclipse-feature ]---------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ org.opengauss.mppdbide.feature ---
+[INFO] org.opengauss.plide.build:org.opengauss.mppdbide.feature:eclipse-feature:1.0.0-SNAPSHOT
+[INFO] +- org.opengauss.plide.build:JSQLParser:eclipse-plugin:1.0.0:provided
+[INFO] +- org.opengauss.plide.build:JSQLParser:jar:jsqlparser-3.2.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:commons-csv:eclipse-plugin:1.0.0:provided
+[INFO] +- org.opengauss.plide.build:commons-csv:jar:commons-csv-1.9.0.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.dbdriver.jdbc.gauss:eclipse-plugin:1.0.0-SNAPSHOT:provided
+[INFO] +- org.opengauss.plide.build:org.opengauss.dbdriver.jdbc.gauss:jar:gsjdbc4.jar:1.0.0.qualifier:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.adapter.gauss:eclipse-plugin:1.0.0-SNAPSHOT:provided
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.osgi:jar:3.17.100.v20211104-1730:system
+[INFO] |  +- p2.eclipse-plugin:com.ibm.icu:jar:67.1.0.v20200706-1749:system
+[INFO] |  +- p2.eclipse-plugin:org.apache.commons.codec:jar:1.14.0.v20200818-1422:system
+[INFO] |  +- p2.eclipse-plugin:org.apache.commons.io:jar:2.8.0.v20210415-0900:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.core.commands:jar:3.10.100.v20210722-1426:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.equinox.common:jar:3.15.100.v20211021-1418:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.core.contenttype:jar:3.8.100.v20210910-0640:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.equinox.preferences:jar:3.9.100.v20211021-1418:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.equinox.registry:jar:3.11.100.v20211021-1418:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.core.jobs:jar:3.12.0.v20210723-1034:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.core.runtime:jar:3.24.0.v20210910-0750:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.equinox.app:jar:1.6.100.v20211021-1418:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.jface:jar:3.24.0.v20211110-1517:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.swt:jar:3.118.0.v20211123-0851:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.jface.text:jar:3.19.0.v20211026-2100:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.text:jar:3.12.0.v20210512-1644:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.swt.win32.win32.x86_64:jar:3.118.0.v20211123-0851:system
+[INFO] |  +- p2.eclipse-plugin:org.apache.commons.lang:jar:2.6.0.v201404270220:system
+[INFO] |  \- p2.eclipse-plugin:org.apache.commons.lang3:jar:3.1.0.v201403281430:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.util:eclipse-plugin:1.0.0-SNAPSHOT:provided
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.util:jar:log4j-api-2.17.1.jar:1.0.0.qualifier:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.util:jar:log4j-core-2.17.1.jar:1.0.0.qualifier:system
+[INFO] +- org.opengauss.plide.build:Common-collection:eclipse-plugin:1.0.0:provided
+[INFO] +- org.opengauss.plide.build:Common-collection:jar:xmlbeans-3.1.0.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:Common-collection:jar:poi-4.1.2.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:Common-collection:jar:poi-ooxml-4.1.2.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:Common-collection:jar:poi-ooxml-schemas-4.1.2.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:Common-collection:jar:commons-collections4-4.4.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:Common-collection:jar:commons-compress-1.21.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:Common-collection:jar:commons-math3-3.6.1.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.bl:eclipse-plugin:1.0.0-SNAPSHOT:provided
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.osgi.util:jar:3.6.100.v20210723-1119:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.osgi.services:jar:3.10.200.v20210723-0643:system
+[INFO] |  +- p2.eclipse-plugin:javax.annotation:jar:1.3.5.v20200909-1856:system
+[INFO] |  +- p2.eclipse-plugin:org.apache.felix.scr:jar:2.1.24.v20200924-1939:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.e4.core.contexts:jar:1.9.100.v20211011-1349:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.e4.core.di:jar:1.8.100.v20210910-0640:system
+[INFO] |  +- p2.eclipse-plugin:javax.inject:jar:1.0.0.v20091030:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.e4.core.di.annotations:jar:1.7.100.v20210910-0640:system
+[INFO] |  \- p2.eclipse-plugin:org.eclipse.e4.core.services:jar:2.3.100.v20210910-0640:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.bl:jar:gson-2.8.6.jar:1.0.0.qualifier:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.bl:jar:commons-lang3-3.12.0.jar:1.0.0.qualifier:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.bl:jar:commons-io-2.11.0.jar:1.0.0.qualifier:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.debuger:eclipse-plugin:1.0.0-SNAPSHOT:provided
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.editor.extension:eclipse-plugin:1.0.0-SNAPSHOT:provided
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.parser:eclipse-plugin:1.0.0-SNAPSHOT:provided
+[INFO] |  \- org.antlr:antlr4-runtime:jar:4.7.1:provided
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.parser:jar:antlr4-runtime-4.9.2.jar:1.0.0.qualifier:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.explainplan:eclipse-plugin:1.0.0-SNAPSHOT:provided
+[INFO] |  +- p2.eclipse-plugin:ca.odell.glazedlists:jar:1.9.0.v201303080712:system
+[INFO] |  +- p2.eclipse-plugin:com.google.guava:jar:30.1.0.v20210127-2300:system
+[INFO] |  +- p2.eclipse-plugin:com.google.inject:jar:3.0.0.v201605172100:system
+[INFO] |  +- p2.eclipse-plugin:com.google.inject.multibindings:jar:3.0.0.v201605172100:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.gef.common:jar:5.0.1.202112010300:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.gef.geometry:jar:5.0.1.202112010300:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.gef.geometry.convert.fx:jar:5.0.0.202112010300:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.gef.fx:jar:5.0.5.202112010300:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.gef.graph:jar:5.1.0.202112010300:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.gef.layout:jar:5.0.0.202112010300:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.gef.mvc.fx:jar:5.2.3.202112010300:system
+[INFO] |  \- p2.eclipse-plugin:org.eclipse.gef.zest.fx:jar:5.1.2.202112010300:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.explainplan:jar:gson-2.8.6.jar:1.0.0.qualifier:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.presentation:eclipse-plugin:1.0.0-SNAPSHOT:provided
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.view:eclipse-plugin:1.0.0-SNAPSHOT:provided
+[INFO] |  +- p2.eclipse-plugin:com.sun.jna:jar:5.8.0.v20210503-0343:system
+[INFO] |  +- p2.eclipse-plugin:com.sun.jna.platform:jar:5.8.0.v20210406-1004:system
+[INFO] |  +- p2.eclipse-plugin:org.w3c.dom.svg:jar:1.1.0.v201011041433:system
+[INFO] |  +- p2.eclipse-plugin:org.apache.batik.constants:jar:1.14.0.v20210324-0332:system
+[INFO] |  +- p2.eclipse-plugin:org.w3c.css.sac:jar:1.3.1.v200903091627:system
+[INFO] |  +- p2.eclipse-plugin:org.apache.xmlgraphics:jar:2.6.0.v20210409-0748:system
+[INFO] |  +- p2.eclipse-plugin:org.apache.batik.css:jar:1.14.0.v20210324-0332:system
+[INFO] |  +- p2.eclipse-plugin:org.apache.batik.util:jar:1.14.0.v20210324-0332:system
+[INFO] |  +- p2.eclipse-plugin:org.apache.batik.i18n:jar:1.14.0.v20210324-0332:system
+[INFO] |  +- p2.eclipse-plugin:org.w3c.dom.events:jar:3.0.0.draft20060413_v201105210656:system
+[INFO] |  +- p2.eclipse-plugin:org.w3c.dom.smil:jar:1.0.1.v200903091627:system
+[INFO] |  +- p2.eclipse-plugin:org.apache.commons.logging:jar:1.2.0.v20180409-1502:system
+[INFO] |  +- p2.eclipse-plugin:org.bouncycastle.bcpg:jar:1.69.0.v20210713-1924:system
+[INFO] |  +- p2.eclipse-plugin:org.bouncycastle.bcprov:jar:1.69.0.v20210923-1401:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.compare.core:jar:3.6.1000.v20201020-1107:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.core.databinding:jar:1.10.100.v20200926-1123:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.core.databinding.observable:jar:1.11.0.v20210722-1426:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.core.databinding.property:jar:1.9.0.v20210619-1129:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.core.expressions:jar:3.8.100.v20210910-0640:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.core.filebuffers:jar:3.7.100.v20210909-1906:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.core.filesystem:jar:1.9.200.v20210912-1851:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.core.net:jar:1.3.1100.v20210424-0724:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.equinox.security:jar:1.3.800.v20211021-1418:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.core.resources:jar:3.16.0.v20211001-2032:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.e4.core.commands:jar:1.0.0.v20210507-1901:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.e4.core.di.extensions:jar:0.17.100.v20210910-0640:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.e4.core.di.extensions.supplier:jar:0.16.200.v20210910-0640:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.e4.emf.xpath:jar:0.3.0.v20210722-1426:system
+[INFO] |  +- p2.eclipse-plugin:org.apache.commons.jxpath:jar:1.3.0.v200911051830:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.emf.ecore:jar:2.25.0.v20210816-0937:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.e4.ui.bindings:jar:0.13.100.v20210722-1426:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.e4.ui.services:jar:1.5.0.v20210115-1333:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.e4.ui.css.core:jar:0.13.200.v20211022-1402:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.e4.ui.css.swt:jar:0.14.400.v20211026-1534:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.e4.ui.css.swt.theme:jar:0.13.0.v20201026-1147:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.e4.ui.di:jar:1.4.0.v20210621-1133:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.e4.ui.dialogs:jar:1.3.100.v20211103-1334:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.e4.ui.ide:jar:3.16.0.v20210625-1251:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.e4.ui.model.workbench:jar:2.2.0.v20210727-1533:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.equinox.event:jar:1.6.100.v20211021-1418:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.e4.ui.widgets:jar:1.3.0.v20210621-1136:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.e4.ui.workbench:jar:1.13.100.v20211019-0756:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.emf.ecore.change:jar:2.14.0.v20190528-0725:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.emf.ecore.xmi:jar:2.16.0.v20190528-0725:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.e4.ui.workbench.addons.swt:jar:1.4.400.v20211102-0453:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.e4.ui.workbench.renderers.swt:jar:0.15.300.v20211102-1716:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.e4.ui.workbench.swt:jar:0.16.300.v20211102-0939:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.jface.databinding:jar:1.13.0.v20210619-1146:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.e4.ui.workbench3:jar:0.16.0.v20210619-0956:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.urischeme:jar:1.2.100.v20211001-1648:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.emf.common:jar:2.23.0.v20210924-1718:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.equinox.bidi:jar:1.4.100.v20211021-1418:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.equinox.launcher:jar:1.6.400.v20210924-0641:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.equinox.p2.artifact.repository:jar:1.4.300.v20211104-1311:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.equinox.p2.metadata:jar:2.6.100.v20210813-0606:system
+[INFO] |  +- p2.eclipse-plugin:org.tukaani.xz:jar:1.9.0.v20210624-1259:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.equinox.p2.core:jar:2.8.100.v20210908-0659:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.equinox.p2.jarprocessor:jar:1.2.100.v20210907-0854:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.equinox.p2.repository:jar:2.5.300.v20211006-1229:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.equinox.p2.engine:jar:2.7.200.v20211104-1616:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.equinox.p2.metadata.repository:jar:1.4.0.v20210315-2228:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.gef.fx.swt:jar:5.0.2.202112010300:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.gef.fx.jface:jar:5.0.2.202112010300:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.gef.geometry.convert.swt:jar:5.0.2.202112010300:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.help:jar:3.9.100.v20210721-0601:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.jface.notifications:jar:0.4.0.v20211004-0555:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.mylyn.commons.core:jar:3.25.2.v20200813-0821:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.mylyn.commons.screenshots:jar:3.25.2.v20200813-0821:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.mylyn.commons.ui:jar:3.25.2.v20200813-0821:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.ui:jar:3.200.0.v20211026-0701:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.ui.forms:jar:3.11.300.v20211022-1451:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.nebula.cwt:jar:1.1.0.201907151344:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.nebula.widgets.cdatetime:jar:1.4.0.201907151344:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.nebula.widgets.nattable.core:jar:1.6.0.201909181823:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.nebula.widgets.nattable.extension.e4:jar:1.2.0.201909181823:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.nebula.widgets.nattable.extension.glazedlists:jar:1.6.0.201909181823:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.nebula.widgets.nattable.extension.nebula:jar:1.2.0.201909181823:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.nebula.widgets.richtext:jar:1.3.0.201907151344:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.ui.workbench:jar:3.124.0.v20211116-0651:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.ui.editors:jar:3.14.300.v20210913-0815:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.ui.ide:jar:3.18.400.v20211026-0701:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.ui.workbench.texteditor:jar:3.16.300.v20211119-1032:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.ui.navigator:jar:3.10.200.v20211009-1706:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.ui.views:jar:3.11.100.v20210816-0811:system
+[INFO] |  +- p2.eclipse-plugin:openjfx.base:jar:17.0.2:system
+[INFO] |  +- p2.eclipse-plugin:openjfx.controls:jar:17.0.2:system
+[INFO] |  +- p2.eclipse-plugin:openjfx.graphics.win32_64:jar:17.0.2:system
+[INFO] |  +- p2.eclipse-plugin:openjfx.swing:jar:17.0.2:system
+[INFO] |  \- p2.eclipse-plugin:openjfx.swt:jar:17.0.2:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.view:jar:gson-2.8.6.jar:1.0.0.qualifier:system
+[INFO] \- org.opengauss.plide.build:org.opengauss.mppdbide.view:jar:guava-30.1.1-jre.jar:1.0.0.qualifier:system
+[INFO] 
+[INFO] ----< org.opengauss.plide.build:org.opengauss.mppdbide.repository >-----
+[INFO] Building org.opengauss.mppdbide.repository 1.0.0-SNAPSHOT        [16/16]
+[INFO] -------------------------[ eclipse-repository ]-------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ org.opengauss.mppdbide.repository ---
+[INFO] org.opengauss.plide.build:org.opengauss.mppdbide.repository:eclipse-repository:1.0.0-SNAPSHOT
+[INFO] +- org.opengauss.plide.build:JSQLParser:eclipse-plugin:1.0.0:provided
+[INFO] +- org.opengauss.plide.build:JSQLParser:jar:jsqlparser-3.2.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:commons-csv:eclipse-plugin:1.0.0:provided
+[INFO] +- org.opengauss.plide.build:commons-csv:jar:commons-csv-1.9.0.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.feature:eclipse-feature:1.0.0-SNAPSHOT:provided
+[INFO] +- org.opengauss.plide.build:org.opengauss.dbdriver.jdbc.gauss:eclipse-plugin:1.0.0-SNAPSHOT:provided
+[INFO] +- org.opengauss.plide.build:org.opengauss.dbdriver.jdbc.gauss:jar:gsjdbc4.jar:1.0.0.qualifier:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.adapter.gauss:eclipse-plugin:1.0.0-SNAPSHOT:provided
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.osgi:jar:3.17.100.v20211104-1730:system
+[INFO] |  +- p2.eclipse-plugin:com.ibm.icu:jar:67.1.0.v20200706-1749:system
+[INFO] |  +- p2.eclipse-plugin:org.apache.commons.codec:jar:1.14.0.v20200818-1422:system
+[INFO] |  +- p2.eclipse-plugin:org.apache.commons.io:jar:2.8.0.v20210415-0900:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.core.commands:jar:3.10.100.v20210722-1426:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.equinox.common:jar:3.15.100.v20211021-1418:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.core.contenttype:jar:3.8.100.v20210910-0640:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.equinox.preferences:jar:3.9.100.v20211021-1418:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.equinox.registry:jar:3.11.100.v20211021-1418:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.core.jobs:jar:3.12.0.v20210723-1034:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.core.runtime:jar:3.24.0.v20210910-0750:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.equinox.app:jar:1.6.100.v20211021-1418:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.jface:jar:3.24.0.v20211110-1517:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.swt:jar:3.118.0.v20211123-0851:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.jface.text:jar:3.19.0.v20211026-2100:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.text:jar:3.12.0.v20210512-1644:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.swt.win32.win32.x86_64:jar:3.118.0.v20211123-0851:system
+[INFO] |  +- p2.eclipse-plugin:org.apache.commons.lang:jar:2.6.0.v201404270220:system
+[INFO] |  \- p2.eclipse-plugin:org.apache.commons.lang3:jar:3.1.0.v201403281430:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.util:eclipse-plugin:1.0.0-SNAPSHOT:provided
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.util:jar:log4j-api-2.17.1.jar:1.0.0.qualifier:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.util:jar:log4j-core-2.17.1.jar:1.0.0.qualifier:system
+[INFO] +- org.opengauss.plide.build:Common-collection:eclipse-plugin:1.0.0:provided
+[INFO] +- org.opengauss.plide.build:Common-collection:jar:xmlbeans-3.1.0.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:Common-collection:jar:poi-4.1.2.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:Common-collection:jar:poi-ooxml-4.1.2.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:Common-collection:jar:poi-ooxml-schemas-4.1.2.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:Common-collection:jar:commons-collections4-4.4.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:Common-collection:jar:commons-compress-1.21.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:Common-collection:jar:commons-math3-3.6.1.jar:1.0.0:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.bl:eclipse-plugin:1.0.0-SNAPSHOT:provided
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.osgi.util:jar:3.6.100.v20210723-1119:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.osgi.services:jar:3.10.200.v20210723-0643:system
+[INFO] |  +- p2.eclipse-plugin:javax.annotation:jar:1.3.5.v20200909-1856:system
+[INFO] |  +- p2.eclipse-plugin:org.apache.felix.scr:jar:2.1.24.v20200924-1939:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.e4.core.contexts:jar:1.9.100.v20211011-1349:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.e4.core.di:jar:1.8.100.v20210910-0640:system
+[INFO] |  +- p2.eclipse-plugin:javax.inject:jar:1.0.0.v20091030:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.e4.core.di.annotations:jar:1.7.100.v20210910-0640:system
+[INFO] |  \- p2.eclipse-plugin:org.eclipse.e4.core.services:jar:2.3.100.v20210910-0640:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.bl:jar:gson-2.8.6.jar:1.0.0.qualifier:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.bl:jar:commons-lang3-3.12.0.jar:1.0.0.qualifier:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.bl:jar:commons-io-2.11.0.jar:1.0.0.qualifier:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.debuger:eclipse-plugin:1.0.0-SNAPSHOT:provided
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.editor.extension:eclipse-plugin:1.0.0-SNAPSHOT:provided
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.parser:eclipse-plugin:1.0.0-SNAPSHOT:provided
+[INFO] |  \- org.antlr:antlr4-runtime:jar:4.7.1:provided
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.parser:jar:antlr4-runtime-4.9.2.jar:1.0.0.qualifier:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.explainplan:eclipse-plugin:1.0.0-SNAPSHOT:provided
+[INFO] |  +- p2.eclipse-plugin:ca.odell.glazedlists:jar:1.9.0.v201303080712:system
+[INFO] |  +- p2.eclipse-plugin:com.google.guava:jar:30.1.0.v20210127-2300:system
+[INFO] |  +- p2.eclipse-plugin:com.google.inject:jar:3.0.0.v201605172100:system
+[INFO] |  +- p2.eclipse-plugin:com.google.inject.multibindings:jar:3.0.0.v201605172100:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.gef.common:jar:5.0.1.202112010300:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.gef.geometry:jar:5.0.1.202112010300:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.gef.geometry.convert.fx:jar:5.0.0.202112010300:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.gef.fx:jar:5.0.5.202112010300:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.gef.graph:jar:5.1.0.202112010300:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.gef.layout:jar:5.0.0.202112010300:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.gef.mvc.fx:jar:5.2.3.202112010300:system
+[INFO] |  \- p2.eclipse-plugin:org.eclipse.gef.zest.fx:jar:5.1.2.202112010300:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.explainplan:jar:gson-2.8.6.jar:1.0.0.qualifier:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.presentation:eclipse-plugin:1.0.0-SNAPSHOT:provided
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.view:eclipse-plugin:1.0.0-SNAPSHOT:provided
+[INFO] |  +- p2.eclipse-plugin:com.sun.jna:jar:5.8.0.v20210503-0343:system
+[INFO] |  +- p2.eclipse-plugin:com.sun.jna.platform:jar:5.8.0.v20210406-1004:system
+[INFO] |  +- p2.eclipse-plugin:org.w3c.dom.svg:jar:1.1.0.v201011041433:system
+[INFO] |  +- p2.eclipse-plugin:org.apache.batik.constants:jar:1.14.0.v20210324-0332:system
+[INFO] |  +- p2.eclipse-plugin:org.w3c.css.sac:jar:1.3.1.v200903091627:system
+[INFO] |  +- p2.eclipse-plugin:org.apache.xmlgraphics:jar:2.6.0.v20210409-0748:system
+[INFO] |  +- p2.eclipse-plugin:org.apache.batik.css:jar:1.14.0.v20210324-0332:system
+[INFO] |  +- p2.eclipse-plugin:org.apache.batik.util:jar:1.14.0.v20210324-0332:system
+[INFO] |  +- p2.eclipse-plugin:org.apache.batik.i18n:jar:1.14.0.v20210324-0332:system
+[INFO] |  +- p2.eclipse-plugin:org.w3c.dom.events:jar:3.0.0.draft20060413_v201105210656:system
+[INFO] |  +- p2.eclipse-plugin:org.w3c.dom.smil:jar:1.0.1.v200903091627:system
+[INFO] |  +- p2.eclipse-plugin:org.apache.commons.logging:jar:1.2.0.v20180409-1502:system
+[INFO] |  +- p2.eclipse-plugin:org.bouncycastle.bcpg:jar:1.69.0.v20210713-1924:system
+[INFO] |  +- p2.eclipse-plugin:org.bouncycastle.bcprov:jar:1.69.0.v20210923-1401:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.compare.core:jar:3.6.1000.v20201020-1107:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.core.databinding:jar:1.10.100.v20200926-1123:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.core.databinding.observable:jar:1.11.0.v20210722-1426:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.core.databinding.property:jar:1.9.0.v20210619-1129:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.core.expressions:jar:3.8.100.v20210910-0640:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.core.filebuffers:jar:3.7.100.v20210909-1906:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.core.filesystem:jar:1.9.200.v20210912-1851:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.core.net:jar:1.3.1100.v20210424-0724:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.equinox.security:jar:1.3.800.v20211021-1418:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.core.resources:jar:3.16.0.v20211001-2032:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.e4.core.commands:jar:1.0.0.v20210507-1901:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.e4.core.di.extensions:jar:0.17.100.v20210910-0640:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.e4.core.di.extensions.supplier:jar:0.16.200.v20210910-0640:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.e4.emf.xpath:jar:0.3.0.v20210722-1426:system
+[INFO] |  +- p2.eclipse-plugin:org.apache.commons.jxpath:jar:1.3.0.v200911051830:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.emf.ecore:jar:2.25.0.v20210816-0937:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.e4.ui.bindings:jar:0.13.100.v20210722-1426:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.e4.ui.services:jar:1.5.0.v20210115-1333:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.e4.ui.css.core:jar:0.13.200.v20211022-1402:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.e4.ui.css.swt:jar:0.14.400.v20211026-1534:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.e4.ui.css.swt.theme:jar:0.13.0.v20201026-1147:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.e4.ui.di:jar:1.4.0.v20210621-1133:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.e4.ui.dialogs:jar:1.3.100.v20211103-1334:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.e4.ui.ide:jar:3.16.0.v20210625-1251:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.e4.ui.model.workbench:jar:2.2.0.v20210727-1533:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.equinox.event:jar:1.6.100.v20211021-1418:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.e4.ui.widgets:jar:1.3.0.v20210621-1136:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.e4.ui.workbench:jar:1.13.100.v20211019-0756:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.emf.ecore.change:jar:2.14.0.v20190528-0725:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.emf.ecore.xmi:jar:2.16.0.v20190528-0725:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.e4.ui.workbench.addons.swt:jar:1.4.400.v20211102-0453:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.e4.ui.workbench.renderers.swt:jar:0.15.300.v20211102-1716:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.e4.ui.workbench.swt:jar:0.16.300.v20211102-0939:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.jface.databinding:jar:1.13.0.v20210619-1146:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.e4.ui.workbench3:jar:0.16.0.v20210619-0956:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.urischeme:jar:1.2.100.v20211001-1648:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.emf.common:jar:2.23.0.v20210924-1718:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.equinox.bidi:jar:1.4.100.v20211021-1418:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.equinox.launcher:jar:1.6.400.v20210924-0641:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.equinox.p2.artifact.repository:jar:1.4.300.v20211104-1311:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.equinox.p2.metadata:jar:2.6.100.v20210813-0606:system
+[INFO] |  +- p2.eclipse-plugin:org.tukaani.xz:jar:1.9.0.v20210624-1259:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.equinox.p2.core:jar:2.8.100.v20210908-0659:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.equinox.p2.jarprocessor:jar:1.2.100.v20210907-0854:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.equinox.p2.repository:jar:2.5.300.v20211006-1229:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.equinox.p2.engine:jar:2.7.200.v20211104-1616:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.equinox.p2.metadata.repository:jar:1.4.0.v20210315-2228:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.gef.fx.swt:jar:5.0.2.202112010300:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.gef.fx.jface:jar:5.0.2.202112010300:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.gef.geometry.convert.swt:jar:5.0.2.202112010300:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.help:jar:3.9.100.v20210721-0601:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.jface.notifications:jar:0.4.0.v20211004-0555:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.mylyn.commons.core:jar:3.25.2.v20200813-0821:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.mylyn.commons.screenshots:jar:3.25.2.v20200813-0821:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.mylyn.commons.ui:jar:3.25.2.v20200813-0821:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.ui:jar:3.200.0.v20211026-0701:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.ui.forms:jar:3.11.300.v20211022-1451:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.nebula.cwt:jar:1.1.0.201907151344:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.nebula.widgets.cdatetime:jar:1.4.0.201907151344:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.nebula.widgets.nattable.core:jar:1.6.0.201909181823:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.nebula.widgets.nattable.extension.e4:jar:1.2.0.201909181823:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.nebula.widgets.nattable.extension.glazedlists:jar:1.6.0.201909181823:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.nebula.widgets.nattable.extension.nebula:jar:1.2.0.201909181823:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.nebula.widgets.richtext:jar:1.3.0.201907151344:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.ui.workbench:jar:3.124.0.v20211116-0651:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.ui.editors:jar:3.14.300.v20210913-0815:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.ui.ide:jar:3.18.400.v20211026-0701:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.ui.workbench.texteditor:jar:3.16.300.v20211119-1032:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.ui.navigator:jar:3.10.200.v20211009-1706:system
+[INFO] |  +- p2.eclipse-plugin:org.eclipse.ui.views:jar:3.11.100.v20210816-0811:system
+[INFO] |  +- p2.eclipse-plugin:openjfx.base:jar:17.0.2:system
+[INFO] |  +- p2.eclipse-plugin:openjfx.controls:jar:17.0.2:system
+[INFO] |  +- p2.eclipse-plugin:openjfx.graphics.win32_64:jar:17.0.2:system
+[INFO] |  +- p2.eclipse-plugin:openjfx.swing:jar:17.0.2:system
+[INFO] |  \- p2.eclipse-plugin:openjfx.swt:jar:17.0.2:system
+[INFO] +- org.opengauss.plide.build:org.opengauss.mppdbide.view:jar:gson-2.8.6.jar:1.0.0.qualifier:system
+[INFO] \- org.opengauss.plide.build:org.opengauss.mppdbide.view:jar:guava-30.1.1-jre.jar:1.0.0.qualifier:system
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary:
+[INFO] 
+[INFO] GAUSS_MPP_DB_IDE 1.0.0-SNAPSHOT .................... SUCCESS [  0.356 s]
+[INFO] org.opengauss.dbdriver.jdbc.gauss 1.0.0-SNAPSHOT ... SUCCESS [  0.004 s]
+[INFO] Common-collection 1.0.0 ............................ SUCCESS [  0.002 s]
+[INFO] commons-csv 1.0.0 .................................. SUCCESS [  0.002 s]
+[INFO] JSQLParser 1.0.0 ................................... SUCCESS [  0.002 s]
+[INFO] org.opengauss.mppdbide.util 1.0.0-SNAPSHOT ......... SUCCESS [  0.006 s]
+[INFO] org.opengauss.mppdbide.adapter.gauss 1.0.0-SNAPSHOT  SUCCESS [  0.015 s]
+[INFO] org.opengauss.mppdbide.bl 1.0.0-SNAPSHOT ........... SUCCESS [  0.012 s]
+[INFO] gauss parser 1.0.0-SNAPSHOT ........................ SUCCESS [  0.015 s]
+[INFO] org.opengauss.mppdbide.debuger 1.0.0-SNAPSHOT ...... SUCCESS [  0.012 s]
+[INFO] org.opengauss.mppdbide.presentation 1.0.0-SNAPSHOT . SUCCESS [  0.059 s]
+[INFO] org.opengauss.mppdbide.explainplan 1.0.0-SNAPSHOT .. SUCCESS [  0.018 s]
+[INFO] org.opengauss.mppdbide.editor.extension 1.0.0-SNAPSHOT SUCCESS [  0.015 s]
+[INFO] org.opengauss.mppdbide.view 1.0.0-SNAPSHOT ......... SUCCESS [  0.035 s]
+[INFO] org.opengauss.mppdbide.feature 1.0.0-SNAPSHOT ...... SUCCESS [  0.024 s]
+[INFO] org.opengauss.mppdbide.repository 1.0.0-SNAPSHOT ... SUCCESS [  0.026 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  8.040 s
+[INFO] Finished at: 2022-11-11T18:03:31+08:00
+[INFO] ------------------------------------------------------------------------
+[WARNING] The requested profile "downloadSources" could not be activated because it does not exist.

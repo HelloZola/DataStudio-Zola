@@ -94,7 +94,8 @@ public final class SecureUtil {
      * @return the security folder
      */
     public String getSecurityFolder() {
-        return packagePath + CONFIG;
+    	return "D:\\tmp\\config";
+        //return packagePath + CONFIG;
     }
 
     /**
@@ -249,7 +250,7 @@ public final class SecureUtil {
             clearPassword(trimChars);
         } catch (IOException exe) {
             MPPDBIDELoggerUtility.error(MessageConfigLoader.getProperty(IMessagesConstants.ERR_DS_SECURITY_ERROR), exe);
-            throw new DataStudioSecurityException(IMessagesConstants.ERR_DS_SECURITY_ERROR, exe);
+            //throw new DataStudioSecurityException(IMessagesConstants.ERR_DS_SECURITY_ERROR, exe);
         } catch (NoSuchAlgorithmException exe) {
             MPPDBIDELoggerUtility.error(MessageConfigLoader.getProperty(IMessagesConstants.ERR_DS_SECURITY_ERROR), exe);
             throw new DataStudioSecurityException(IMessagesConstants.ERR_DS_SECURITY_ERROR, exe);
