@@ -15,6 +15,8 @@
 
 package org.opengauss.mppdbide.view.ui.visualexplainplan;
 
+import java.util.List;
+
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 import javax.inject.Inject;
@@ -22,6 +24,7 @@ import javax.inject.Inject;
 import org.eclipse.e4.core.contexts.IEclipseContext;
 import org.eclipse.e4.core.services.events.IEventBroker;
 import org.eclipse.e4.ui.model.application.ui.basic.MPart;
+import org.eclipse.gef.common.adapt.IAdaptable;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.custom.SashForm;
 import org.eclipse.swt.events.SelectionEvent;
@@ -32,6 +35,10 @@ import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 import org.osgi.service.event.Event;
 import org.osgi.service.event.EventHandler;
+
+import com.google.common.collect.SetMultimap;
+
+import javafx.scene.Node;
 
 import org.opengauss.mppdbide.eclipse.dependent.EclipseContextDSKeys;
 import org.opengauss.mppdbide.eclipse.dependent.EclipseInjections;
@@ -116,7 +123,7 @@ public class VisualExplainPlanPart extends AbstractVisualExplainCore implements 
         SashForm sashForm = new SashForm(currComposite, SWT.NONE);
         sashForm.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
         sashForm.setOrientation(SWT.VERTICAL);
-        super.createPartControl(sashForm, this.uiPresenatationWrapper);
+        //super.createPartControl(sashForm, this.uiPresenatationWrapper);
         createOverallPropertiesView(this.uiPresenatationWrapper);
 
     }
@@ -162,7 +169,7 @@ public class VisualExplainPlanPart extends AbstractVisualExplainCore implements 
         return new SelectionListener() {
             @Override
             public void widgetSelected(SelectionEvent event) {
-                handleResetViewPort();
+                //handleResetViewPort();
             }
 
             @Override
@@ -220,5 +227,33 @@ public class VisualExplainPlanPart extends AbstractVisualExplainCore implements 
             }
         }
     }
+
+	public void setAdaptable(IAdaptable adaptable) {
+		// TODO Auto-generated method stub
+	}
+
+	@Override
+	protected SetMultimap doGetContentAnchorages() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	protected List doGetContentChildren() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	protected Node doCreateVisual() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	protected void doRefreshVisual(Node visual) {
+		// TODO Auto-generated method stub
+		
+	}
 
 }

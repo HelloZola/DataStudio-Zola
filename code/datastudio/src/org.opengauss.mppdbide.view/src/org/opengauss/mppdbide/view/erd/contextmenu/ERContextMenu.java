@@ -187,10 +187,10 @@ public class ERContextMenu extends ContextMenu {
             if (mPart.getObject() instanceof ERPart) {
                 ERPart erPart = (ERPart) mPart.getObject();
 
-                AbstractERPresentation erDiagram = erPart.getErContextMenu().getDiagram();
-                Graph graph = ERModelToGraphModelConvertor.getGraphModel(erDiagram);
-                erPart.getErContextMenu().getViewer().getContents().setAll(Collections.singletonList(graph));
-                erPart.getErContextMenu().setItemsSelectStatu();
+//                AbstractERPresentation erDiagram = erPart.getErContextMenu().getDiagram();
+//                Graph graph = ERModelToGraphModelConvertor.getGraphModel(erDiagram);
+//                erPart.getErContextMenu().getViewer().getContents().setAll(Collections.singletonList(graph));
+//                erPart.getErContextMenu().setItemsSelectStatu();
             }
         }
     }

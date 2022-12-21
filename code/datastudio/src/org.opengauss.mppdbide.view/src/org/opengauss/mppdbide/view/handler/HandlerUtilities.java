@@ -71,6 +71,7 @@ public class HandlerUtilities {
             IHandlerUtilities.refreshObjectBrowserTree();
             return;
         }
+        //生成mpart页签，获取mpart的PLSourceEditor(默认自带的)
         PLSourceEditor editorObject = UIElement.getInstance().createEditor(sqlObject);
         try {
             HandlerUtilities.codeForHandler(sqlObject, isReloadAgain);
@@ -78,6 +79,7 @@ public class HandlerUtilities {
             SourceViewerUtil.removeSourceViewerId(sqlObject.getPLSourceEditorElmId(), sqlObject.getObjectType());
             throw exp;
         }
+        //PLSourceEditor设置指定IDebugObject
         if (null != editorObject) {
             selectVisibleDebugObject(sqlObject, editorObject);
             editorObject.displaySourceForDebugObject(sqlObject);

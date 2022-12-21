@@ -22,11 +22,9 @@ import java.util.Locale;
 import net.sf.jsqlparser.expression.AllComparisonExpression;
 import net.sf.jsqlparser.expression.AnalyticExpression;
 import net.sf.jsqlparser.expression.AnyComparisonExpression;
-import net.sf.jsqlparser.expression.ArrayExpression;
 import net.sf.jsqlparser.expression.BinaryExpression;
 import net.sf.jsqlparser.expression.CaseExpression;
 import net.sf.jsqlparser.expression.CastExpression;
-import net.sf.jsqlparser.expression.CollateExpression;
 import net.sf.jsqlparser.expression.DateTimeLiteralExpression;
 import net.sf.jsqlparser.expression.DateValue;
 import net.sf.jsqlparser.expression.DoubleValue;
@@ -42,7 +40,6 @@ import net.sf.jsqlparser.expression.JsonExpression;
 import net.sf.jsqlparser.expression.KeepExpression;
 import net.sf.jsqlparser.expression.LongValue;
 import net.sf.jsqlparser.expression.MySQLGroupConcat;
-import net.sf.jsqlparser.expression.NextValExpression;
 import net.sf.jsqlparser.expression.NotExpression;
 import net.sf.jsqlparser.expression.NullValue;
 import net.sf.jsqlparser.expression.NumericBind;
@@ -66,7 +63,6 @@ import net.sf.jsqlparser.expression.operators.arithmetic.BitwiseRightShift;
 import net.sf.jsqlparser.expression.operators.arithmetic.BitwiseXor;
 import net.sf.jsqlparser.expression.operators.arithmetic.Concat;
 import net.sf.jsqlparser.expression.operators.arithmetic.Division;
-import net.sf.jsqlparser.expression.operators.arithmetic.IntegerDivision;
 import net.sf.jsqlparser.expression.operators.arithmetic.Modulo;
 import net.sf.jsqlparser.expression.operators.arithmetic.Multiplication;
 import net.sf.jsqlparser.expression.operators.arithmetic.Subtraction;
@@ -76,11 +72,9 @@ import net.sf.jsqlparser.expression.operators.relational.Between;
 import net.sf.jsqlparser.expression.operators.relational.EqualsTo;
 import net.sf.jsqlparser.expression.operators.relational.ExistsExpression;
 import net.sf.jsqlparser.expression.operators.relational.ExpressionList;
-import net.sf.jsqlparser.expression.operators.relational.FullTextSearch;
 import net.sf.jsqlparser.expression.operators.relational.GreaterThan;
 import net.sf.jsqlparser.expression.operators.relational.GreaterThanEquals;
 import net.sf.jsqlparser.expression.operators.relational.InExpression;
-import net.sf.jsqlparser.expression.operators.relational.IsBooleanExpression;
 import net.sf.jsqlparser.expression.operators.relational.IsNullExpression;
 import net.sf.jsqlparser.expression.operators.relational.ItemsListVisitor;
 import net.sf.jsqlparser.expression.operators.relational.JsonOperator;
@@ -89,39 +83,26 @@ import net.sf.jsqlparser.expression.operators.relational.Matches;
 import net.sf.jsqlparser.expression.operators.relational.MinorThan;
 import net.sf.jsqlparser.expression.operators.relational.MinorThanEquals;
 import net.sf.jsqlparser.expression.operators.relational.MultiExpressionList;
-import net.sf.jsqlparser.expression.operators.relational.NamedExpressionList;
 import net.sf.jsqlparser.expression.operators.relational.NotEqualsTo;
 import net.sf.jsqlparser.expression.operators.relational.RegExpMatchOperator;
 import net.sf.jsqlparser.expression.operators.relational.RegExpMySQLOperator;
-import net.sf.jsqlparser.expression.operators.relational.SimilarToExpression;
 import net.sf.jsqlparser.schema.Column;
 import net.sf.jsqlparser.schema.Table;
 import net.sf.jsqlparser.statement.Block;
 import net.sf.jsqlparser.statement.Commit;
-import net.sf.jsqlparser.statement.CreateFunctionalStatement;
-import net.sf.jsqlparser.statement.DeclareStatement;
-import net.sf.jsqlparser.statement.DescribeStatement;
-import net.sf.jsqlparser.statement.ExplainStatement;
 import net.sf.jsqlparser.statement.SetStatement;
-import net.sf.jsqlparser.statement.ShowColumnsStatement;
-import net.sf.jsqlparser.statement.ShowStatement;
 import net.sf.jsqlparser.statement.Statement;
 import net.sf.jsqlparser.statement.StatementVisitor;
 import net.sf.jsqlparser.statement.Statements;
 import net.sf.jsqlparser.statement.UseStatement;
 import net.sf.jsqlparser.statement.alter.Alter;
-import net.sf.jsqlparser.statement.alter.sequence.AlterSequence;
-import net.sf.jsqlparser.statement.comment.Comment;
 import net.sf.jsqlparser.statement.create.index.CreateIndex;
-import net.sf.jsqlparser.statement.create.schema.CreateSchema;
-import net.sf.jsqlparser.statement.create.sequence.CreateSequence;
 import net.sf.jsqlparser.statement.create.table.CreateTable;
 import net.sf.jsqlparser.statement.create.view.AlterView;
 import net.sf.jsqlparser.statement.create.view.CreateView;
 import net.sf.jsqlparser.statement.delete.Delete;
 import net.sf.jsqlparser.statement.drop.Drop;
 import net.sf.jsqlparser.statement.execute.Execute;
-import net.sf.jsqlparser.statement.grant.Grant;
 import net.sf.jsqlparser.statement.insert.Insert;
 import net.sf.jsqlparser.statement.merge.Merge;
 import net.sf.jsqlparser.statement.replace.Replace;
@@ -147,7 +128,6 @@ import net.sf.jsqlparser.statement.select.WithItem;
 import net.sf.jsqlparser.statement.truncate.Truncate;
 import net.sf.jsqlparser.statement.update.Update;
 import net.sf.jsqlparser.statement.upsert.Upsert;
-import net.sf.jsqlparser.statement.values.ValuesStatement;
 
 /**
  * 
@@ -839,7 +819,7 @@ public class TablesNamesFinderAdapter implements SelectVisitor, FromItemVisitor,
     @Override
     public void visit(Update update) {
 
-        tablesList.add(update.getTable().getName());
+        //tablesList.add(update.getTable().getName());
         if (update.getExpressions() != null) {
             for (Expression expression : update.getExpressions()) {
                 expression.accept(this);
@@ -975,87 +955,10 @@ public class TablesNamesFinderAdapter implements SelectVisitor, FromItemVisitor,
         return tablesList;
     }
 
-    @Override
-    public void visit(Comment comment) {
-    }
-
-    @Override
-    public void visit(CreateSchema aThis) {
-    }
-
-    @Override
-    public void visit(ShowColumnsStatement set) {
-    }
-
-    @Override
-    public void visit(Block block) {
-    }
-
-    @Override
-    public void visit(DescribeStatement describe) {
-    }
-
-    @Override
-    public void visit(ExplainStatement aThis) {
-    }
-
-    @Override
-    public void visit(ShowStatement aThis) {
-    }
-
-    @Override
-    public void visit(DeclareStatement aThis) {
-    }
-
-    @Override
-    public void visit(Grant grant) {
-    }
-
-    @Override
-    public void visit(CreateSequence createSequence) {
-    }
-
-    @Override
-    public void visit(AlterSequence alterSequence) {
-    }
-
-    @Override
-    public void visit(CreateFunctionalStatement createFunctionalStatement) {
-    }
-
-    @Override
-    public void visit(NamedExpressionList namedExpressionList) {
-    }
-
-    @Override
-    public void visit(IntegerDivision division) {
-    }
-
-    @Override
-    public void visit(FullTextSearch fullTextSearch) {
-    }
-
-    @Override
-    public void visit(IsBooleanExpression isBooleanExpression) {
-    }
-
-    @Override
-    public void visit(NextValExpression aThis) {
-    }
-
-    @Override
-    public void visit(CollateExpression aThis) {
-    }
-
-    @Override
-    public void visit(SimilarToExpression aThis) {
-    }
-
-    @Override
-    public void visit(ArrayExpression aThis) {
-    }
-
-    @Override
-    public void visit(ValuesStatement aThis) {
-    }
+	@Override
+	public void visit(Block arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+   
 }

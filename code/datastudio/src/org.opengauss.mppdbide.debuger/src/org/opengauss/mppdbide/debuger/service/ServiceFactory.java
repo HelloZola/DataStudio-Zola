@@ -92,7 +92,8 @@ public class ServiceFactory {
                 new ArrayList<>(1))) {
             try (ResultSet rs = ps.executeQuery()) {
                 if (rs.next()) {
-                    return Optional.ofNullable(ParseVo.parse(rs, VersionVo.class));
+                	Optional<VersionVo> versionVo =  Optional.ofNullable(ParseVo.parse(rs, VersionVo.class));
+                	return versionVo;
                 }
                 return Optional.empty();
             }

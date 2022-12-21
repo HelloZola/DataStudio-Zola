@@ -15,13 +15,7 @@
 
 package org.opengauss.mppdbide.view.erd.parts;
 
-import java.util.Map;
-
-import org.eclipse.gef.mvc.fx.parts.IContentPart;
 import org.eclipse.gef.zest.fx.parts.ZestFxContentPartFactory;
-
-import com.google.inject.Inject;
-import com.google.inject.Injector;
 
 /**
  * The Class ERPartFactory.
@@ -32,17 +26,14 @@ import com.google.inject.Injector;
  * @since 3.0.0
  */
 public class ERPartFactory extends ZestFxContentPartFactory {
-    @Inject
-    private Injector injector;
-
-    @Override
-    public IContentPart<? extends javafx.scene.Node> createContentPart(Object content, Map<Object, Object> contextMap) {
-        if (content instanceof org.eclipse.gef.graph.Node) {
-            // create custom node if we find the custom attribute
-            ERNodePart part = new ERNodePart();
-            injector.injectMembers(part);
-            return part;
-        }
-        return super.createContentPart(content, contextMap);
-    }
+	/*
+	 * @Inject private Injector injector;
+	 * 
+	 * @Override public IContentPart<? extends javafx.scene.Node>
+	 * createContentPart(Object content, Map<Object, Object> contextMap) { if
+	 * (content instanceof org.eclipse.gef.graph.Node) { // create custom node if we
+	 * find the custom attribute ERNodePart part = new ERNodePart();
+	 * injector.injectMembers(part); return part; } return
+	 * super.createContentPart(content, contextMap); }
+	 */
 }

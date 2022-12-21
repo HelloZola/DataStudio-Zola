@@ -28,7 +28,6 @@ import org.eclipse.swt.widgets.Event;
 import org.eclipse.swt.widgets.Listener;
 import org.eclipse.swt.widgets.Shell;
 
-import com.google.inject.Inject;
 import org.opengauss.mppdbide.view.utils.UIElement;
 
 /**
@@ -40,10 +39,8 @@ import org.opengauss.mppdbide.view.utils.UIElement;
  */
 public final class VisualPlanWindowShutdownListener implements Listener {
 
-    @Inject
     private IPresentationEngine engine;
 
-    @Inject
     private EModelService modelService;
 
     /**

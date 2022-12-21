@@ -55,9 +55,10 @@ public class ViewSourceDebugObjectHandler implements ExecuteWrapper {
         Object partObject = UIElement.getInstance().getActivePartObject();
         IDebugObject debugObject = IHandlerUtilities.getSelectedDebugObject();
         if (debugObject != null) {
+        	//根据DbgObj生成mpart页签
             if (!(UIElement.getInstance().isEditorExistByDbgObj(debugObject))) {
                 try {
-                    HandlerUtilities.displaySourceCodeInEditor(debugObject, true);
+                	HandlerUtilities.displaySourceCodeInEditor(debugObject, true);
                 } catch (DatabaseOperationException e) {
                     if (!e.getMessage()
                             .contentEquals(MessageConfigLoader.getProperty(IMessagesConstants.ERR_BL_INVALID_STATE))) {

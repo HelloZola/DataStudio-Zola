@@ -17,11 +17,6 @@ package org.opengauss.mppdbide.view.erd.parts;
 
 import org.eclipse.gef.zest.fx.parts.NodePart;
 
-import org.opengauss.mppdbide.bl.erd.model.AbstractEREntity;
-import org.opengauss.mppdbide.bl.erd.model.IERNodeConstants;
-import org.opengauss.mppdbide.view.erd.visuals.EREntityVisual;
-
-import javafx.beans.property.ReadOnlyMapProperty;
 import javafx.scene.Group;
 
 /**
@@ -36,10 +31,8 @@ public class ERNodePart extends NodePart {
 
     @Override
     protected Group doCreateVisual() {
-        ReadOnlyMapProperty<String, Object> property = getContent().attributesProperty();
-        AbstractEREntity entity = (AbstractEREntity) property.get(IERNodeConstants.NODE_PROPERTY);
-        EREntityVisual entityVisual = new EREntityVisual(entity);
-        entityVisual.initEREntityVisual(entity);
-        return entityVisual;
+//        ReadOnlyMapProperty<String, Object> property = getContent().attributesProperty();
+//        AbstractEREntity entity = (AbstractEREntity) property.get(IERNodeConstants.NODE_PROPERTY);
+    	return null;
     }
 }

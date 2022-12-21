@@ -60,9 +60,9 @@ public class ERPart extends ERAbstractCore {
     public Composite postConstruct(Composite availableComp, MPart part) {
         Object obj = part.getObject();
         if (obj instanceof EREntityPresentation) {
-            this.setPresenter((EREntityPresentation) obj);
+            //this.setPresenter((EREntityPresentation) obj);
         } else {
-            this.setPresenter((ERDiagramPresentation) obj);
+            //this.setPresenter((ERDiagramPresentation) obj);
         }
         createComponent(availableComp, part);
         return availableComp;
@@ -87,7 +87,7 @@ public class ERPart extends ERAbstractCore {
         SashForm sashForm = new SashForm(currComposite, SWT.NONE);
         sashForm.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
         sashForm.setOrientation(SWT.VERTICAL);
-        super.createPartControl(sashForm);
+        //super.createPartControl(sashForm);
     }
 
     /**

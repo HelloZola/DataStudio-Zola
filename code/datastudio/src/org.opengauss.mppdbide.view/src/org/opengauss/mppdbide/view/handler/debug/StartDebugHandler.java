@@ -72,7 +72,9 @@ public class StartDebugHandler {
     @Execute
     public void execute() {
         MPPDBIDELoggerUtility.error("start debugint:" + "null");
+        //初始化debug界面
         debugUtils.initDebugSourceView();
+        //获取源码面板
         plSourceEditor = UIElement.getInstance().getVisibleSourceViewer();
         plSourceEditor.setEditable(false);
         try {
